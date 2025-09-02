@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz ISTQB</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Landing Page -->
+        <div id="landing-page" class="page active">
+            <header>
+                <h1>Quiz ISTQB</h1>
+                <p>Seleziona un quiz per iniziare</p>
+            </header>
+            
+            <main>
+                <div id="quiz-list" class="quiz-list">
+                    <!-- Quiz items will be populated here -->
+                </div>
+                
+                <div id="loading" class="loading hidden">
+                    <p>Caricamento quiz...</p>
+                </div>
+                
+                <div id="error-message" class="error-message hidden">
+                    <p>Errore nel caricamento dei quiz. Assicurati che la cartella json_Q_A/ contenga file JSON validi.</p>
+                </div>
+            </main>
+        </div>
+
+        <!-- Quiz Page -->
+        <div id="quiz-page" class="page">
+            <header class="quiz-header">
+                <div class="quiz-info">
+                    <h2 id="quiz-title"></h2>
+                    <div class="progress-info">
+                        <span id="question-progress">Domanda 1/40</span>
+                        <span id="timer" class="timer">Tempo rimanente: 60:00</span>
+                    </div>
+                </div>
+            </header>
+
+            <main class="quiz-content">
+                <div id="resume-prompt" class="resume-prompt hidden">
+                    <p>È stato trovato un quiz salvato. Vuoi riprenderlo?</p>
+                    <button id="resume-btn" class="btn btn-primary">Riprendi</button>
+                    <button id="restart-btn" class="btn btn-secondary">Ricomincia</button>
+                </div>
+
+                <div id="question-container" class="question-container">
+                    <div class="question">
+                        <h3 id="question-text"></h3>
+                        <div id="options-container" class="options">
+                            <!-- Options will be populated here -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="quiz-controls">
+                    <button id="prev-btn" class="btn btn-secondary" disabled>Indietro</button>
+                    <button id="submit-btn" class="btn btn-danger">Invia Quiz</button>
+                    <button id="next-btn" class="btn btn-primary">Avanti</button>
+                </div>
+            </main>
+        </div>
+
+        <!-- Results Page -->
+        <div id="results-page" class="page">
+            <header>
+                <h1>Risultati Quiz</h1>
+            </header>
+
+            <main class="results-content">
+                <div class="score-summary">
+                    <h2 id="final-score">Punteggio: 0/40</h2>
+                    <p class="pass-rule">Soglia di superamento: 26/40</p>
+                    <div id="pass-status" class="pass-status"></div>
+                    <div id="score-note" class="score-note hidden"></div>
+                </div>
+
+                <div class="learning-objective-summary">
+                    <h3>Riepilogo per Obiettivi di Apprendimento</h3>
+                    <div id="learning-objective-stats" class="learning-objective-stats">
+                        <!-- Learning objective statistics will be populated here -->
+                    </div>
+                </div>
+
+                <div class="results-details">
+                    <h3>Dettaglio Risposte</h3>
+                    <div id="question-results" class="question-results">
+                        <!-- Detailed results will be populated here -->
+                    </div>
+                </div>
+
+                <div class="results-actions">
+                    <button id="back-to-home" class="btn btn-primary">Torna alla Home</button>
+                    <button id="retry-quiz" class="btn btn-secondary">Riprova Quiz</button>
+                </div>
+            </main>
+        </div>
+
+        <!-- Validation Errors -->
+        <div id="validation-errors" class="validation-errors hidden">
+            <h4>File non validi rilevati:</h4>
+            <ul id="error-list"></ul>
+        </div>
+    </div>
+
+    <script src="utils.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

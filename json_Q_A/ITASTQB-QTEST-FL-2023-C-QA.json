@@ -1,0 +1,1084 @@
+[
+  {
+    "question_pdf": "ITASTQB-QTEST-FL-2023-C.pdf",
+    "question_page": 6,
+    "question_number": "1",
+    "question_text": "Quale dei seguenti è un tipico obiettivo del test?",
+    "question_option": {
+      "a": "Validare che i requisiti documentati siano soddisfatti",
+      "b": "Causare failure e identificare difetti",
+      "c": "Generare errori e identificare le root cause",
+      "d": "Verificare che l'oggetto di test soddisfi le aspettative dell'utente"
+    },
+    "answer_pdf": "ITASTQB-QTEST-FL-2023-C-SOL.pdf",
+    "answer_page": 7,
+    "answer_option": "b",
+    "answer_option_text": {
+      "b": "È corretta. Causare failure e identificare difetti è probabilmente l'obiettivo più comune del testing dinamico"
+    },
+    "no_answer_option_text": {
+      "a": "Non è corretta. Validare che i requisiti documentati siano soddisfatti non è corretto, poiché la validazione riguarda il soddisfare i requisiti e le aspettative dell'utente, mentre la verifica riguarda il soddisfare i requisiti specificati. Sarebbe quindi corretto se \"validare\" fosse sostituito con \"verificare\"",
+      "c": "Non è corretta. Generare errori e identificare le root cause non è corretto, poiché i tester non causano gli errori, ma cercano di causare failure. Gli errori sono tipicamente commessi dagli sviluppatori (e non possono essere realmente generati) e si traducono in difetti, che i tester cercano di rilevare direttamente attraverso il testing statico, o indirettamente attraverso i failure con il testing dinamico. Identificare le root cause è utile, ma è parte del debugging, che è un'attività separata dal testing",
+      "d": "Non è corretta. Verificare che l'oggetto di test soddisfi le aspettative dell'utente non è corretto, poiché la verifica riguarda il soddisfare i requisiti specificati, mentre la validazione riguarda il soddisfare i requisiti e le aspettative dell'utente. Sarebbe quindi corretto se \"verificare\" fosse sostituito con \"validare\""
+    },
+    "ambiguous": false,
+    "learning_objective": "FL-1.1.1",
+    "k_level": "K1",
+    "points": 1
+  },
+  {
+    "question_pdf": "ITASTQB-QTEST-FL-2023-C.pdf",
+    "question_page": 6,
+    "question_number": "2",
+    "question_text": "Quale delle seguenti affermazioni descrive MEGLIO la differenza tra testing e debugging?",
+    "question_option": {
+      "a": "Il testing genera failure, mentre il debugging corregge i failure",
+      "b": "Il testing è un'attività negativa, mentre il debugging è un'attività positiva",
+      "c": "Il testing determina l'esistenza di difetti, mentre il debugging elimina i difetti",
+      "d": "Il testing individua la causa dei difetti, mentre il debugging risolve la causa dei difetti"
+    },
+    "answer_pdf": "ITASTQB-QTEST-FL-2023-C-SOL.pdf",
+    "answer_page": 8,
+    "answer_option": "c",
+    "answer_option_text": {
+      "c": "È corretta. Il testing determina l'esistenza di difetti, sia direttamente attraverso l'osservazione del difetto nelle review (o da parte di uno strumento di analisi statica), sia indirettamente causando un failure nel testing dinamico. Il debugging è un'attività separata dal testing (normalmente eseguita dagli sviluppatori) e si occupa di localizzare i difetti (solo per il testing dinamico) e correggere i difetti"
+    },
+    "no_answer_option_text": {
+      "a": "Non è corretta. Il testing dinamico causa failure (dai quali è possibile localizzare e correggere i difetti). Il debugging si occupa di localizzare e correggere i difetti. Pertanto, il debugging non corregge i failure",
+      "b": "Non è corretta. Sia il testing sia il debugging contribuiscono a migliorare la qualità dell'oggetto di test, quindi dovrebbero essere considerati entrambi positivamente. II debugging è generalmente considerato un'attività positiva, perché corregge qualcosa. II testing dinamico fa fallire in modo intenzionale l'oggetto di test, motivo per cui alcune persone lo considerano un'attività negativa, ma si tratta di una visione molto ristretta (e non di una visione tipica dei tester). Sono possibili test case sia positivi sia negativi. I test case positivi verificano che l'oggetto di test esegua correttamente quello che si suppone debba fare, mentre il testing negativo verifica che l'oggetto di test non esegua quello che si suppone non debba fare",
+      "d": "Non è corretta. Le cause dei difetti sono generalmente errori umani. Il testing trova i difetti direttamente attraverso il testing statico o indirettamente causando failure nel testing dinamico, mentre il debugging corregge i difetti. Quindi, il testing non individua le cause dei difetti e il debugging non risolve le cause dei difetti"
+    },
+    "ambiguous": false,
+    "learning_objective": "FL-1.1.2",
+    "k_level": "K2",
+    "points": 1
+  },
+  {
+    "question_pdf": "ITASTQB-QTEST-FL-2023-C.pdf",
+    "question_page": 6,
+    "question_number": "3",
+    "question_text": "\"L'assenza di difetti è un'idea sbagliata\" è uno dei principi del testing.\nQuale dei seguenti è un esempio di applicazione pratica di questo principio?",
+    "question_option": {
+      "a": "Spiegare che non è possibile che il testing dimostri l'assenza di difetti",
+      "b": "Supportare gli utenti finali nell'esecuzione del testing di accettazione",
+      "c": "Garantire che non rimangano difetti di implementazione nel sistema rilasciato",
+      "d": "Modificare i test che non generano failure per garantire che rimangano pochi difetti"
+    },
+    "answer_pdf": "ITASTQB-QTEST-FL-2023-C-SOL.pdf",
+    "answer_page": 9,
+    "answer_option": "b",
+    "answer_option_text": {
+      "b": "È corretta. Supportando l'utente finale nell'esecuzione del testing di accettazione, dovrebbe essere possibile validare che il sistema soddisfi le esigenze e le aspettative degli utenti"
+    },
+    "no_answer_option_text": {
+      "a": "Non è corretta. II principio \"il testing mostra la presenza di difetti, ma non la loro assenza\" spiega che il testing può rilevare l'esistenza di difetti nell'oggetto di test, ma non è possibile dimostrare che non siano presenti difetti e, quindi, garantire la sua correttezza. Pertanto, spiegare che non è possibile per il testing dimostrare l'assenza di difetti indirizzerebbe parzialmente questo principio, non \"l'assenza di difetti è un'idea sbagliata\"",
+      "c": "Non è corretta. Non è possibile garantire che non rimangano difetti di implementazione nel sistema rilasciato, poiché il principio \"il testing mostra la presenza di difetti, ma non la loro assenza\" spiega che mentre il testing può rilevare l'esistenza di difetti nell'oggetto di test, non è possibile dimostrare l'assenza di difetti e, quindi, garantire la sua correttezza",
+      "d": "Non è corretta. Modificare i test che non generano failure per garantire che rimangano pochi difetti è un modo per indirizzare il principio \"i test perdono di efficacia\". Questo principio riguarda l'idea che ripetere test identici su un codice inalterato difficilmente porterà a scoprire nuovi difetti, e quindi modificare i test può essere fondamentale. Questo non validerà che il sistema soddisfi le esigenze e le aspettative degli utenti"
+    },
+    "ambiguous": false,
+    "learning_objective": "FL-1.3.1",
+    "k_level": "K2",
+    "points": 1
+  },
+  {
+    "question_pdf": "ITASTQB-QTEST-FL-2023-C.pdf",
+    "question_page": 6,
+    "question_number": "4",
+    "question_text": "Quali DUE delle seguenti attività di test richiede con PIÙ probabilità l'applicazione dell'analisi ai valori limite e del partizionamento di equivalenza?",
+    "question_option": {
+      "a": "Implementazione dei test",
+      "b": "Progettazione dei test",
+      "c": "Esecuzione dei test",
+      "d": "Monitoraggio dei test",
+      "e": "Analisi dei test"
+    },
+    "answer_pdf": "ITASTQB-QTEST-FL-2023-C-SOL.pdf",
+    "answer_page": 9,
+    "answer_option": "b,e",
+    "answer_option_text": {
+      "b": "È corretta. La progettazione dei test implica probabilmente l'utilizzo di tecniche di test per creare i test case a partire dalle condizioni di test e dagli elementi di copertura",
+      "e": "È corretta. L'analisi dei test comporta probabilmente l'utilizzo di tecniche di test per identificare le condizioni di test"
+    },
+    "no_answer_option_text": {
+      "a": "Non è corretta. È improbabile che l'implementazione dei test comporti l'utilizzo di tecniche di test, in quanto si occupa principalmente di assemblare i test case in procedure di test, mentre le tecniche di test creano i test case",
+      "c": "Non è corretta. È improbabile che l'esecuzione dei test implichi l'utilizzo di tecniche di test, in quanto riguarda principalmente l'esecuzione di procedure di test (e quindi di test case), mentre le tecniche di test creano test case",
+      "d": "Non è corretta. È improbabile che il monitoraggio dei test implichi l'utilizzo di tecniche di test. Il monitoraggio dei test riguarda soprattutto i controlli in corso per garantire il rispetto del piano, mentre le tecniche di test creano test case"
+    },
+    "ambiguous": false,
+    "learning_objective": "FL-1.4.1",
+    "k_level": "K2",
+    "points": 1
+  },
+  {
+    "question_pdf": "ITASTQB-QTEST-FL-2023-C.pdf",
+    "question_page": 7,
+    "question_number": "5",
+    "question_text": "Dato il seguente testware:\n1. Elementi di copertura\n2. Change request\n3. Schedulazione dell'esecuzione dei test\n4. Condizioni di test prioritizzate\nE le seguenti attività di test:\nA. Analisi dei test\nB. Progettazione dei test\nC. Implementazione dei test\nD. Completamento dei test\nQuale delle seguenti risposte è la MIGLIORE combinazione del testware prodotto dalle attività?",
+    "question_option": {
+      "a": "1B, 2D, 3C, 4A",
+      "b": "1B, 2D, 3A, 4C",
+      "c": "1D, 2C, 3A, 4B",
+      "d": "1D, 2C, 3B, 4A"
+    },
+    "answer_pdf": "ITASTQB-QTEST-FL-2023-C-SOL.pdf",
+    "answer_page": 11,
+    "answer_option": "a",
+    "answer_option_text": {
+      "a": "È corretta. L'abbinamento corretto è: 1B, 2D, 3C, 4A"
+    },
+    "no_answer_option_text": {
+      "b": "Non è corretta",
+      "c": "Non è corretta",
+      "d": "Non è corretta"
+    },
+    "ambiguous": false,
+    "learning_objective": "FL-1.4.3",
+    "k_level": "K2",
+    "points": 1
+  },
+  {
+    "question_pdf": "ITASTQB-QTEST-FL-2023-C.pdf",
+    "question_page": 7,
+    "question_number": "6",
+    "question_text": "Quale delle seguenti affermazioni sui diversi ruoli del testing è PIÙ probabile che sia CORRETTA?",
+    "question_option": {
+      "a": "Nello sviluppo software Agile, il ruolo di test management è responsabilità primaria del team, mentre il ruolo di testing è responsabilità primaria di un singolo individuo esterno al team",
+      "b": "Il ruolo di testing è principalmente responsabile del monitoraggio e controllo dei test, mentre il ruolo di test management è principalmente responsabile della pianificazione dei test e del completamento dei test",
+      "c": "Nello sviluppo software Agile, le attività di test management che riguardano più team sono gestite da un test manager esterno al team, mentre alcune attività di test management sono gestite dal team stesso",
+      "d": "Il ruolo di test management è principalmente responsabile dell'analisi dei test e della progettazione dei test, mentre il ruolo di testing è principalmente responsabile dell'implementazione dei test e dell'esecuzione dei test"
+    },
+    "answer_pdf": "ITASTQB-QTEST-FL-2023-C-SOL.pdf",
+    "answer_page": 12,
+    "answer_option": "c",
+    "answer_option_text": {
+      "c": "È corretta. Nello sviluppo software Agile, alcune delle attività di test management possono essere gestite dal team Agile stesso. Tuttavia, per le attività di test che riguardano più team all'interno di un'organizzazione, i Test Manager esterni al team di sviluppo possono svolgere questi compiti"
+    },
+    "no_answer_option_text": {
+      "a": "Non è corretta. Sebbene sia corretto affermare che nello sviluppo software Agile, alcuni dei compiti del test management possono essere gestiti dal team Agile stesso, il ruolo del testing non è responsabilità primaria di un singolo individuo esterno al team. È invece più probabile che il testing venga eseguito dai diversi membri del team, seguendo l'approccio whole-team",
+      "b": "Non è corretta. Il ruolo di test management coinvolge principalmente le attività relative alla pianificazione dei test, al monitoraggio e controllo dei test e al completamento dei test. Quindi, anche se questa affermazione è parzialmente corretta, è sbagliato dire che il ruolo del testing è principalmente responsabile del monitoraggio e controllo dei test",
+      "d": "Non è corretta. Il ruolo di test management coinvolge principalmente le attività relative alla pianificazione dei test, al monitoraggio e controllo dei test e al completamento dei test, mentre il ruolo del testing è responsabile principalmente degli aspetti tecnici e di ingegneria del testing, come l'analisi dei test, la progettazione dei test, l'implementazione dei test e l'esecuzione dei test. Pertanto, il ruolo di test management non è normalmente responsabile dell'analisi dei test e della progettazione dei test, anche se è corretto dire che il ruolo del testing è principalmente responsabile dell'implementazione dei test ed esecuzione dei test"
+    },
+    "ambiguous": false,
+    "learning_objective": "FL-1.4.5",
+    "k_level": "K2",
+    "points": 1
+  },
+  {
+    "question_pdf": "ITASTQB-QTEST-FL-2023-C.pdf",
+    "question_page": 7,
+    "question_number": "7",
+    "question_text": "Quale dei seguenti è un vantaggio dell'approccio whole-team?",
+    "question_option": {
+      "a": "Team senza tester",
+      "b": "Dinamiche del team migliorate",
+      "c": "Membri del team specialisti",
+      "d": "Team di dimensioni maggiori"
+    },
+    "answer_pdf": "ITASTQB-QTEST-FL-2023-C-SOL.pdf",
+    "answer_page": 13,
+    "answer_option": "b",
+    "answer_option_text": {
+      "b": "È corretta. Sfruttando al meglio le diverse competenze di ogni membro del team, l'approccio whole-team favorisce dinamiche di squadra migliori, promuove una robusta comunicazione e collaborazione, e genera un effetto sinergico che va a vantaggio dell'intero progetto"
+    },
+    "no_answer_option_text": {
+      "a": "Non è corretta. Nell'approccio whole-team, i tester svolgono un ruolo vitale condividendo la loro esperienza nel testing con il team e guidando lo sviluppo del prodotto. Collaborano con gli altri membri del team per raggiungere i livelli di qualità desiderati e lavorano con i rappresentanti di business per creare test di accettazione. I tester collaborano anche con gli sviluppatori per determinare la strategia di test ottimale e gli approcci di automazione",
+      "c": "Non è corretta. L'approccio whole-team consente a qualsiasi membro del team, con le competenze e le conoscenze necessarie, di svolgere qualsiasi compito, quindi i membri del team specialisti non sono un vantaggio di questo approccio",
+      "d": "Non è corretta. Non esistono indicazioni specifiche sulle dimensioni ottimali dei team che utilizzano l'approccio whole-team, e non esiste alcuna considerazione sul fatto che i team più grandi siano migliori"
+    },
+    "ambiguous": false,
+    "learning_objective": "FL-1.5.2",
+    "k_level": "K1",
+    "points": 1
+  },
+  {
+    "question_pdf": "ITASTQB-QTEST-FL-2023-C.pdf",
+    "question_page": 8,
+    "question_number": "8",
+    "question_text": "Quale delle seguenti affermazioni sull'indipendenza del testing è CORRETTA?",
+    "question_option": {
+      "a": "I tester indipendenti rileveranno i difetti grazie a una prospettiva tecnica differente dalla prospettiva degli sviluppatori, ma la loro indipendenza può portare a un rapporto conflittuale con gli sviluppatori",
+      "b": "La familiarità degli sviluppatori con il proprio codice fa sì che rileveranno solo pochi difetti, ma il loro background software condiviso con i tester fa sì che questi difetti vengano rilevati anche dai tester",
+      "c": "Il testing indipendente richiede tester esterni al team di sviluppo e idealmente esterni all'organizzazione, ma questi tester hanno difficoltà a comprendere il dominio dell'applicazione",
+      "d": "I tester esterni al team di sviluppo sono più indipendenti dei tester all'interno del team, ma i tester all'interno del team hanno maggiore probabilità di essere incolpati per ritardi nel rilascio del prodotto"
+    },
+    "answer_pdf": "ITASTQB-QTEST-FL-2023-C-SOL.pdf",
+    "answer_page": 14,
+    "answer_option": "a",
+    "answer_option_text": {
+      "a": "È corretta. Il vantaggio principale dell'indipendenza nel testing è che i tester hanno maggiori probabilità di identificare diversi tipi di failure e difetti rispetto agli sviluppatori, a causa dei differenti background, punti di vista tecnici e potenziali pregiudizi (biases), compresi i pregiudizi cognitivi. Tuttavia, il principale svantaggio dell'indipendenza nel testing è che i tester possono rimanere isolati dal team di sviluppo, causando problemi di comunicazione, mancanza di collaborazione e potenzialmente un rapporto conflittuale, con i tester, che vengono incolpati di ritardi e di essere colli di bottiglia nel processo di rilascio"
+    },
+    "no_answer_option_text": {
+      "b": "Non è corretta. La familiarità di uno sviluppatore con il codice non significa che raramente rilevi difetti, ma piuttosto che questa familiarità consenta di trovare in modo efficace molti difetti nel proprio codice. Inoltre, più che gli sviluppatori e i tester abbiano un background comune, è invece indicato che il fatto che gli sviluppatori abbiano un background diverso da quello dei tester sia la ragione per cui i tester e gli sviluppatori rilevino diversi tipi di difetti",
+      "c": "Non è corretta. Il testing può essere condotto a diversi livelli di indipendenza, a partire da nessuna forma di indipendenza per l'autore fino a un'indipendenza alta per tester esterni all'organizzazione. Nella maggior parte dei progetti si utilizzano diversi livelli di indipendenza, dove gli sviluppatori eseguono il testing di componente e di integrazione dei componenti, il team di test esegue il testing di sistema e di integrazione dei sistemi e i rappresentanti di business eseguono il testing di accettazione. Quindi, i tester possono far parte del team dello sviluppatore e non devono necessariamente essere esterni all'organizzazione. La conoscenza del dominio applicativo cambierà da caso a caso e non dipende dal livello di indipendenza",
+      "d": "Non è corretta. Il testing può essere condotto a diversi livelli di indipendenza, a partire da nessuna forma di indipendenza per l'autore fino a un'indipendenza alta per tester esterni all'organizzazione, con tester esterni al team dello sviluppatore generalmente più indipendenti dai tester interni al team. Tuttavia, esiste una maggior ragione di credere che i tester esterni al team siano probabilmente più isolati degli sviluppatori e quindi abbiano maggiori probabilità di essere incolpati per ritardi nel rilascio del prodotto"
+    },
+    "ambiguous": false,
+    "learning_objective": "FL-1.5.3",
+    "k_level": "K2",
+    "points": 1
+  },
+  {
+    "question_pdf": "ITASTQB-QTEST-FL-2023-C.pdf",
+    "question_page": 8,
+    "question_number": "9",
+    "question_text": "Quale delle seguenti è una buona pratica del testing che si applica a tutti i cicli di vita dello sviluppo software?",
+    "question_option": {
+      "a": "Per ogni livello di test, esiste un corrispondente livello di sviluppo",
+      "b": "Per ogni obiettivo di test, esiste un corrispondente obiettivo di sviluppo",
+      "c": "Per ogni attività di test del software, esiste una corrispondente attività dell'utente",
+      "d": "Per ogni attività di sviluppo software, esiste una corrispondente attività di test"
+    },
+    "answer_pdf": "ITASTQB-QTEST-FL-2023-C-SOL.pdf",
+    "answer_page": 16,
+    "answer_option": "d",
+    "answer_option_text": {
+      "d": "È corretta. Il quality control si applica a tutte le attività di sviluppo, e questo significa che per ogni attività dello sviluppo software corrisponde un'attività di test"
+    },
+    "no_answer_option_text": {
+      "a": "Non è corretta. Il quality control si applica a tutte le attività di sviluppo, e questo significa che ogni attività di sviluppo software ha una corrispondente attività di test. Tuttavia, in questo caso si sta cercando di equiparare i livelli di test con i livelli di sviluppo e, sebbene si sappia cosa significhi \"livelli di test\", non esiste un'interpretazione comune del termine \"livello di sviluppo\"",
+      "b": "Non è corretta. Ogni attività di sviluppo software ha una corrispondente attività di test, ma gli obiettivi di test sono molto differenti. Ad esempio, un obiettivo di test potrebbe essere quello di garantire che un oggetto di test aderisca a un requisito contrattuale, che prevede l'esecuzione di un certo tipo di test prima del rilascio. In questo caso non esiste una ragione per avere un corrispondente obiettivo di sviluppo",
+      "c": "Non è corretta. Il quality control si applica a tutte le attività di sviluppo, e questo significa che ogni attività di sviluppo software ha una corrispondente attività di test. Tuttavia, la stessa simmetria non si applica al testing e alle attività utente. Ad esempio, per alcuni sistemi è difficile anche solo identificare gli utenti finali. Inoltre, alcune attività di test si focalizzano sugli sviluppatori (p.e. il testing per una facile manutenibilità), senza alcun aspetto legato all'utente"
+    },
+    "ambiguous": false,
+    "learning_objective": "FL-2.1.2",
+    "k_level": "K1",
+    "points": 1
+  },
+  {
+    "question_pdf": "ITASTQB-QTEST-FL-2023-C.pdf",
+    "question_page": 8,
+    "question_number": "10",
+    "question_text": "Quale dei seguenti è un esempio di approccio test-first allo sviluppo?",
+    "question_option": {
+      "a": "Component Test-Driven Development",
+      "b": "Integration Test-Driven Development",
+      "c": "System Test-Driven Development",
+      "d": "Acceptance Test-Driven Development"
+    },
+    "answer_pdf": "ITASTQB-QTEST-FL-2023-C-SOL.pdf",
+    "answer_page": 17,
+    "answer_option": "d",
+    "answer_option_text": {
+      "d": "È corretta. Acceptance Test-Driven Development (ATDD) è un esempio conosciuto di approccio test-first allo sviluppo"
+    },
+    "no_answer_option_text": {
+      "a": "Non è corretta. Component Test-Driven Development non è un esempio corretto di approccio test-first allo sviluppo",
+      "b": "Non è corretta. Integration Test-Driven Development non è un esempio corretto di approccio test-first allo sviluppo",
+      "c": "Non è corretta. System Test-Driven Development non è un esempio corretto di approccio test-first allo sviluppo"
+    },
+    "ambiguous": false,
+    "learning_objective": "FL-2.1.3",
+    "k_level": "K1",
+    "points": 1
+  },
+  {
+    "question_pdf": "ITASTQB-QTEST-FL-2023-C.pdf",
+    "question_page": 9,
+    "question_number": "11",
+    "question_text": "Quale delle seguenti fornisce la MIGLIORE descrizione dell'approccio shift-left?",
+    "question_option": {
+      "a": "Se concordato dagli sviluppatori, le attività manuali sul lato sinistro del processo di test vengono automatizzate per supportare il principio \"il testing anticipato permette di risparmiare tempo e denaro\"",
+      "b": "Quando risulta efficace dal punto di vista dei costi, le attività di test vengono anticipate nel ciclo di vita dello sviluppo software (SDLC), per ridurre il costo totale della qualità attraverso la riduzione del numero di difetti rilevati successivamente nel SDLC",
+      "c": "Quando hanno tempo libero a disposizione, i tester devono automatizzare i regression test, a partire dai test di componente e dai test di integrazione dei componenti",
+      "d": "Quando possibile, i tester sono formati per eseguire i compiti nelle prime fasi del ciclo di vita dello sviluppo software (SDLC), per permettere l'automazione di un maggior numero di attività di test nelle fasi successive del SDLC"
+    },
+    "answer_pdf": "ITASTQB-QTEST-FL-2023-C-SOL.pdf",
+    "answer_page": 18,
+    "answer_option": "b",
+    "answer_option_text": {
+      "b": "È corretta. Shift-left enfatizza l'importanza di anticipare il testing nelle fasi iniziali del ciclo di vita dello sviluppo software. L'implementazione del testing shift-left richiede una formazione aggiuntiva e un aumento dell'effort e dei costi durante le prime fasi del SDLC, tuttavia i risparmi complessivi dovrebbero essere maggiori"
+    },
+    "no_answer_option_text": {
+      "a": "Non è corretta. Le pratiche considerate nel testing shift-left hanno lo scopo di implementare un maggior numero di attività di test nelle prime fasi del ciclo di vita dello sviluppo, rappresentando il ciclo di vita dello sviluppo software (SDLC) da sinistra a destra. Non esiste il lato sinistro del processo di test",
+      "c": "Non è corretta. Sebbene i test di componente e di integrazione dei componenti automatizzati per il regression testing siano generalmente validi, la creazione di questi test è normalmente di responsabilità degli sviluppatori e, se si segue un approccio di continuous integration/continuous delivery (CI/CD), questi test saranno stati sottomessi insieme al codice. In alcune situazioni il tester può automatizzare i test per il regression testing e talvolta anche i test di componente e di integrazione dei componenti, ma questo non fa parte di un approccio \"shift-left\" che sposta il testing all'inizio del SDLC",
+      "d": "Non è corretta. La formazione dei tester per l'esecuzione di attività nelle prime fasi del SDLC supporterebbe un approccio shift-left, sottolineando l'importanza di iniziare il testing nelle prime fasi del SDLC. Tuttavia, l'automazione di un maggior numero di attività di test da eseguire successivamente nel SDLC non è parte di un approccio \"shift-left\""
+    },
+    "ambiguous": false,
+    "learning_objective": "FL-2.1.5",
+    "k_level": "K2",
+    "points": 1
+  },
+  {
+    "question_pdf": "ITASTQB-QTEST-FL-2023-C.pdf",
+    "question_page": 9,
+    "question_number": "12",
+    "question_text": "Quale dei seguenti è MENO probabile che si verifichi come risultato di una retrospettiva?",
+    "question_option": {
+      "a": "La qualità dei futuri oggetti di test migliora grazie all'identificazione di miglioramenti nelle pratiche di sviluppo",
+      "b": "L'efficienza dei test migliora grazie a una configurazione più veloce degli ambienti di test attraverso l'automazione",
+      "c": "La comprensione dei processi di sviluppo e di test da parte degli utenti finali viene migliorata",
+      "d": "I test script automatizzati vengono migliorati grazie al feedback degli sviluppatori"
+    },
+    "answer_pdf": "ITASTQB-QTEST-FL-2023-C-SOL.pdf",
+    "answer_page": 19,
+    "answer_option": "c",
+    "answer_option_text": {
+      "c": "È corretta. I partecipanti alle retrospettive includono tipicamente tester, sviluppatori, architetti, product owner e business analyst, ma gli utenti finali sono raramente invitati o raramente partecipano a questi meeting - ed è altrettanto improbabile che ricevano alcun tipo di report da questi meeting. Pertanto, è molto improbabile che imparino e capiscano di più sui processi di sviluppo e di test attraverso le retrospettive"
+    },
+    "no_answer_option_text": {
+      "a": "Non è corretta. Uno degli scopi delle retrospettive è di identificare potenziali miglioramenti del processo che, se messi in pratica, dovrebbero portare a un aumento della qualità dei futuri risultati del processo di sviluppo (oggetti di test). Quindi, è probabile che questo si verifichi come risultato di una retrospettiva",
+      "b": "Non è corretta. Uno dei vantaggi delle retrospettive per il testing è l'aumento dell'efficienza dei test attraverso i miglioramenti del processo. Quindi, è probabile che questo si verifichi come risultato di una retrospettiva",
+      "d": "Non è corretta. Uno dei benefici delle retrospettive per il testing include il miglioramento della qualità del testware (compresi i test script automatizzati) grazie alle review congiunte con gli sviluppatori. Quindi, è probabile che questo avvenga come risultato di una retrospettiva"
+    },
+    "ambiguous": false,
+    "learning_objective": "FL-2.1.6",
+    "k_level": "K2",
+    "points": 1
+  },
+  {
+    "question_pdf": "ITASTQB-QTEST-FL-2023-C.pdf",
+    "question_page": 9,
+    "question_number": "13",
+    "question_text": "Quale dei seguenti livelli di test è PIÙ probabile che venga svolto se il testing è focalizzato sulla validazione, e che non venga eseguito dai tester?",
+    "question_option": {
+      "a": "Testing di componente",
+      "b": "Testing di integrazione dei componenti",
+      "c": "Testing di integrazione dei sistemi",
+      "d": "Testing di accettazione"
+    },
+    "answer_pdf": "ITASTQB-QTEST-FL-2023-C-SOL.pdf",
+    "answer_page": 20,
+    "answer_option": "d",
+    "answer_option_text": {
+      "d": "È corretta. Il testing di accettazione si focalizza sul validare che il sistema soddisfi le esigenze di business dell'utente e sia pronto per il rilascio. Generalmente, questo testing viene svolto dagli utenti finali"
+    },
+    "no_answer_option_text": {
+      "a": "Non è corretta. Il testing di componente (chiamato anche unit testing) comporta il testing di singoli componenti ed è per lo più una verifica rispetto a una specifica, piuttosto che una validazione rispetto alle esigenze dell'utente. Questo testing non viene normalmente eseguito dai tester, poiché gli sviluppatori di solito lo eseguono nel loro ambiente di sviluppo",
+      "b": "Non è corretta. Il testing di integrazione dei componenti comporta il testing delle interfacce e delle interazioni tra i componenti ed è per lo più una verifica rispetto a una specifica, piuttosto che una validazione rispetto alle esigenze dell'utente. Questo testing non viene normalmente eseguito dai tester, in quanto di solito lo eseguono gli sviluppatori",
+      "c": "Non è corretta. Il testing di integrazione dei sistemi esamina le interfacce con altri sistemi e servizi esterni ed è per lo più una verifica rispetto a una specifica, piuttosto che una validazione rispetto alle esigenze dell'utente. Questo testing viene di solito eseguito dai tester"
+    },
+    "ambiguous": false,
+    "learning_objective": "FL-2.2.1",
+    "k_level": "K2",
+    "points": 1
+  },
+  {
+    "question_pdf": "ITASTQB-QTEST-FL-2023-C.pdf",
+    "question_page": 9,
+    "question_number": "14",
+    "question_text": "Il software di un sistema di navigazione è stato aggiornato a causa di suggerimenti di percorsi che violano il codice della strada, come ad esempio guidare contromano in strade a senso unico.\nQuale delle seguenti risposte descrive MEGLIO il testing che verrà eseguito?",
+    "question_option": {
+      "a": "Solo testing confermativo",
+      "b": "Testing confermativo, seguito da regression testing",
+      "c": "Solo regression testing",
+      "d": "Regression testing, seguito da testing confermativo"
+    },
+    "answer_pdf": "ITASTQB-QTEST-FL-2023-C-SOL.pdf",
+    "answer_page": 21,
+    "answer_option": "b",
+    "answer_option_text": {
+      "b": "È corretta. Il testing confermativo verificherà che gli aggiornamenti abbiano portato a un'implementazione corretta, e quindi il regression testing verrà utilizzato per garantire che non siano stati introdotti o scoperti difetti in aree del sistema non modificate"
+    },
+    "no_answer_option_text": {
+      "a": "Non è corretta. È necessario eseguire il testing confermativo per verificare che gli aggiornamenti abbiano portato a un'implementazione corretta; tuttavia, sarebbe opportuno eseguire successivamente il regression testing per garantire che non siano stati introdotti o scoperti difetti in aree del sistema non modificate",
+      "c": "Non è corretta. Il regression testing dovrebbe essere utilizzato per garantire che non siano stati introdotti o scoperti difetti nelle aree del sistema non modificate al momento dell'aggiornamento. Tuttavia, è anche necessario eseguire il testing confermativo per verificare che gli aggiornamenti abbiano portato a un'implementazione corretta",
+      "d": "Non è corretta. Il testing confermativo verificherà che gli aggiornamenti abbiano portato a un'implementazione corretta, mentre il regression testing servirà a garantire che non siano stati introdotti o scoperti difetti in aree del sistema non modificate. Tuttavia, quando viene eseguito (cioè quando è necessario testare un aggiornamento), il testing confermativo precede il regression testing"
+    },
+    "ambiguous": false,
+    "learning_objective": "FL-2.2.3",
+    "k_level": "K2",
+    "points": 1
+  },
+  {
+    "question_pdf": "ITASTQB-QTEST-FL-2023-C.pdf",
+    "question_page": 10,
+    "question_number": "15",
+    "question_text": "Dati i seguenti esempi di difetti:\ni. Due parti differenti della specifica di progetto sono inconsistenti tra loro a causa della complessità del progetto\nii. Un tempo di risposta troppo lungo fa perdere la pazienza agli utenti\niii. Un percorso nel codice non può essere raggiunto durante l'esecuzione\niv. Una variabile viene dichiarata ma non viene mai utilizzata successivamente nel programma\nv. La quantità di memoria necessaria al programma per generare un report è troppo elevata\nQuale delle seguenti risposte identifica MEGLIO i difetti che potrebbero essere rilevati con il testing statico (piuttosto che con il testing dinamico)?",
+    "question_option": {
+      "a": "ii, v",
+      "b": "iii, v",
+      "c": "i, ii, iv",
+      "d": "i, iii, iv"
+    },
+    "answer_pdf": "ITASTQB-QTEST-FL-2023-C-SOL.pdf",
+    "answer_page": 22,
+    "answer_option": "d",
+    "answer_option_text": {
+      "d": "È corretta. L'abbinamento corretto per il testing statico è i, iii e iv"
+    },
+    "no_answer_option_text": {
+      "a": "Non è corretta",
+      "b": "Non è corretta",
+      "c": "Non è corretta"
+    },
+    "ambiguous": false,
+    "learning_objective": "FL-3.1.3",
+    "k_level": "K2",
+    "points": 1
+  },
+  {
+    "question_pdf": "ITASTQB-QTEST-FL-2023-C.pdf",
+    "question_page": 10,
+    "question_number": "16",
+    "question_text": "Quale dei seguenti è un vantaggio del feedback anticipato e frequente degli stakeholder?",
+    "question_option": {
+      "a": "Le modifiche ai requisiti vengono comprese e implementate prima",
+      "b": "Assicura che gli stakeholder di business comprendano i requisiti degli utenti",
+      "c": "Consente ai product owner di modificare i loro requisiti tutte le volte che lo desiderano",
+      "d": "Agli utenti finali viene comunicato quali requisiti non saranno implementati prima del rilascio"
+    },
+    "answer_pdf": "ITASTQB-QTEST-FL-2023-C-SOL.pdf",
+    "answer_page": 24,
+    "answer_option": "a",
+    "answer_option_text": {
+      "a": "È corretta. Ottenere un feedback anticipato e frequente dagli stakeholder nel processo di sviluppo del software può essere molto vantaggioso. Facilita la comunicazione anticipata di potenziali problemi di qualità, può prevenire incomprensioni sui requisiti e assicura che qualsiasi modifica nei requisiti degli stakeholder sia compresa e implementata prima"
+    },
+    "no_answer_option_text": {
+      "b": "Non è corretta. Il feedback proviene dagli stakeholder, ed è improbabile che il loro feedback migliori la comprensione dei propri requisiti degli utenti",
+      "c": "Non è corretta. Ottenere un feedback anticipato e frequente degli stakeholder nel processo dello sviluppo software può essere molto vantaggioso. Facilita la comunicazione anticipata di potenziali problemi di qualità, può prevenire incomprensioni sui requisiti e assicura che qualsiasi modifica nei requisiti degli stakeholder sia compresa e implementata prima. Tuttavia, il fatto che le modifiche ai requisiti possano essere comprese e implementate prima, non significa che siano incoraggiate modifiche illimitate ai requisiti",
+      "d": "Non è corretta. Il feedback proviene dagli stakeholder e non copre la comunicazione agli utenti finali. Le comunicazioni agli utenti finali potrebbero includere quali requisiti non saranno implementati prima del rilascio, ma idealmente questo non dovrebbe accadere affatto"
+    },
+    "ambiguous": false,
+    "learning_objective": "FL-3.2.1",
+    "k_level": "K1",
+    "points": 1
+  },
+  {
+    "question_pdf": "ITASTQB-QTEST-FL-2023-C.pdf",
+    "question_page": 11,
+    "question_number": "17",
+    "question_text": "Dati i seguenti tipi di review:\n1. Review tecnica\n2. Review informale\n3. Ispezione\n4. Walkthrough\nE le seguenti descrizioni:\nA. Include obiettivi come ottenere il consenso, generare nuove idee e motivare gli autori a migliorare\nB. Include obiettivi come educare i reviewer, ottenere il consenso, generare nuove idee e rilevare potenziali difetti\nC. L'obiettivo principale è rilevare potenziali difetti e richiede la raccolta di metriche supportare il miglioramento del processo\nD. L'obiettivo principale è rilevare potenziali difetti senza generare alcun output formale documentato\nQuale delle seguenti combinazioni abbina MEGLIO i tipi di review alle descrizioni?",
+    "question_option": {
+      "a": "1A, 2B, 3C, 4D",
+      "b": "1A, 2D, 3C, 4B",
+      "c": "1B, 2C, 3D, 4A",
+      "d": "1C, 2D, 3A, 4B"
+    },
+    "answer_pdf": "ITASTQB-QTEST-FL-2023-C-SOL.pdf",
+    "answer_page": 25,
+    "answer_option": "b",
+    "answer_option_text": {
+      "b": "È corretta"
+    },
+    "no_answer_option_text": {
+      "a": "Non è corretta",
+      "c": "Non è corretta",
+      "d": "Non è corretta"
+    },
+    "ambiguous": false,
+    "learning_objective": "FL-3.2.4",
+    "k_level": "K2",
+    "points": 1
+  },
+  {
+    "question_pdf": "ITASTQB-QTEST-FL-2023-C.pdf",
+    "question_page": 11,
+    "question_number": "18",
+    "question_text": "Quale dei seguenti è un fattore che contribuisce al successo di una review?",
+    "question_option": {
+      "a": "Assicurarsi che il management partecipi come reviewer",
+      "b": "Dividere i prodotti di lavoro di grandi dimensioni in parti più piccole",
+      "c": "Definire come obiettivo la valutazione del reviewer",
+      "d": "Pianificare di coprire un documento completo in ogni review"
+    },
+    "answer_pdf": "ITASTQB-QTEST-FL-2023-C-SOL.pdf",
+    "answer_page": 26,
+    "answer_option": "b",
+    "answer_option_text": {
+      "b": "È corretta. Per garantire il successo delle review, è importante suddividere un prodotto di lavoro di grandi dimensioni in parti sufficientemente piccole da poter essere sottoposte a review in tempi ragionevoli, per prevenire che i reviewer perdano il focus durante le review individuali o i review meeting"
+    },
+    "no_answer_option_text": {
+      "a": "Non è corretta. Per garantire il successo delle review, è importante assicurarsi il supporto del management per il processo di review, ma questo non significa che dovrebbe partecipare come reviewer",
+      "c": "Non è corretta. Per garantire il successo delle review, è importante definire chiaramente obiettivi e criteri di uscita misurabili, senza valutare i partecipanti",
+      "d": "Non è corretta. Per garantire il successo delle review, è importante suddividere la review di documenti di grandi dimensioni in parti più piccole, per evitare che i reviewer perdano il focus durante la review individuale o i review meeting. Pertanto, non si dovrebbe sempre pianificare di coprire un documento completo in ogni review"
+    },
+    "ambiguous": false,
+    "learning_objective": "FL-3.2.5",
+    "k_level": "K1",
+    "points": 1
+  },
+  {
+    "question_pdf": "ITASTQB-QTEST-FL-2023-C.pdf",
+    "question_page": 11,
+    "question_number": "19",
+    "question_text": "Qual è la differenza PRINCIPALE tra le tecniche di test black-box e le tecniche di test basate sull'esperienza?",
+    "question_option": {
+      "a": "L'oggetto di test",
+      "b": "Il livello di test in cui viene utilizzata la tecnica di test",
+      "c": "La base di test",
+      "d": "Il ciclo di vita dello sviluppo software in cui può essere utilizzata la tecnica di test"
+    },
+    "answer_pdf": "ITASTQB-QTEST-FL-2023-C-SOL.pdf",
+    "answer_page": 27,
+    "answer_option": "c",
+    "answer_option_text": {
+      "c": "È corretta. Le tecniche di test black-box (note anche come tecniche basate sulle specifiche) si basano sull'analisi del comportamento dell'oggetto di test senza fare riferimento alla sua struttura interna. Pertanto, la base di test è generalmente una specifica. Le tecniche di test basate sull'esperienza utilizzano efficacemente la conoscenza e l'esperienza dei tester per la progettazione e l'implementazione dei test case. Questo significa che il tester, quando progetta i test, può non utilizzare le specifiche"
+    },
+    "no_answer_option_text": {
+      "a": "Non è corretta. Nella maggior parte dei casi, per gli stessi oggetti di test possono essere utilizzate sia tecniche di test black-box sia tecniche di test basate sull'esperienza",
+      "b": "Non è corretta. Sia le tecniche di test black-box sia le tecniche di test basate sull'esperienza possono essere utilizzate a tutti i livelli di test",
+      "d": "Non è corretta. Le tecniche di test basate sull'esperienza possono rilevare difetti che potrebbero non essere rilevati utilizzando le tecniche di test black-box (e white-box). Pertanto, le tecniche di test basate sull'esperienza sono complementari alle tecniche di test black-box e alle tecniche di test white-box, che possono essere entrambe utilizzate in tutti i cicli di vita dello sviluppo software"
+    },
+    "ambiguous": false,
+    "learning_objective": "FL-4.1.1",
+    "k_level": "K2",
+    "points": 1
+  },
+  {
+    "question_pdf": "ITASTQB-QTEST-FL-2023-C.pdf",
+    "question_page": 12,
+    "question_number": "20",
+    "question_text": "State eseguendo il testing di un sistema di validazione di PIN, che accetta PIN validi e rifiuta PIN invalidi.\nUn PIN è una sequenza di cifre. Un PIN è valido se è composto da quattro cifre, di cui almeno due differenti.\nQuale dei seguenti è un insieme MINIMO di dati di input dei test che copre tutte le partizioni di equivalenza per questo scenario?",
+    "question_option": {
+      "a": "112, 1111, 1234, 123456",
+      "b": "1, 123, 1111, 1234",
+      "c": "12, 112, 1112, 11112",
+      "d": "1, 111, 1111, 11111"
+    },
+    "answer_pdf": "ITASTQB-QTEST-FL-2023-C-SOL.pdf",
+    "answer_page": 28,
+    "answer_option": "a",
+    "answer_option_text": {
+      "a": "È corretta. 112 copre D2, L1, G2; 1111 copre D1, L2, G2; 1234 copre D2, L2, G2, 123456 copre D2, L3, G2. Questi tre valori raggiungono la copertura completa delle partizioni di equivalenza, ed evitano il mascheramento dei difetti"
+    },
+    "no_answer_option_text": {
+      "b": "Non è corretta. 1 copre D1, L1, G2; 123 copre D2, L1, G2; 1111 copre D1, L2, G2, 12345 copre D2, L2, G1",
+      "c": "Non è corretta. Non copre D1. 12 copre D2, L1, G2; 112 copre D2, L1, G2; 1112 copre D2, L2, G1, 11112 copre D2, L3, G2",
+      "d": "Non è corretta. Non copre D2 (e G1). 1 copre D1, L1, G2; 111 copre D1, L1, G2; 1111 copre D1, L2, G2, 11111 copre D1, L3, G2"
+    },
+    "ambiguous": false,
+    "learning_objective": "FL-4.2.1",
+    "k_level": "K3",
+    "points": 1
+  },
+  {
+    "question_pdf": "ITASTQB-QTEST-FL-2023-C.pdf",
+    "question_page": 12,
+    "question_number": "21",
+    "question_text": "Uno sviluppatore è stato ingaggiato per implementare la seguente regola di business:\nINPUT: valore (numero intero)\nIF (valore $\\le100$ OR valore $\\ge200$) THEN scrivere \"valore non corretto\"\nELSE scrivere \"valore OK\"\nCome tester, progettate i test case utilizzando l'analisi ai valori limite a 2 valori.\nQuale dei seguenti insiemi di input dei test raggiunge la copertura maggiore?",
+    "question_option": {
+      "a": "100, 150, 200, 201",
+      "b": "99, 100, 200, 201",
+      "c": "98, 99, 100, 101",
+      "d": "101, 150, 199, 200"
+    },
+    "answer_pdf": "ITASTQB-QTEST-FL-2023-C-SOL.pdf",
+    "answer_page": 29,
+    "answer_option": "d",
+    "answer_option_text": {
+      "d": "È corretta. 101, 199 e 200 sono elementi di copertura validi per BVA a 2 valori, quindi si ottiene una copertura del 75%"
+    },
+    "no_answer_option_text": {
+      "a": "Non è corretta. Solo 100 e 200 sono elementi di copertura validi per BVA a 2 valori, quindi si ottiene una copertura del 50%",
+      "b": "Non è corretta. Solo 100 e 200 sono elementi di copertura validi per BVA a 2 valori, quindi si ottiene una copertura del 50%",
+      "c": "Non è corretta. Solo 100 e 101 sono elementi di copertura validi per BVA a 2 valori, quindi si ottiene una copertura del 50%"
+    },
+    "ambiguous": false,
+    "learning_objective": "FL-4.2.2",
+    "k_level": "K3",
+    "points": 1
+  },
+  {
+    "question_pdf": "ITASTQB-QTEST-FL-2023-C.pdf",
+    "question_page": 13,
+    "question_number": "22",
+    "question_text": "State lavorando in un progetto per lo sviluppo di un sistema di analisi dei risultati degli esami di guida.\nVi è stato chiesto di progettare i test case in base alla seguente tabella delle decisioni:\n\n\"R1 \",\"R2 \",\"R3 \"\n\"C1: Primo tentativo di esame? \",,,\"F \"\n\"C2: Esame teorico superato? \",\"T \",\"F \",\n\"C3: Esame pratico superato? \",\"T \",,\"F \"\n\"Rilasciare una patente di guida? \",\"X \",,\n\"Richiedere ulteriori lezioni di guida? \",,,\"X \"\n\"Richiedere di ripetere l'esame? \",,\"X \",\n\nQuali dati di test dimostreranno l'esistenza di regole contraddittorie in questa tabella delle decisioni?",
+    "question_option": {
+      "a": "$C1=T$, $C2=T$, $C3=F$",
+      "b": "$C1=T$ $C2=F$ $C3=T$",
+      "c": "$C1=T$, $C2=T$ $C3=T~e~C1=F$, $C2=T$, $C3=T$",
+      "d": "$C1=F$, $C2=F$, $C3=F$"
+    },
+    "answer_pdf": "ITASTQB-QTEST-FL-2023-C-SOL.pdf",
+    "answer_page": 30,
+    "answer_option": "d",
+    "answer_option_text": {
+      "d": "È corretta. La combinazione (F, F, F) corrisponde sia a R2 che a R3, ma R2 e R3 hanno azioni diverse, quindi evidenzia una contraddizione tra R2 e R3"
+    },
+    "no_answer_option_text": {
+      "a": "Non è corretta. La combinazione (T, T, F) non corrisponde a nessuna regola. Questo è un esempio di omissione, non di contraddizione",
+      "b": "Non è corretta. La combinazione (T, F, T) corrisponde a una sola colonna, R2, quindi non esiste contraddizione",
+      "c": "Non è corretta. Entrambe le combinazioni (T, T, T) e (F, T, T) corrispondono a una sola colonna, R1, quindi non esiste contraddizione"
+    },
+    "ambiguous": false,
+    "learning_objective": "FL-4.2.3",
+    "k_level": "K3",
+    "points": 1
+  },
+  {
+    "question_pdf": "ITASTQB-QTEST-FL-2023-C.pdf",
+    "question_page": 14,
+    "question_number": "23",
+    "question_text": "State progettando i test case in base al seguente state transition diagram:\nQual è il numero MINIMO di test case necessari per ottenere il 100% di copertura delle transizioni valide?",
+    "question_option": {
+      "a": "3",
+      "b": "2",
+      "c": "5",
+      "d": "6"
+    },
+    "answer_pdf": "ITASTQB-QTEST-FL-2023-C-SOL.pdf",
+    "answer_page": 31,
+    "answer_option": "a",
+    "answer_option_text": {
+      "a": "È corretta"
+    },
+    "no_answer_option_text": {
+      "b": "Non è corretta",
+      "c": "Non è corretta",
+      "d": "Non è corretta"
+    },
+    "ambiguous": false,
+    "learning_objective": "FL-4.2.4",
+    "k_level": "K3",
+    "points": 1
+  },
+  {
+    "question_pdf": "ITASTQB-QTEST-FL-2023-C.pdf",
+    "question_page": 15,
+    "question_number": "24",
+    "question_text": "Volete applicare il testing dei rami al codice rappresentato dal seguente grafico del flusso di controllo:\nQuanti elementi di copertura è necessario testare?",
+    "question_option": {
+      "a": "2",
+      "b": "4",
+      "c": "8",
+      "d": "7"
+    },
+    "answer_pdf": "ITASTQB-QTEST-FL-2023-C-SOL.pdf",
+    "answer_page": 32,
+    "answer_option": "c",
+    "answer_option_text": {
+      "c": "È corretta"
+    },
+    "no_answer_option_text": {
+      "a": "Non è corretta",
+      "b": "Non è corretta",
+      "d": "Non è corretta"
+    },
+    "ambiguous": false,
+    "learning_objective": "FL-4.3.2",
+    "k_level": "K2",
+    "points": 1
+  },
+  {
+    "question_pdf": "ITASTQB-QTEST-FL-2023-C.pdf",
+    "question_page": 15,
+    "question_number": "25",
+    "question_text": "In che modo il testing white-box può essere utile a supporto del testing black-box?",
+    "question_option": {
+      "a": "Le misure di copertura white-box possono aiutare i tester a valutare i test black-box in termini di copertura del codice ottenuta da questi test black-box",
+      "b": "L'analisi di copertura white-box può aiutare i tester a identificare il codice sorgente non raggiungibile",
+      "c": "Il testing dei rami comprende le tecniche di test black-box; quindi, il raggiungimento della copertura completa dei rami garantisce il raggiungimento della copertura completa di qualsiasi tecnica black-box",
+      "d": "Le tecniche di test white-box possono fornire elementi di copertura per le tecniche black- box"
+    },
+    "answer_pdf": "ITASTQB-QTEST-FL-2023-C-SOL.pdf",
+    "answer_page": 32,
+    "answer_option": "a",
+    "answer_option_text": {
+      "a": "È corretta. L'esecuzione del solo testing black-box non fornisce una misura dell'effettiva copertura del codice. Le misure di copertura white-box forniscono una misura oggettiva della copertura e forniscono le informazioni necessarie per consentire la generazione di test aggiuntivi per aumentare questa copertura e, di conseguenza, aumentare la fiducia nel codice"
+    },
+    "no_answer_option_text": {
+      "b": "Non è corretta. Questa affermazione è falsa e non ha nulla a che fare con il testing black-box",
+      "c": "Non è corretta. In generale, non esistono relazioni di sussunzione tra tecniche white-box e tecniche black-box",
+      "d": "Non è corretta. Le tecniche white-box vengono utilizzate per progettare i test basati sull'oggetto di test, mentre le tecniche black-box vengono utilizzate per progettare i test basati sulle specifiche. Pertanto, non esiste alcuna relazione tra gli elementi di copertura derivati da questi due tipi di tecniche"
+    },
+    "ambiguous": false,
+    "learning_objective": "FL-4.3.3",
+    "k_level": "K2",
+    "points": 1
+  },
+  {
+    "question_pdf": "ITASTQB-QTEST-FL-2023-C.pdf",
+    "question_page": 16,
+    "question_number": "26",
+    "question_text": "Considerate il seguente elenco:\nInput corretto non accettato\nInput non corretto accettato\nFormato di output errato\nDivisione per zero\nQuale tecnica di test viene PIÙ PROBABILMENTE utilizzata dal tester che utilizza questo elenco durante l'esecuzione dei test?",
+    "question_option": {
+      "a": "Testing esplorativo",
+      "b": "Fault attack",
+      "c": "Testing checklist-based",
+      "d": "Analisi ai valori limite"
+    },
+    "answer_pdf": "ITASTQB-QTEST-FL-2023-C-SOL.pdf",
+    "answer_page": 33,
+    "answer_option": "b",
+    "answer_option_text": {
+      "b": "È corretta. Si tratta di una lista di possibili failure. Il fault attack è un approccio metodico all'implementazione dell'error guessing e richiede che il tester crei o acquisisca una lista di possibili errori, difetti e failure, e che progetti i test che identifichino i difetti associati agli errori, espongano i difetti o causino i failure"
+    },
+    "no_answer_option_text": {
+      "a": "Non è corretta. Il testing esplorativo utilizza i test charter, non una lista di possibili difetti/failure. Sebbene il testing esplorativo possa incorporare l'uso di altre tecniche di test, in questo caso il fault attack è l'opzione più probabile",
+      "c": "Non è corretta. Il tester sta usando una checklist di elementi per supportare il proprio testing. Sia l'error guessing che il testing checklist-based utilizzano tali liste, ma in questo caso è una lista di possibili failure, non di condizioni di test, e quindi la tecnica di test PIÙ PROBABILE è il fault attack, che si focalizza su errori, difetti e failure",
+      "d": "Non è corretta. L'analisi ai valori limite si basa sull'analisi dei limiti delle partizioni di equivalenza. La lista precedente non menziona le partizioni di equivalenza o i loro limiti"
+    },
+    "ambiguous": false,
+    "learning_objective": "FL-4.4.1",
+    "k_level": "K2",
+    "points": 1
+  },
+  {
+    "question_pdf": "ITASTQB-QTEST-FL-2023-C.pdf",
+    "question_page": 16,
+    "question_number": "27",
+    "question_text": "Quale delle seguenti descrive MEGLIO il modo in cui il testing checklist-based può portare a una maggiore copertura?",
+    "question_option": {
+      "a": "Gli elementi della checklist possono essere definiti a un livello di dettaglio sufficientemente basso, in modo che il tester possa implementare ed eseguire test case dettagliati basati su questi elementi",
+      "b": "Le checklist possono essere automatizzate, quindi ogni volta che l'esecuzione di un test automatizzato copre gli elementi della checklist, si ottiene una copertura aggiuntiva",
+      "c": "Ogni elemento della checklist dovrebbe essere testato separatamente e indipendentemente, in modo che gli elementi coprano aree diverse del software",
+      "d": "Due tester che progettano ed eseguono test basati sugli stessi elementi di una checklist di alto livello, in genere eseguiranno il testing in modo leggermente diverso, con una copertura potenzialmente maggiore ma una minore ripetibilità"
+    },
+    "answer_pdf": "ITASTQB-QTEST-FL-2023-C-SOL.pdf",
+    "answer_page": 34,
+    "answer_option": "d",
+    "answer_option_text": {
+      "d": "È corretta. Se le checklist sono di alto livello, è probabile che si verifichi una certa variabilità nel testing effettivo, con conseguente copertura potenzialmente maggiore ma minore ripetibilità. Se due tester seguono una checklist di elementi di alto livello, ognuno di questi può utilizzare diversi dati di test, passi del test ecc. In questo modo, un tester probabilmente coprirà alcune aree non coperte dall'altro tester e questo risulterà in una maggiore copertura"
+    },
+    "no_answer_option_text": {
+      "a": "Non è corretta. Sebbene sia vero che il tester può implementare ed eseguire test case dettagliati basati su una checklist, non si spiega come questo possa portare a un aumento della copertura",
+      "b": "Non è corretta. Gli elementi della checklist non dovrebbero essere automatizzati. Ma anche se lo sono, i test script automatizzati eseguono i test sempre nello stesso modo, che generalmente non porta a un aumento della copertura",
+      "c": "Non è corretta. È vero che ogni elemento della checklist dovrebbe essere testato separatamente e in modo indipendente. Ma questo impatta l'ordine di esecuzione dei test e non ha un impatto sulla copertura ottenuta, e quindi non comporta un aumento della copertura"
+    },
+    "ambiguous": false,
+    "learning_objective": "FL-4.4.3",
+    "k_level": "K2",
+    "points": 1
+  },
+  {
+    "question_pdf": "ITASTQB-QTEST-FL-2023-C.pdf",
+    "question_page": 16,
+    "question_number": "28",
+    "question_text": "Quale dei seguenti è il MIGLIOR esempio di criterio di accettazione scenario-oriented?",
+    "question_option": {
+      "a": "L'applicazione deve consentire agli utenti di cancellare il proprio account e tutti i dati associati, quando richiesto",
+      "b": "Quando un cliente aggiunge un articolo al proprio carrello e procede al checkout, dovrebbe essergli richiesto di eseguire la login o di creare un account, se non è ancora stato fatto",
+      "c": "IF (contain(product(23). Name, cart.products())) THEN return FALSE",
+      "d": "Il sito web deve essere conforme agli Standard di accessibilità \"ICT Accessibility 508\" е garantire che tutti i contenuti siano accessibili agli utenti con disabilità"
+    },
+    "answer_pdf": "ITASTQB-QTEST-FL-2023-C-SOL.pdf",
+    "answer_page": 35,
+    "answer_option": "b",
+    "answer_option_text": {
+      "b": "È corretta. Questo criterio di accettazione descrive un esempio di scenario che deve essere realizzabile dal sistema. Questo è un esempio di criterio di accettazione scenario-oriented"
+    },
+    "no_answer_option_text": {
+      "a": "Non è corretta. Questo criterio di accettazione descrive a quali regole o normative il sistema deve aderire (in questo caso, il diritto alla cancellazione). Questo è un esempio di un criterio di accettazione rule-oriented",
+      "c": "Non è corretta. Questa sequenza assomiglia a una linea di codice che implementa una regola di business. I criteri di accettazione dovrebbero essere scritti in collaborazione con i rappresentanti di business, e quindi in un linguaggio a loro comprensibile. Questa frase sarà molto probabilmente incomprensibile per questi stakeholder",
+      "d": "Non è corretta. Questo criterio di accettazione descrive quali sono le regole o le normative a cui il sistema deve aderire e come viene garantita la conformità. Pertanto, questo è un esempio di criterio di accettazione rule-oriented, non di un criterio di accettazione scenario-oriented"
+    },
+    "ambiguous": false,
+    "learning_objective": "FL-4.5.2",
+    "k_level": "K2",
+    "points": 1
+  },
+  {
+    "question_pdf": "ITASTQB-QTEST-FL-2023-C.pdf",
+    "question_page": 17,
+    "question_number": "29",
+    "question_text": "State applicando acceptance test-driven development e state progettando i test case basati in base alla seguente user story:\nCome (As) utente Regolare o Speciale, voglio (I want to) poter utilizzare la mia tessera elettronica di accesso ai piani, per poter (in order to) accedere a piani specifici.\nCriteri di Accettazione:\nAC1: Gli utenti Regolari hanno accesso ai piani da 1 a 3\nAC2: II piano 4 è accessibile solo agli utenti Speciali\nAC3: Gli utenti Speciali hanno tutti i diritti di accesso degli utenti Regolari\nQuale test case è il PIÙ adeguato per testare AC3?",
+    "question_option": {
+      "a": "Verificare che un utente Regolare possa accedere ai piani 1 e 3",
+      "b": "Verificare che un utente Regolare non possa accedere al piano 4",
+      "c": "Verificare che un utente Speciale possa accedere al piano 5",
+      "d": "Verificare che un utente Speciale possa accedere ai piani 1, 2 e 3"
+    },
+    "answer_pdf": "ITASTQB-QTEST-FL-2023-C-SOL.pdf",
+    "answer_page": 36,
+    "answer_option": "d",
+    "answer_option_text": {
+      "d": "È corretta. In questo modo è possibile verificare se un utente Speciale può accedere a piani che sono accessibili a un utente Regolare"
+    },
+    "no_answer_option_text": {
+      "a": "Non è corretta. Vogliamo verificare che gli utenti Speciali abbiano i diritti degli utenti Regolari, quindi dobbiamo testare i diritti di accesso per un utente Speciale, non per un utente Regolare",
+      "b": "Non è corretta. Vogliamo verificare che gli utenti Speciali abbiano i diritti degli utenti Regolari, quindi dobbiamo testare i diritti di accesso per un utente Speciale, non per un utente Regolare",
+      "c": "Non è corretta. Non esiste un piano 5 descritto nei criteri di accettazione. I test case non dovrebbero estendere l'ambito della user story. Ma anche se volessimo eseguire un testing negativo, questo test non sarebbe direttamente correlato a AC3"
+    },
+    "ambiguous": false,
+    "learning_objective": "FL-4.5.3",
+    "k_level": "K3",
+    "points": 1
+  },
+  {
+    "question_pdf": "ITASTQB-QTEST-FL-2023-C.pdf",
+    "question_page": 17,
+    "question_number": "30",
+    "question_text": "Quale dei seguenti NON è un obiettivo di un test plan?",
+    "question_option": {
+      "a": "Definire i dati di test e i risultati attesi per i test di componente e per i test di integrazione dei componenti",
+      "b": "Definire il criterio di uscita del livello di test di componente: \"deve essere raggiunto il 100% di copertura delle istruzioni e il 100% di copertura dei rami\"",
+      "c": "Descrivere quali campi dovrà contenere il test progress report e quale dovrebbe essere il formato di questo report",
+      "d": "Spiegare perché il testing di integrazione dei sistemi sarà escluso dal testing, sebbene la strategia di test richieda questo livello di test"
+    },
+    "answer_pdf": "ITASTQB-QTEST-FL-2023-C-SOL.pdf",
+    "answer_page": 37,
+    "answer_option": "a",
+    "answer_option_text": {
+      "a": "È corretta. Il test plan può includere i requisiti dei dati di test (come parte dell'approccio del test), ma non i dati di test dettagliati per i test case. I dati di test sono parte dei test case, non del test plan. Inoltre, è normalmente impossibile definire tali dati al momento della creazione del test plan, perché non si conosce esattamente l'aspetto dei componenti"
+    },
+    "no_answer_option_text": {
+      "b": "Non è corretta. Uno degli scopi di un test plan è aiutare a garantire che le attività di test eseguite soddisfino i criteri stabiliti, includendo i criteri di ingresso e i criteri di uscita. I criteri di copertura del codice sono un esempio di criteri di questo tipo per il livello di test di componente",
+      "c": "Non è corretta. I template della documentazione sono il contenuto tipico di un test plan. Questo aiuta a facilitare la comunicazione tra gli stakeholder, definendo un modo standard di comunicare o di fare reporting",
+      "d": "Non è corretta. Uno degli scopi di un test plan è dimostrare che il testing aderirà alla politica di test e alla strategia di test esistenti, oppure spiegare perché il testing devierà da questi. Questo è un esempio di spiegazione della deviazione, relativamente ai livelli di test che saranno (o non saranno) seguiti"
+    },
+    "ambiguous": false,
+    "learning_objective": "FL-5.1.1",
+    "k_level": "K2",
+    "points": 1
+  },
+  {
+    "question_pdf": "ITASTQB-QTEST-FL-2023-C.pdf",
+    "question_page": 18,
+    "question_number": "31",
+    "question_text": "All'inizio di ogni iterazione, il team stima la quantità di lavoro (in giorni-persona) che dovrà essere completata durante l'iterazione.\n$E(n)$ è la quantità di lavoro stimata per l'iterazione n, e $A(n)$ è la quantità effettiva di lavoro svolto nell'iterazione Dalla terza iterazione, il team utilizza il seguente modello di stima basato sull'estrapolazione:\n$E(n)=\\frac{3*A(n-1)+A(n-2)}{4}$\nII grafico mostra la quantità di lavoro stimata e la quantità di lavoro effettiva per le prime quattro iterazioni:\nQual è la quantità di lavoro stimata per l'iterazione #5?",
+    "question_option": {
+      "a": "10,5 giorni-persona",
+      "b": "8,25 giorni-persona",
+      "c": "6,5 giorni-persona",
+      "d": "9,4 giorni-persona"
+    },
+    "answer_pdf": "ITASTQB-QTEST-FL-2023-C-SOL.pdf",
+    "answer_page": 38,
+    "answer_option": "c",
+    "answer_option_text": {
+      "c": "È corretta"
+    },
+    "no_answer_option_text": {
+      "a": "Non è corretta",
+      "b": "Non è corretta",
+      "d": "Non è corretta"
+    },
+    "ambiguous": false,
+    "learning_objective": "FL-5.1.4",
+    "k_level": "K3",
+    "points": 1
+  },
+  {
+    "question_pdf": "ITASTQB-QTEST-FL-2023-C.pdf",
+    "question_page": 19,
+    "question_number": "32",
+    "question_text": "State preparando una schedulazione di esecuzione dei test per l'esecuzione di sette test case, daTC1 a TC7.\nLa figura seguente riporta le priorità di questi test case ( $1=$ priorità massima, $3=$ priorità minima) e le dipendenze tra i test case attraverso le frecce.\nAd esempio, la freccia da TC4 a TC5 significa che TC5 può essere eseguito solo se TC4 è stato precedentemente eseguito.\nQuale test case dovrebbe essere eseguito per sesto?",
+    "question_option": {
+      "a": "TC3",
+      "b": "TC5",
+      "c": "TC6",
+      "d": "TC2"
+    },
+    "answer_pdf": "ITASTQB-QTEST-FL-2023-C-SOL.pdf",
+    "answer_page": 39,
+    "answer_option": "a",
+    "answer_option_text": {
+      "a": "È corretta"
+    },
+    "no_answer_option_text": {
+      "b": "Non è corretta",
+      "c": "Non è corretta",
+      "d": "Non è corretta"
+    },
+    "ambiguous": false,
+    "learning_objective": "FL-5.1.5",
+    "k_level": "K3",
+    "points": 1
+  },
+  {
+    "question_pdf": "ITASTQB-QTEST-FL-2023-C.pdf",
+    "question_page": 19,
+    "question_number": "33",
+    "question_text": "Cosa descrive il modello della piramide di test?",
+    "question_option": {
+      "a": "I test possono avere differenti priorità",
+      "b": "I test possono avere differenti granularità",
+      "c": "I test possono richiedere differenti criteri di copertura",
+      "d": "I test possono dipendere da altri test"
+    },
+    "answer_pdf": "ITASTQB-QTEST-FL-2023-C-SOL.pdf",
+    "answer_page": 39,
+    "answer_option": "b",
+    "answer_option_text": {
+      "b": "È corretta. Il modello della piramide di test mostra che test differenti hanno diversi livelli di granularità"
+    },
+    "no_answer_option_text": {
+      "a": "Non è corretta. Il modello della piramide di test non fornisce informazioni sulle priorità dei test",
+      "c": "Non è corretta. Il modello della piramide di test è indipendente dai criteri di copertura",
+      "d": "Non è corretta. Il modello della piramide di test non mostra alcuna relazione tra test differenti"
+    },
+    "ambiguous": false,
+    "learning_objective": "FL-5.1.6",
+    "k_level": "K1",
+    "points": 1
+  },
+  {
+    "question_pdf": "ITASTQB-QTEST-FL-2023-C.pdf",
+    "question_page": 19,
+    "question_number": "34",
+    "question_text": "Qual è la relazione tra quadranti del testing, livelli di test e tipi di test?",
+    "question_option": {
+      "a": "I quadranti del testing rappresentano particolari combinazioni di livelli di test e tipi di test, definendo la loro posizione nel ciclo di vita dello sviluppo software",
+      "b": "I quadranti del testing descrivono il grado di granularità dei singoli tipi di test che vengono eseguiti in ogni livello di test",
+      "c": "I quadranti del testing descrivono i tipi di test che possono essere eseguiti ai livelli di test",
+      "d": "I quadranti del testing raggruppano livelli di test e tipi di test in base a diversi criteri, come l'obiettivo per specifici stakeholder"
+    },
+    "answer_pdf": "ITASTQB-QTEST-FL-2023-C-SOL.pdf",
+    "answer_page": 40,
+    "answer_option": "d",
+    "answer_option_text": {
+      "d": "È corretta. I quadranti del testing raggruppano i livelli di test, i tipi di test, le attività, le tecniche di test e i prodotti di lavoro nello sviluppo software Agile. In questo modello, i test possono essere orientati al business o alla tecnologia. I test possono supportare il team (cioè guidare lo sviluppo) o criticare il prodotto (cioè misurare il suo comportamento rispetto alle aspettative). La combinazione di questi due punti di vista determina i quattro quadranti"
+    },
+    "no_answer_option_text": {
+      "a": "Non è corretta. I quadranti del testing raggruppano separatamente i livelli di test e i tipi di test in base a diversi criteri. Non rappresentano alcuna combinazione di livelli di test e tipi di test, e non sono correlati ad alcuna posizione all'interno del ciclo di vita dello sviluppo software. Sia i livelli di test sia i tipi di test sono trattati separatamente nel modello dei quadranti del testing",
+      "b": "Non è corretta. I quadranti del testing raggruppano i livelli di test e i tipi di test in base a diversi criteri. Non descrivono il grado di granularità dei singoli tipi di test eseguiti a ogni livello di test. Un modello di questo tipo, relativo ai livelli di test, è chiamato piramide di test",
+      "c": "Non è corretta. L'affermazione è errata, perché in generale qualsiasi tipo di test può essere eseguito a qualsiasi livello di test"
+    },
+    "ambiguous": false,
+    "learning_objective": "FL-5.1.7",
+    "k_level": "K2",
+    "points": 1
+  },
+  {
+    "question_pdf": "ITASTQB-QTEST-FL-2023-C.pdf",
+    "question_page": 20,
+    "question_number": "35",
+    "question_text": "Quale dei seguenti è un esempio di come l'analisi dei rischi di prodotto possa influenzare l'accuratezza e l'ambito del testing?",
+    "question_option": {
+      "a": "Il monitoraggio continuo dei rischi permette di identificare i rischi emergenti il prima possibile",
+      "b": "L'identificazione del rischio permette di implementare le attività di mitigazione del rischio e di ridurre il livello di rischio",
+      "c": "II livello di rischio valutato aiuta a determinare i livelli di test e le tecniche di test",
+      "d": "L'analisi del rischio permette di derivare gli elementi di copertura"
+    },
+    "answer_pdf": "ITASTQB-QTEST-FL-2023-C-SOL.pdf",
+    "answer_page": 40,
+    "answer_option": "c",
+    "answer_option_text": {
+      "c": "È corretta. Questo è un esempio di come l'analisi del rischio influenzi la completezza e l'ambito del testing"
+    },
+    "no_answer_option_text": {
+      "a": "Non è corretta. Il monitoraggio del rischio è parte del controllo del rischio, non dell'analisi del rischio",
+      "b": "Non è corretta. L'identificazione del rischio non permette di implementare le attività di mitigazione del rischio. Le azioni di mitigazione vengono definite durante la fase di controllo del rischio",
+      "d": "Non è corretta. Gli elementi di copertura vengono derivati utilizzando tecniche di test, non attraverso l'analisi del rischio"
+    },
+    "ambiguous": false,
+    "learning_objective": "FL-5.2.3",
+    "k_level": "K2",
+    "points": 1
+  },
+  {
+    "question_pdf": "ITASTQB-QTEST-FL-2023-C.pdf",
+    "question_page": 20,
+    "question_number": "36",
+    "question_text": "Quale delle seguenti attività nel processo di test utilizza MAGGIORMENTE i test progress report?",
+    "question_option": {
+      "a": "Progettazione dei test",
+      "b": "Completamento dei test",
+      "c": "Analisi dei test",
+      "d": "Pianificazione dei test"
+    },
+    "answer_pdf": "ITASTQB-QTEST-FL-2023-C-SOL.pdf",
+    "answer_page": 41,
+    "answer_option": "b",
+    "answer_option_text": {
+      "b": "È corretta. Un test completion report viene preparato durante il completamento dei test, quando un progetto, un livello di test o un tipo di test è completo e quando, idealmente, i suoi criteri di uscita sono stati soddisfatti. Questo report utilizza le informazioni contenute nei test progress report e altri dati"
+    },
+    "no_answer_option_text": {
+      "a": "Non è corretta. I test progress report vengono utilizzati principalmente durante il monitoraggio e controllo dei test, non durante la progettazione dei test",
+      "c": "Non è corretta. I test progress report sono utilizzati principalmente durante il monitoraggio e controllo dei test, non durante l'analisi dei test",
+      "d": "Non è corretta. I test progress report sono utilizzati principalmente durante il monitoraggio e il controllo dei test, non durante la pianificazione dei test"
+    },
+    "ambiguous": false,
+    "learning_objective": "FL-5.3.2",
+    "k_level": "K2",
+    "points": 1
+  },
+  {
+    "question_pdf": "ITASTQB-QTEST-FL-2023-C.pdf",
+    "question_page": 20,
+    "question_number": "37",
+    "question_text": "Quale dei seguenti NON è un esempio di come il configuration management supporta il testing?",
+    "question_option": {
+      "a": "Tutti gli elementi di documentazione approvati presenti nel repository sono identificati in modo univoco e sottoposti al controllo della versione",
+      "b": "Tutte le modifiche agli elementi dell'ambiente di test vengono tracciate",
+      "c": "Tutte le specifiche dei requisiti sono riferite in modo non ambiguo nei test plan",
+      "d": "Tutti i difetti identificati hanno uno stato assegnato"
+    },
+    "answer_pdf": "ITASTQB-QTEST-FL-2023-C-SOL.pdf",
+    "answer_page": 42,
+    "answer_option": "d",
+    "answer_option_text": {
+      "d": "È corretta. Questo è garantito dal defect management, non dal configuration management"
+    },
+    "no_answer_option_text": {
+      "a": "Non è corretta. Quando un utente segnala un failure del software, grazie all'identificazione univoca degli elementi di documentazione approvati, è possibile ri-assemblare i file della versione del software utilizzata dall'utente (nonché le versioni corrispondenti dei test script) e quindi riprodurre il failure e rilevare il difetto più velocemente",
+      "b": "Non è corretta. Se una modifica all'ambiente di test causa problemi imprevisti durante il testing, il configuration management consente ai tester di eseguire un rollback a una versione precedente dell'ambiente. Questo assicura che il testing possa continuare senza essere influenzato dalla modifica",
+      "c": "Non è corretta. Il configuration management assicura che tutta la documentazione identificata (p.e. le specifiche dei requisiti) e gli elementi del software siano referenziati senza ambiguità nella documentazione di test (p.e.i test plan)"
+    },
+    "ambiguous": false,
+    "learning_objective": "FL-5.4.1",
+    "k_level": "K2",
+    "points": 1
+  },
+  {
+    "question_pdf": "ITASTQB-QTEST-FL-2023-C.pdf",
+    "question_page": 21,
+    "question_number": "38",
+    "question_text": "Si consideri il seguente defect report di un'applicazione web-based di e-commerce:\nApplicazione: WebShop v0.99\nDifetto: Icona di login non funzionante\nPassi per la riproduzione:\n1. Avviare il sito web\n2. Selezionare l'icona di login\nRisultato atteso: L'utente dovrebbe essere reindirizzato alla pagina di login\nRisultato effettivo: L'icona di login non risponde quando viene selezionata\nSeverità: Alta\nPriorità: Urgente\nQual è l'informazione PIÙ importante che manca in questo report?",
+    "question_option": {
+      "a": "Nome del tester e data del report",
+      "b": "Elementi dell'ambiente di test e relativi version number",
+      "c": "Identificazione dell'oggetto di test",
+      "d": "Impatto sugli interessi degli stakeholder"
+    },
+    "answer_pdf": "ITASTQB-QTEST-FL-2023-C-SOL.pdf",
+    "answer_page": 43,
+    "answer_option": "b",
+    "answer_option_text": {
+      "b": "È corretta. L'elemento importante mancante è l'identificazione del browser e del dispositivo utilizzato per il testing. Le informazioni sul browser e sul dispositivo sono importanti perché il difetto può essere specifico del browser o del dispositivo. Ad esempio, un pulsante di login può funzionare bene su un browser (o su una versione di un browser specifico) ma non su un altro. Pertanto, le informazioni sul browser e sul dispositivo possono aiutare gli sviluppatori a riprodurre il problema e a trovarne più rapidamente la root cause"
+    },
+    "no_answer_option_text": {
+      "a": "Non è corretta. Questo è importante, ma non è importante come gli elementi dell'ambiente di test",
+      "c": "Non è corretta. L'oggetto di test è stato identificato (WebShop v0.99)",
+      "d": "Non è corretta. L'impatto è definito come severità (alta)"
+    },
+    "ambiguous": false,
+    "learning_objective": "FL-5.5.1",
+    "k_level": "K3",
+    "points": 1
+  },
+  {
+    "question_pdf": "ITASTQB-QTEST-FL-2023-C.pdf",
+    "question_page": 21,
+    "question_number": "39",
+    "question_text": "Quali strumenti delle seguenti categorie aiutano a organizzare i test case, il configuration management, la tracciabilità con la base di test e i difetti rilevati?",
+    "question_option": {
+      "a": "Strumenti di esecuzione dei test e di copertura",
+      "b": "Strumenti per la progettazione e l'implementazione dei test",
+      "c": "Strumenti di defect management",
+      "d": "Strumenti di test management"
+    },
+    "answer_pdf": "ITASTQB-QTEST-FL-2023-C-SOL.pdf",
+    "answer_page": 44,
+    "answer_option": "d",
+    "answer_option_text": {
+      "d": "È corretta. Gli strumenti di test management aumentano l'efficienza del processo di test facilitando la gestione del ciclo di vita dello sviluppo software, dei requisiti, dei test, della tracciabilità con la base di test, dei difetti e del configuration management"
+    },
+    "no_answer_option_text": {
+      "a": "Non è corretta. Gli strumenti di esecuzione dei test e copertura facilitano l'esecuzione automatizzata dei test case e la misura della copertura ottenuta con l'esecuzione di quei test case. Tuttavia, questi strumenti non supportano l'organizzazione dei difetti e il configuration management",
+      "b": "Non è corretta. Gli strumenti per la progettazione e l'implementazione dei test facilitano la generazione dei test case, dei dati di test e delle procedure di test, ma non supportano l'organizzazione dei difetti, la tracciabilità con la base di test e il configuration management",
+      "c": "Non è corretta. Gli strumenti di defect management vengono utilizzati per gestire i difetti, ma non sono strumenti di test e non vengono utilizzati per organizzare i test case o il configuration management"
+    },
+    "ambiguous": false,
+    "learning_objective": "FL-6.1.1",
+    "k_level": "K2",
+    "points": 1
+  },
+  {
+    "question_pdf": "ITASTQB-QTEST-FL-2023-C.pdf",
+    "question_page": 21,
+    "question_number": "40",
+    "question_text": "Quale dei seguenti è PIU probabile che sia un vantaggio della test automation?",
+    "question_option": {
+      "a": "Capacità di generare test case senza accedere alla base di test",
+      "b": "Ottenere una maggiore copertura attraverso una valutazione più obiettiva",
+      "c": "Aumento dei tempi di esecuzione dei test con una maggiore potenza di elaborazione",
+      "d": "Prevenzione degli errori umani attraverso una maggiore consistenza e ripetibilità"
+    },
+    "answer_pdf": "ITASTQB-QTEST-FL-2023-C-SOL.pdf",
+    "answer_page": 45,
+    "answer_option": "d",
+    "answer_option_text": {
+      "d": "È corretta. \"Prevenzione degli errori umani attraverso una maggiore consistenza e ripetibilità\" è un vantaggio della test automation, poiché la test automation non può essere affetta da errori umani. Ad esempio, significa che i test sono derivati in modo consistente dai requisiti, i dati di test sono creati in modo sistematico e i test sono eseguiti da uno strumento nello stesso ordine e con la stessa frequenza"
+    },
+    "no_answer_option_text": {
+      "a": "Non è corretta. \"Capacità di generare test case senza accedere alla base di test\" non è possibile. La generazione dei test case da parte dei tester o degli strumenti di test richiede l'accesso alla base di test",
+      "b": "Non è corretta. \"Ottenere una maggiore copertura attraverso una valutazione più obiettiva\" non è un beneficio diretto della test automation. La test automation fornirà una valutazione più obiettiva della copertura, ma tale valutazione non aumenterà la copertura. E' possibile aumentare la copertura utilizzando solo i risultati della copertura per scrivere ulteriori test case",
+      "c": "Non è corretta. \"Aumento dei tempi di esecuzione dei test con una maggiore potenza di elaborazione\" è un'affermazione contraddittoria, poiché una maggiore potenza di elaborazione riduce normalmente i tempi di esecuzione, e l'aumento dei tempi di esecuzione non è un vantaggio poiché il testing richiederebbe più tempo"
+    },
+    "ambiguous": false,
+    "learning_objective": "FL-6.2.1",
+    "k_level": "K1",
+    "points": 1
+  }
+]

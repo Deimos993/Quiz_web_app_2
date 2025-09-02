@@ -1,0 +1,117 @@
+[
+  {
+    "question_text": "Quale delle seguenti NON è una caratteristica del testing?",
+    "question_option": [
+      {
+        "option": "A",
+        "option_text": "Il testing può mostrare la presenza di difetti"
+      },
+      {
+        "option": "B", 
+        "option_text": "Il testing può dimostrare l'assenza di difetti"
+      },
+      {
+        "option": "C",
+        "option_text": "Il testing riduce la probabilità che rimangano difetti non scoperti nel software"
+      },
+      {
+        "option": "D",
+        "option_text": "Il testing può fornire informazioni per migliorare la qualità"
+      }
+    ],
+    "answer_option": "B",
+    "answer_option_text": "Il testing può mostrare la presenza di difetti ma non può dimostrare la loro assenza. Questo è uno dei principi fondamentali del testing."
+  },
+  {
+    "question_text": "Quale delle seguenti affermazioni descrive meglio il testing statico?",
+    "question_option": [
+      {
+        "option": "A",
+        "option_text": "Testing che richiede l'esecuzione del codice"
+      },
+      {
+        "option": "B",
+        "option_text": "Testing che non richiede l'esecuzione del codice"
+      },
+      {
+        "option": "C", 
+        "option_text": "Testing eseguito solo su sistemi in produzione"
+      },
+      {
+        "option": "D",
+        "option_text": "Testing eseguito solo da strumenti automatici"
+      }
+    ],
+    "answer_option": "B",
+    "answer_option_text": "Il testing statico è una forma di testing che esamina il codice, la documentazione o altri artefatti senza eseguire il software."
+  },
+  {
+    "question_text": "Cosa significa il termine 'debugging'?",
+    "question_option": [
+      {
+        "option": "A",
+        "option_text": "Trovare difetti nel software"
+      },
+      {
+        "option": "B",
+        "option_text": "Correggere difetti nel software"
+      },
+      {
+        "option": "C",
+        "option_text": "Prevenire difetti nel software"
+      },
+      {
+        "option": "D",
+        "option_text": "Documentare difetti nel software"
+      }
+    ],
+    "answer_option": "B",
+    "answer_option_text": "Il debugging è il processo di localizzazione e correzione dei difetti. È diverso dal testing, che è il processo di trovare difetti."
+  },
+  {
+    "question_text": "Quale dei seguenti è un esempio di testing black-box?",
+    "question_option": [
+      {
+        "option": "A",
+        "option_text": "Testing basato sulla struttura del codice"
+      },
+      {
+        "option": "B",
+        "option_text": "Testing basato sui requisiti funzionali"
+      },
+      {
+        "option": "C",
+        "option_text": "Testing basato sul flusso di controllo"
+      },
+      {
+        "option": "D",
+        "option_text": "Testing basato sulla copertura del codice"
+      }
+    ],
+    "answer_option": "B",
+    "answer_option_text": "Il testing black-box si basa sulla specifica esterna del software (come i requisiti funzionali) senza considerare la struttura interna del codice."
+  },
+  {
+    "question_text": "In quale fase del ciclo di vita del software è più economico correggere i difetti?",
+    "question_option": [
+      {
+        "option": "A",
+        "option_text": "Durante la fase di manutenzione"
+      },
+      {
+        "option": "B",
+        "option_text": "Durante la fase di test"
+      },
+      {
+        "option": "C",
+        "option_text": "Durante la fase di progettazione"
+      },
+      {
+        "option": "D",
+        "option_text": "Durante la fase di analisi dei requisiti"
+      }
+    ],
+    "answer_option": "D",
+    "answer_option_text": "Prima viene trovato un difetto nel ciclo di vita del software, meno costoso è correggerlo. I difetti trovati nella fase di analisi dei requisiti sono i meno costosi da correggere."
+  }
+]
