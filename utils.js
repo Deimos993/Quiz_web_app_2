@@ -158,6 +158,42 @@ function getOptionText(question, optionKey) {
 }
 
 /**
+ * Check if a question is multi-answer (multiple correct options)
+ * @param {Object} question - Question object to check
+ * @returns {boolean} - True if question has multiple correct answers
+ */
+function isMultiAnswerQuestion(question) {
+    if (!question.answer_option_text) {
+        return false;
+    }
+    
+    if (typeof question.answer_option_text === 'object') {
+        return Object.keys(question.answer_option_text).length > 1;
+    }
+    
+    return false;
+}
+
+/**
+ * Get all correct answers for a question
+ * @param {Object} question - Question object
+ * @returns {Array} - Array of correct answer keys
+ */
+function getCorrectAnswers(question) {
+    const correctAnswers = [];
+    
+    if (question.answer_option_text && typeof question.answer_option_text === 'object') {
+        // Multi-answer: all keys in answer_option_text are correct
+        correctAnswers.push(...Object.keys(question.answer_option_text).map(key => key.toUpperCase()));
+    } else if (question.answer_option) {
+        // Single answer: use answer_option
+        correctAnswers.push(question.answer_option.toUpperCase());
+    }
+    
+    return correctAnswers;
+}
+
+/**
  * Prepare question for display with shuffled options
  * @param {Object} question - Original question object
  * @returns {Object} - Question with shuffled options and original key mapping
@@ -167,13 +203,16 @@ function prepareQuestionForDisplay(question) {
         return question;
     }
     
+    const isMultiAnswer = isMultiAnswerQuestion(question);
+    
     if (Array.isArray(question.question_option)) {
         // Array format: shuffle the options
         const shuffledOptions = shuffleArray(question.question_option);
         return {
             ...question,
             question_option: shuffledOptions,
-            original_options: question.question_option // Keep original for reference
+            original_options: question.question_option, // Keep original for reference
+            isMultiAnswer: isMultiAnswer
         };
     } else if (typeof question.question_option === 'object') {
         // Object format: convert to array format for consistent display
@@ -187,11 +226,15 @@ function prepareQuestionForDisplay(question) {
         return {
             ...question,
             question_option: shuffledOptions,
-            original_options: question.question_option // Keep original for reference
+            original_options: question.question_option, // Keep original for reference
+            isMultiAnswer: isMultiAnswer
         };
     }
     
-    return question;
+    return {
+        ...question,
+        isMultiAnswer: isMultiAnswer
+    };
 }
 
 /**
@@ -208,11 +251,26 @@ function gradeQuiz(questions, userAnswers) {
     questions.forEach((question, index) => {
         const questionId = index.toString();
         const userAnswer = userAnswers[questionId];
-        const correctAnswer = question.answer_option;
+        const correctAnswers = getCorrectAnswers(question);
+        const isMultiAnswer = isMultiAnswerQuestion(question);
         
-        // Case-insensitive comparison
-        const isCorrect = userAnswer && 
-            userAnswer.toLowerCase() === correctAnswer.toLowerCase();
+        let isCorrect = false;
+        
+        if (isMultiAnswer) {
+            // Multi-answer question: check if user selected all correct answers and no incorrect ones
+            const userSelections = Array.isArray(userAnswer) ? userAnswer : (userAnswer ? [userAnswer] : []);
+            const userSelectionsUpper = userSelections.map(ans => ans.toUpperCase());
+            const correctAnswersUpper = correctAnswers.map(ans => ans.toUpperCase());
+            
+            // Check if arrays are equal (same elements, same count)
+            isCorrect = correctAnswersUpper.length === userSelectionsUpper.length &&
+                       correctAnswersUpper.every(ans => userSelectionsUpper.includes(ans));
+        } else {
+            // Single answer question: case-insensitive comparison
+            const correctAnswer = question.answer_option;
+            isCorrect = userAnswer && 
+                userAnswer.toLowerCase() === correctAnswer.toLowerCase();
+        }
         
         if (isCorrect) {
             correctCount++;
@@ -245,12 +303,24 @@ function gradeQuiz(questions, userAnswers) {
                 explanation = question.answer_option_text;
             } else if (typeof question.answer_option_text === 'object') {
                 // Object format: { "a": "explanation for A", "c": "explanation for C", ... }
-                const lowerCorrectAnswer = correctAnswer.toLowerCase();
-                explanation = question.answer_option_text[lowerCorrectAnswer] || '';
-                // Add correct answer explanations to allExplanations
-                Object.entries(question.answer_option_text).forEach(([key, text]) => {
-                    allExplanations[key.toUpperCase()] = text;
-                });
+                if (isMultiAnswer) {
+                    // For multi-answer, combine all explanations
+                    const explanationParts = [];
+                    Object.entries(question.answer_option_text).forEach(([key, text]) => {
+                        explanationParts.push(`${key.toUpperCase()}: ${text}`);
+                        allExplanations[key.toUpperCase()] = text;
+                    });
+                    explanation = explanationParts.join('\n\n');
+                } else {
+                    // Single answer
+                    const correctAnswer = question.answer_option;
+                    const lowerCorrectAnswer = correctAnswer.toLowerCase();
+                    explanation = question.answer_option_text[lowerCorrectAnswer] || '';
+                    // Add correct answer explanations to allExplanations
+                    Object.entries(question.answer_option_text).forEach(([key, text]) => {
+                        allExplanations[key.toUpperCase()] = text;
+                    });
+                }
             }
         }
         
@@ -261,16 +331,43 @@ function gradeQuiz(questions, userAnswers) {
             });
         }
 
+        // Format correct answers and user answers for display
+        let correctAnswerDisplay, correctAnswerTextDisplay;
+        let userAnswerDisplay, userAnswerTextDisplay;
+        
+        if (isMultiAnswer) {
+            correctAnswerDisplay = correctAnswers.join(', ');
+            correctAnswerTextDisplay = correctAnswers.map(ans => getOptionText(question, ans)).join('; ');
+            
+            if (Array.isArray(userAnswer) && userAnswer.length > 0) {
+                userAnswerDisplay = userAnswer.join(', ');
+                userAnswerTextDisplay = userAnswer.map(ans => getOptionText(question, ans)).join('; ');
+            } else if (userAnswer) {
+                userAnswerDisplay = userAnswer;
+                userAnswerTextDisplay = getOptionText(question, userAnswer);
+            } else {
+                userAnswerDisplay = 'Nessuna risposta';
+                userAnswerTextDisplay = 'Nessuna risposta';
+            }
+        } else {
+            const correctAnswer = question.answer_option;
+            correctAnswerDisplay = correctAnswer;
+            correctAnswerTextDisplay = getOptionText(question, correctAnswer);
+            userAnswerDisplay = userAnswer || 'Nessuna risposta';
+            userAnswerTextDisplay = userAnswer ? getOptionText(question, userAnswer) : 'Nessuna risposta';
+        }
+
         results.push({
             question: question.question_text,
-            correctAnswer: correctAnswer,
-            correctAnswerText: getOptionText(question, correctAnswer),
-            userAnswer: userAnswer || 'Nessuna risposta',
-            userAnswerText: userAnswer ? getOptionText(question, userAnswer) : 'Nessuna risposta',
+            correctAnswer: correctAnswerDisplay,
+            correctAnswerText: correctAnswerTextDisplay,
+            userAnswer: userAnswerDisplay,
+            userAnswerText: userAnswerTextDisplay,
             isCorrect,
             explanation: explanation,
             allExplanations: allExplanations,
-            learningObjective: learningObjective
+            learningObjective: learningObjective,
+            isMultiAnswer: isMultiAnswer
         });
     });
     
@@ -379,6 +476,8 @@ if (typeof module !== 'undefined' && module.exports) {
         validateQuizData,
         safeJsonParse,
         getOptionText,
+        isMultiAnswerQuestion,
+        getCorrectAnswers,
         prepareQuestionForDisplay,
         gradeQuiz,
         saveQuizState,

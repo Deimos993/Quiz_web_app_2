@@ -74,6 +74,9 @@ class QuizApp {
             if (e.target.type === 'radio') {
                 this.selectOption(e.target.value);
                 this.updateNavigationButtons();
+            } else if (e.target.type === 'checkbox') {
+                this.selectMultiOption(e.target.value, e.target.checked);
+                this.updateNavigationButtons();
             }
         });
 
@@ -97,10 +100,18 @@ class QuizApp {
                     case '4':
                     case '5':
                         const optionIndex = parseInt(e.key) - 1;
-                        const options = document.querySelectorAll('input[name="answer"]');
-                        if (options[optionIndex]) {
-                            options[optionIndex].checked = true;
-                            this.selectOption(options[optionIndex].value);
+                        const radioOptions = document.querySelectorAll('input[name="answer"]');
+                        const checkboxOptions = document.querySelectorAll('input[name="answer-multi"]');
+                        
+                        if (radioOptions.length > 0 && radioOptions[optionIndex]) {
+                            // Single answer question
+                            radioOptions[optionIndex].checked = true;
+                            this.selectOption(radioOptions[optionIndex].value);
+                            this.updateNavigationButtons();
+                        } else if (checkboxOptions.length > 0 && checkboxOptions[optionIndex]) {
+                            // Multi-answer question - toggle checkbox
+                            checkboxOptions[optionIndex].checked = !checkboxOptions[optionIndex].checked;
+                            this.selectMultiOption(checkboxOptions[optionIndex].value, checkboxOptions[optionIndex].checked);
                             this.updateNavigationButtons();
                         }
                         break;
@@ -411,6 +422,11 @@ class QuizApp {
         questionTextEl.textContent = question.question_text;
         progressEl.textContent = `Domanda ${this.currentQuestionIndex + 1}/${this.currentQuestions.length}`;
         
+        // Add multi-answer indicator
+        if (question.isMultiAnswer) {
+            progressEl.textContent += ' (Risposta multipla)';
+        }
+        
         // Clear previous options
         optionsEl.innerHTML = '';
         
@@ -421,17 +437,26 @@ class QuizApp {
                     const optionEl = document.createElement('div');
                     optionEl.className = 'option';
                     
-                    const radioId = `option-${index}`;
-                    const isSelected = this.userAnswers[this.currentQuestionIndex] === option.option;
+                    const inputId = `option-${index}`;
+                    const inputType = question.isMultiAnswer ? 'checkbox' : 'radio';
+                    const inputName = question.isMultiAnswer ? 'answer-multi' : 'answer';
+                    
+                    let isSelected = false;
+                    if (question.isMultiAnswer) {
+                        const userAnswers = this.userAnswers[this.currentQuestionIndex];
+                        isSelected = Array.isArray(userAnswers) && userAnswers.includes(option.option);
+                    } else {
+                        isSelected = this.userAnswers[this.currentQuestionIndex] === option.option;
+                    }
                     
                     optionEl.innerHTML = `
-                        <input type="radio" 
-                               id="${radioId}" 
-                               name="answer" 
+                        <input type="${inputType}" 
+                               id="${inputId}" 
+                               name="${inputName}" 
                                value="${escapeHtml(option.option)}"
                                ${isSelected ? 'checked' : ''}
                                aria-describedby="question-text">
-                        <label for="${radioId}">${escapeHtml(option.option_text)}</label>
+                        <label for="${inputId}">${escapeHtml(option.option_text)}</label>
                     `;
                     
                     if (isSelected) {
@@ -440,9 +465,14 @@ class QuizApp {
                     
                     // Add click handler to the entire option div
                     optionEl.addEventListener('click', () => {
-                        const radio = optionEl.querySelector('input[type="radio"]');
-                        radio.checked = true;
-                        this.selectOption(radio.value);
+                        const input = optionEl.querySelector(`input[type="${inputType}"]`);
+                        if (question.isMultiAnswer) {
+                            input.checked = !input.checked;
+                            this.selectMultiOption(input.value, input.checked);
+                        } else {
+                            input.checked = true;
+                            this.selectOption(input.value);
+                        }
                         this.updateNavigationButtons();
                     });
                     
@@ -453,7 +483,7 @@ class QuizApp {
     }
 
     /**
-     * Select an option for the current question
+     * Select an option for the current question (single answer)
      */
     selectOption(optionValue) {
         this.userAnswers[this.currentQuestionIndex] = optionValue;
@@ -467,6 +497,48 @@ class QuizApp {
         if (selectedOption) {
             selectedOption.closest('.option').classList.add('selected');
         }
+        
+        // Save state after answer selection
+        this.saveCurrentState();
+    }
+
+    /**
+     * Select/deselect an option for multi-answer questions
+     */
+    selectMultiOption(optionValue, isChecked) {
+        const questionIndex = this.currentQuestionIndex;
+        
+        if (!this.userAnswers[questionIndex]) {
+            this.userAnswers[questionIndex] = [];
+        }
+        
+        if (!Array.isArray(this.userAnswers[questionIndex])) {
+            this.userAnswers[questionIndex] = [];
+        }
+        
+        if (isChecked) {
+            // Add option if not already present
+            if (!this.userAnswers[questionIndex].includes(optionValue)) {
+                this.userAnswers[questionIndex].push(optionValue);
+            }
+        } else {
+            // Remove option
+            this.userAnswers[questionIndex] = this.userAnswers[questionIndex].filter(
+                value => value !== optionValue
+            );
+        }
+        
+        // Update visual feedback
+        document.querySelectorAll('.option').forEach(option => {
+            const checkbox = option.querySelector('input[type="checkbox"]');
+            if (checkbox) {
+                if (checkbox.checked) {
+                    option.classList.add('selected');
+                } else {
+                    option.classList.remove('selected');
+                }
+            }
+        });
         
         // Save state after answer selection
         this.saveCurrentState();
@@ -509,8 +581,27 @@ class QuizApp {
      * Confirm quiz submission
      */
     confirmSubmitQuiz() {
-        const answeredCount = Object.keys(this.userAnswers).length;
+        let answeredCount = 0;
         const totalQuestions = this.currentQuestions.length;
+        
+        // Count answered questions (considering both single and multi-answer)
+        for (let i = 0; i < totalQuestions; i++) {
+            const answer = this.userAnswers[i];
+            if (answer !== undefined && answer !== null) {
+                if (Array.isArray(answer)) {
+                    // Multi-answer: count as answered if at least one option is selected
+                    if (answer.length > 0) {
+                        answeredCount++;
+                    }
+                } else {
+                    // Single answer: count as answered if not empty
+                    if (answer !== '') {
+                        answeredCount++;
+                    }
+                }
+            }
+        }
+        
         const unansweredCount = totalQuestions - answeredCount;
         
         let message = 'Sei sicuro di voler inviare il quiz?';
@@ -575,8 +666,23 @@ class QuizApp {
             let explanationHtml = '';
             if (result.allExplanations && Object.keys(result.allExplanations).length > 0) {
                 const explanationItems = Object.entries(result.allExplanations).map(([option, explanation]) => {
-                    const isCorrect = option.toLowerCase() === result.correctAnswer.toLowerCase();
-                    const isUserAnswer = option.toLowerCase() === result.userAnswer.toLowerCase();
+                    let isCorrect = false;
+                    let isUserAnswer = false;
+                    
+                    if (result.isMultiAnswer) {
+                        // For multi-answer, check if option is in correct answers
+                        const correctAnswers = result.correctAnswer.split(', ').map(ans => ans.toLowerCase());
+                        const userAnswers = result.userAnswer !== 'Nessuna risposta' ? 
+                            result.userAnswer.split(', ').map(ans => ans.toLowerCase()) : [];
+                        
+                        isCorrect = correctAnswers.includes(option.toLowerCase());
+                        isUserAnswer = userAnswers.includes(option.toLowerCase());
+                    } else {
+                        // Single answer
+                        isCorrect = option.toLowerCase() === result.correctAnswer.toLowerCase();
+                        isUserAnswer = option.toLowerCase() === result.userAnswer.toLowerCase();
+                    }
+                    
                     const cssClass = isCorrect ? 'correct-explanation' : 'incorrect-explanation';
                     const userClass = isUserAnswer ? 'user-explanation' : '';
                     
@@ -607,31 +713,49 @@ class QuizApp {
             const question = this.currentQuestions[index];
             let allOptionsHtml = '';
             if (question.question_option && Array.isArray(question.question_option)) {
+                const correctAnswers = result.isMultiAnswer ? 
+                    result.correctAnswer.split(', ').map(ans => ans.toLowerCase()) : 
+                    [result.correctAnswer.toLowerCase()];
+                const userAnswers = result.userAnswer !== 'Nessuna risposta' ? 
+                    (result.isMultiAnswer ? 
+                        result.userAnswer.split(', ').map(ans => ans.toLowerCase()) : 
+                        [result.userAnswer.toLowerCase()]) : [];
+                
                 allOptionsHtml = `
                     <div class="all-options">
                         <strong>Tutte le opzioni:</strong>
                         <ul>
-                            ${question.question_option.map(option => `
-                                <li class="${option.option.toLowerCase() === result.correctAnswer.toLowerCase() ? 'correct-option' : ''}
-                                          ${option.option.toLowerCase() === result.userAnswer.toLowerCase() ? 'user-option' : ''}">
-                                    <strong>${escapeHtml(option.option)}:</strong> ${escapeHtml(option.option_text)}
-                                </li>
-                            `).join('')}
+                            ${question.question_option.map(option => {
+                                const isCorrect = correctAnswers.includes(option.option.toLowerCase());
+                                const isUserAnswer = userAnswers.includes(option.option.toLowerCase());
+                                
+                                return `
+                                    <li class="${isCorrect ? 'correct-option' : ''}
+                                              ${isUserAnswer ? 'user-option' : ''}">
+                                        <strong>${escapeHtml(option.option)}:</strong> ${escapeHtml(option.option_text)}
+                                    </li>
+                                `;
+                            }).join('')}
                         </ul>
                     </div>
                 `;
             }
             
+            // Add question type indicator
+            const questionTypeIndicator = result.isMultiAnswer ? 
+                '<span class="question-type">(Risposta multipla)</span>' : 
+                '<span class="question-type">(Risposta singola)</span>';
+            
             resultEl.innerHTML = `
-                <h4>Domanda ${index + 1} ${result.learningObjective ? `(${result.learningObjective})` : ''}</h4>
+                <h4>Domanda ${index + 1} ${result.learningObjective ? `(${result.learningObjective})` : ''} ${questionTypeIndicator}</h4>
                 <p>${escapeHtml(result.question)}</p>
                 ${allOptionsHtml}
                 <div class="result-info">
                     <div class="correct-answer">
-                        <strong>Risposta corretta:</strong> ${escapeHtml(result.correctAnswer)} - ${escapeHtml(result.correctAnswerText)}
+                        <strong>Risposta${result.isMultiAnswer ? 'e' : ''} corretta${result.isMultiAnswer ? 'e' : ''}:</strong> ${escapeHtml(result.correctAnswer)} - ${escapeHtml(result.correctAnswerText)}
                     </div>
                     <div class="user-answer">
-                        <strong>La tua risposta:</strong> ${escapeHtml(result.userAnswer)} - ${escapeHtml(result.userAnswerText)}
+                        <strong>La tua risposta${result.isMultiAnswer ? 'e' : ''}:</strong> ${escapeHtml(result.userAnswer)} - ${escapeHtml(result.userAnswerText)}
                     </div>
                 </div>
                 ${explanationHtml}

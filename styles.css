@@ -249,7 +249,8 @@ header p {
     background-color: #e3f2fd;
 }
 
-.option input[type="radio"] {
+.option input[type="radio"],
+.option input[type="checkbox"] {
     margin-top: 0.25rem;
     cursor: pointer;
 }
@@ -259,6 +260,17 @@ header p {
     flex: 1;
     font-size: 1rem;
     line-height: 1.4;
+}
+
+/* Multi-answer question styling */
+.question-type {
+    font-size: 0.85rem;
+    font-weight: normal;
+    color: #666;
+    background-color: #e9ecef;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    margin-left: 0.5rem;
 }
 
 /* Quiz Controls */
@@ -863,7 +875,8 @@ header p {
 /* Focus Styles */
 .btn:focus,
 .option:focus-within,
-input[type="radio"]:focus {
+input[type="radio"]:focus,
+input[type="checkbox"]:focus {
     outline: 2px solid #2980b9;
     outline-offset: 2px;
 }
