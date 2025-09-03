@@ -413,11 +413,13 @@ class QuizApp {
     /**
      * Display the current question
      */
-    displayCurrentQuestion() {
+    async displayCurrentQuestion() {
         const question = this.currentQuestions[this.currentQuestionIndex];
         const questionTextEl = document.getElementById('question-text');
         const optionsEl = document.getElementById('options-container');
         const progressEl = document.getElementById('question-progress');
+        const questionImageContainer = document.getElementById('question-image-container');
+        const questionImage = document.getElementById('question-image');
         
         questionTextEl.textContent = question.question_text;
         progressEl.textContent = `Domanda ${this.currentQuestionIndex + 1}/${this.currentQuestions.length}`;
@@ -425,6 +427,86 @@ class QuizApp {
         // Add multi-answer indicator
         if (question.isMultiAnswer) {
             progressEl.textContent += ' (Risposta multipla)';
+        }
+        
+        // Handle question image
+        if (question.question_image && question.question_image.trim() !== '') {
+            // Use the image path directly from the JSON data
+            console.log(`Loading image for question ${question.question_number}: ${question.question_image}`);
+            
+            // Reset the container state
+            questionImageContainer.classList.add('hidden');
+            
+            questionImage.onload = () => {
+                questionImageContainer.classList.remove('hidden');
+                console.log(`✅ Image loaded successfully: ${questionImage.src}`);
+            };
+            
+            questionImage.onerror = () => {
+                // If the JSON path fails, try the fallback method
+                console.log(`❌ JSON image path failed, trying fallback paths...`);
+                const imagePaths = getQuestionImagePath(this.currentQuiz, question.question_number);
+                if (imagePaths) {
+                    questionImage.onload = () => {
+                        questionImageContainer.classList.remove('hidden');
+                        console.log(`✅ Fallback image loaded successfully: ${questionImage.src}`);
+                    };
+                    
+                    questionImage.onerror = () => {
+                        // If primary fallback fails, try alternative path
+                        if (questionImage.src.includes(imagePaths.primary)) {
+                            console.log(`❌ Primary fallback failed, trying alternative: ${imagePaths.alternative}`);
+                            questionImage.src = imagePaths.alternative;
+                        } else {
+                            // All paths failed, hide container
+                            questionImageContainer.classList.add('hidden');
+                            console.log(`❌ No image found for question ${question.question_number}`);
+                        }
+                    };
+                    
+                    questionImage.src = imagePaths.primary;
+                } else {
+                    questionImageContainer.classList.add('hidden');
+                    console.log(`❌ No image found for question ${question.question_number}`);
+                }
+            };
+            
+            // Set initial image source and alt text
+            questionImage.src = question.question_image;
+            questionImage.alt = `Immagine per la domanda ${question.question_number}`;
+        } else {
+            // No image path in JSON, try fallback method
+            const imagePaths = getQuestionImagePath(this.currentQuiz, question.question_number);
+            if (imagePaths) {
+                console.log(`No image in JSON, looking for images for question ${question.question_number}:`, imagePaths);
+                
+                // Reset the container state
+                questionImageContainer.classList.add('hidden');
+                
+                // First, try to load the primary image path
+                questionImage.onload = () => {
+                    questionImageContainer.classList.remove('hidden');
+                    console.log(`✅ Image loaded successfully: ${questionImage.src}`);
+                };
+                
+                questionImage.onerror = () => {
+                    // If primary fails, try alternative path
+                    if (questionImage.src.includes(imagePaths.primary)) {
+                        console.log(`❌ Primary image failed, trying alternative: ${imagePaths.alternative}`);
+                        questionImage.src = imagePaths.alternative;
+                    } else {
+                        // Both paths failed, hide container
+                        questionImageContainer.classList.add('hidden');
+                        console.log(`❌ No image found for question ${question.question_number}`);
+                    }
+                };
+                
+                // Set initial image source and alt text
+                questionImage.src = imagePaths.primary;
+                questionImage.alt = `Immagine per la domanda ${question.question_number}`;
+            } else {
+                questionImageContainer.classList.add('hidden');
+            }
         }
         
         // Clear previous options

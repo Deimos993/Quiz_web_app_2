@@ -4,6 +4,7 @@
     "question_page": 6,
     "question_number": "1",
     "question_text": "Quale dei seguenti è un tipico obiettivo del test?",
+    "question_image": "",
     "question_option": {
       "a": "Validare che i requisiti documentati siano soddisfatti",
       "b": "Causare failure e identificare difetti",
@@ -31,6 +32,7 @@
     "question_page": 6,
     "question_number": "2",
     "question_text": "Quale delle seguenti affermazioni descrive MEGLIO la differenza tra testing e debugging?",
+    "question_image": "",
     "question_option": {
       "a": "Il testing genera failure, mentre il debugging corregge i failure",
       "b": "Il testing è un'attività negativa, mentre il debugging è un'attività positiva",
@@ -58,6 +60,7 @@
     "question_page": 6,
     "question_number": "3",
     "question_text": "\"L'assenza di difetti è un'idea sbagliata\" è uno dei principi del testing.\nQuale dei seguenti è un esempio di applicazione pratica di questo principio?",
+    "question_image": "",
     "question_option": {
       "a": "Spiegare che non è possibile che il testing dimostri l'assenza di difetti",
       "b": "Supportare gli utenti finali nell'esecuzione del testing di accettazione",
@@ -85,6 +88,7 @@
     "question_page": 6,
     "question_number": "4",
     "question_text": "Quali DUE delle seguenti attività di test richiede con PIÙ probabilità l'applicazione dell'analisi ai valori limite e del partizionamento di equivalenza?",
+    "question_image": "",
     "question_option": {
       "a": "Implementazione dei test",
       "b": "Progettazione dei test",
@@ -114,6 +118,7 @@
     "question_page": 7,
     "question_number": "5",
     "question_text": "Dato il seguente testware:\n1. Elementi di copertura\n2. Change request\n3. Schedulazione dell'esecuzione dei test\n4. Condizioni di test prioritizzate\nE le seguenti attività di test:\nA. Analisi dei test\nB. Progettazione dei test\nC. Implementazione dei test\nD. Completamento dei test\nQuale delle seguenti risposte è la MIGLIORE combinazione del testware prodotto dalle attività?",
+    "question_image": "",
     "question_option": {
       "a": "1B, 2D, 3C, 4A",
       "b": "1B, 2D, 3A, 4C",
@@ -141,6 +146,7 @@
     "question_page": 7,
     "question_number": "6",
     "question_text": "Quale delle seguenti affermazioni sui diversi ruoli del testing è PIÙ probabile che sia CORRETTA?",
+    "question_image": "",
     "question_option": {
       "a": "Nello sviluppo software Agile, il ruolo di test management è responsabilità primaria del team, mentre il ruolo di testing è responsabilità primaria di un singolo individuo esterno al team",
       "b": "Il ruolo di testing è principalmente responsabile del monitoraggio e controllo dei test, mentre il ruolo di test management è principalmente responsabile della pianificazione dei test e del completamento dei test",
@@ -168,6 +174,7 @@
     "question_page": 7,
     "question_number": "7",
     "question_text": "Quale dei seguenti è un vantaggio dell'approccio whole-team?",
+    "question_image": "",
     "question_option": {
       "a": "Team senza tester",
       "b": "Dinamiche del team migliorate",
@@ -195,6 +202,7 @@
     "question_page": 8,
     "question_number": "8",
     "question_text": "Quale delle seguenti affermazioni sull'indipendenza del testing è CORRETTA?",
+    "question_image": "",
     "question_option": {
       "a": "I tester indipendenti rileveranno i difetti grazie a una prospettiva tecnica differente dalla prospettiva degli sviluppatori, ma la loro indipendenza può portare a un rapporto conflittuale con gli sviluppatori",
       "b": "La familiarità degli sviluppatori con il proprio codice fa sì che rileveranno solo pochi difetti, ma il loro background software condiviso con i tester fa sì che questi difetti vengano rilevati anche dai tester",
@@ -222,6 +230,7 @@
     "question_page": 8,
     "question_number": "9",
     "question_text": "Quale delle seguenti è una buona pratica del testing che si applica a tutti i cicli di vita dello sviluppo software?",
+    "question_image": "",
     "question_option": {
       "a": "Per ogni livello di test, esiste un corrispondente livello di sviluppo",
       "b": "Per ogni obiettivo di test, esiste un corrispondente obiettivo di sviluppo",
@@ -249,6 +258,7 @@
     "question_page": 8,
     "question_number": "10",
     "question_text": "Quale dei seguenti è un esempio di approccio test-first allo sviluppo?",
+    "question_image": "",
     "question_option": {
       "a": "Component Test-Driven Development",
       "b": "Integration Test-Driven Development",
@@ -276,6 +286,7 @@
     "question_page": 9,
     "question_number": "11",
     "question_text": "Quale delle seguenti fornisce la MIGLIORE descrizione dell'approccio shift-left?",
+    "question_image": "",
     "question_option": {
       "a": "Se concordato dagli sviluppatori, le attività manuali sul lato sinistro del processo di test vengono automatizzate per supportare il principio \"il testing anticipato permette di risparmiare tempo e denaro\"",
       "b": "Quando risulta efficace dal punto di vista dei costi, le attività di test vengono anticipate nel ciclo di vita dello sviluppo software (SDLC), per ridurre il costo totale della qualità attraverso la riduzione del numero di difetti rilevati successivamente nel SDLC",
@@ -303,6 +314,7 @@
     "question_page": 9,
     "question_number": "12",
     "question_text": "Quale dei seguenti è MENO probabile che si verifichi come risultato di una retrospettiva?",
+    "question_image": "",
     "question_option": {
       "a": "La qualità dei futuri oggetti di test migliora grazie all'identificazione di miglioramenti nelle pratiche di sviluppo",
       "b": "L'efficienza dei test migliora grazie a una configurazione più veloce degli ambienti di test attraverso l'automazione",
@@ -330,6 +342,7 @@
     "question_page": 9,
     "question_number": "13",
     "question_text": "Quale dei seguenti livelli di test è PIÙ probabile che venga svolto se il testing è focalizzato sulla validazione, e che non venga eseguito dai tester?",
+    "question_image": "",
     "question_option": {
       "a": "Testing di componente",
       "b": "Testing di integrazione dei componenti",
@@ -357,6 +370,7 @@
     "question_page": 9,
     "question_number": "14",
     "question_text": "Il software di un sistema di navigazione è stato aggiornato a causa di suggerimenti di percorsi che violano il codice della strada, come ad esempio guidare contromano in strade a senso unico.\nQuale delle seguenti risposte descrive MEGLIO il testing che verrà eseguito?",
+    "question_image": "",
     "question_option": {
       "a": "Solo testing confermativo",
       "b": "Testing confermativo, seguito da regression testing",
@@ -384,6 +398,7 @@
     "question_page": 10,
     "question_number": "15",
     "question_text": "Dati i seguenti esempi di difetti:\ni. Due parti differenti della specifica di progetto sono inconsistenti tra loro a causa della complessità del progetto\nii. Un tempo di risposta troppo lungo fa perdere la pazienza agli utenti\niii. Un percorso nel codice non può essere raggiunto durante l'esecuzione\niv. Una variabile viene dichiarata ma non viene mai utilizzata successivamente nel programma\nv. La quantità di memoria necessaria al programma per generare un report è troppo elevata\nQuale delle seguenti risposte identifica MEGLIO i difetti che potrebbero essere rilevati con il testing statico (piuttosto che con il testing dinamico)?",
+    "question_image": "",
     "question_option": {
       "a": "ii, v",
       "b": "iii, v",
@@ -411,6 +426,7 @@
     "question_page": 10,
     "question_number": "16",
     "question_text": "Quale dei seguenti è un vantaggio del feedback anticipato e frequente degli stakeholder?",
+    "question_image": "",
     "question_option": {
       "a": "Le modifiche ai requisiti vengono comprese e implementate prima",
       "b": "Assicura che gli stakeholder di business comprendano i requisiti degli utenti",
@@ -438,6 +454,7 @@
     "question_page": 11,
     "question_number": "17",
     "question_text": "Dati i seguenti tipi di review:\n1. Review tecnica\n2. Review informale\n3. Ispezione\n4. Walkthrough\nE le seguenti descrizioni:\nA. Include obiettivi come ottenere il consenso, generare nuove idee e motivare gli autori a migliorare\nB. Include obiettivi come educare i reviewer, ottenere il consenso, generare nuove idee e rilevare potenziali difetti\nC. L'obiettivo principale è rilevare potenziali difetti e richiede la raccolta di metriche supportare il miglioramento del processo\nD. L'obiettivo principale è rilevare potenziali difetti senza generare alcun output formale documentato\nQuale delle seguenti combinazioni abbina MEGLIO i tipi di review alle descrizioni?",
+    "question_image": "",
     "question_option": {
       "a": "1A, 2B, 3C, 4D",
       "b": "1A, 2D, 3C, 4B",
@@ -465,6 +482,7 @@
     "question_page": 11,
     "question_number": "18",
     "question_text": "Quale dei seguenti è un fattore che contribuisce al successo di una review?",
+    "question_image": "",
     "question_option": {
       "a": "Assicurarsi che il management partecipi come reviewer",
       "b": "Dividere i prodotti di lavoro di grandi dimensioni in parti più piccole",
@@ -492,6 +510,7 @@
     "question_page": 11,
     "question_number": "19",
     "question_text": "Qual è la differenza PRINCIPALE tra le tecniche di test black-box e le tecniche di test basate sull'esperienza?",
+    "question_image": "",
     "question_option": {
       "a": "L'oggetto di test",
       "b": "Il livello di test in cui viene utilizzata la tecnica di test",
@@ -519,6 +538,7 @@
     "question_page": 12,
     "question_number": "20",
     "question_text": "State eseguendo il testing di un sistema di validazione di PIN, che accetta PIN validi e rifiuta PIN invalidi.\nUn PIN è una sequenza di cifre. Un PIN è valido se è composto da quattro cifre, di cui almeno due differenti.\nQuale dei seguenti è un insieme MINIMO di dati di input dei test che copre tutte le partizioni di equivalenza per questo scenario?",
+    "question_image": "",
     "question_option": {
       "a": "112, 1111, 1234, 123456",
       "b": "1, 123, 1111, 1234",
@@ -546,6 +566,7 @@
     "question_page": 12,
     "question_number": "21",
     "question_text": "Uno sviluppatore è stato ingaggiato per implementare la seguente regola di business:\nINPUT: valore (numero intero)\nIF (valore <=100 OR valore >= 200) THEN scrivere \"valore non corretto\"\nELSE scrivere \"valore OK\"\nCome tester, progettate i test case utilizzando l'analisi ai valori limite a 2 valori.\nQuale dei seguenti insiemi di input dei test raggiunge la copertura maggiore?",
+    "question_image": "",
     "question_option": {
       "a": "100, 150, 200, 201",
       "b": "99, 100, 200, 201",
@@ -573,6 +594,7 @@
     "question_page": 13,
     "question_number": "22",
     "question_text": "State lavorando in un progetto per lo sviluppo di un sistema di analisi dei risultati degli esami di guida.\nVi è stato chiesto di progettare i test case in base alla seguente tabella delle decisioni:\n\n\"R1 \",\"R2 \",\"R3 \"\n\"C1: Primo tentativo di esame? \",,,\"F \"\n\"C2: Esame teorico superato? \",\"T \",\"F \",\n\"C3: Esame pratico superato? \",\"T \",,\"F \"\n\"Rilasciare una patente di guida? \",\"X \",,\n\"Richiedere ulteriori lezioni di guida? \",,,\"X \"\n\"Richiedere di ripetere l'esame? \",,\"X \",\n\nQuali dati di test dimostreranno l'esistenza di regole contraddittorie in questa tabella delle decisioni?",
+    "question_image": "img/C/22.png",
     "question_option": {
       "a": "$C1=T$, $C2=T$, $C3=F$",
       "b": "$C1=T$ $C2=F$ $C3=T$",
@@ -600,6 +622,7 @@
     "question_page": 14,
     "question_number": "23",
     "question_text": "State progettando i test case in base al seguente state transition diagram:\nQual è il numero MINIMO di test case necessari per ottenere il 100% di copertura delle transizioni valide?",
+    "question_image": "img/C/23.png",
     "question_option": {
       "a": "3",
       "b": "2",
@@ -627,6 +650,7 @@
     "question_page": 15,
     "question_number": "24",
     "question_text": "Volete applicare il testing dei rami al codice rappresentato dal seguente grafico del flusso di controllo:\nQuanti elementi di copertura è necessario testare?",
+    "question_image": "img/C/24.png",
     "question_option": {
       "a": "2",
       "b": "4",
@@ -654,6 +678,7 @@
     "question_page": 15,
     "question_number": "25",
     "question_text": "In che modo il testing white-box può essere utile a supporto del testing black-box?",
+    "question_image": "",
     "question_option": {
       "a": "Le misure di copertura white-box possono aiutare i tester a valutare i test black-box in termini di copertura del codice ottenuta da questi test black-box",
       "b": "L'analisi di copertura white-box può aiutare i tester a identificare il codice sorgente non raggiungibile",
@@ -681,6 +706,7 @@
     "question_page": 16,
     "question_number": "26",
     "question_text": "Considerate il seguente elenco:\nInput corretto non accettato\nInput non corretto accettato\nFormato di output errato\nDivisione per zero\nQuale tecnica di test viene PIÙ PROBABILMENTE utilizzata dal tester che utilizza questo elenco durante l'esecuzione dei test?",
+    "question_image": "",
     "question_option": {
       "a": "Testing esplorativo",
       "b": "Fault attack",
@@ -708,6 +734,7 @@
     "question_page": 16,
     "question_number": "27",
     "question_text": "Quale delle seguenti descrive MEGLIO il modo in cui il testing checklist-based può portare a una maggiore copertura?",
+    "question_image": "",
     "question_option": {
       "a": "Gli elementi della checklist possono essere definiti a un livello di dettaglio sufficientemente basso, in modo che il tester possa implementare ed eseguire test case dettagliati basati su questi elementi",
       "b": "Le checklist possono essere automatizzate, quindi ogni volta che l'esecuzione di un test automatizzato copre gli elementi della checklist, si ottiene una copertura aggiuntiva",
@@ -735,6 +762,7 @@
     "question_page": 16,
     "question_number": "28",
     "question_text": "Quale dei seguenti è il MIGLIOR esempio di criterio di accettazione scenario-oriented?",
+    "question_image": "",
     "question_option": {
       "a": "L'applicazione deve consentire agli utenti di cancellare il proprio account e tutti i dati associati, quando richiesto",
       "b": "Quando un cliente aggiunge un articolo al proprio carrello e procede al checkout, dovrebbe essergli richiesto di eseguire la login o di creare un account, se non è ancora stato fatto",
@@ -762,6 +790,7 @@
     "question_page": 17,
     "question_number": "29",
     "question_text": "State applicando acceptance test-driven development e state progettando i test case basati in base alla seguente user story:\nCome (As) utente Regolare o Speciale, voglio (I want to) poter utilizzare la mia tessera elettronica di accesso ai piani, per poter (in order to) accedere a piani specifici.\nCriteri di Accettazione:\nAC1: Gli utenti Regolari hanno accesso ai piani da 1 a 3\nAC2: II piano 4 è accessibile solo agli utenti Speciali\nAC3: Gli utenti Speciali hanno tutti i diritti di accesso degli utenti Regolari\nQuale test case è il PIÙ adeguato per testare AC3?",
+    "question_image": "",
     "question_option": {
       "a": "Verificare che un utente Regolare possa accedere ai piani 1 e 3",
       "b": "Verificare che un utente Regolare non possa accedere al piano 4",
@@ -789,6 +818,7 @@
     "question_page": 17,
     "question_number": "30",
     "question_text": "Quale dei seguenti NON è un obiettivo di un test plan?",
+    "question_image": "",
     "question_option": {
       "a": "Definire i dati di test e i risultati attesi per i test di componente e per i test di integrazione dei componenti",
       "b": "Definire il criterio di uscita del livello di test di componente: \"deve essere raggiunto il 100% di copertura delle istruzioni e il 100% di copertura dei rami\"",
@@ -816,6 +846,7 @@
     "question_page": 18,
     "question_number": "31",
     "question_text": "All'inizio di ogni iterazione, il team stima la quantità di lavoro (in giorni-persona) che dovrà essere completata durante l'iterazione.\n$E(n)$ è la quantità di lavoro stimata per l'iterazione n, e $A(n)$ è la quantità effettiva di lavoro svolto nell'iterazione Dalla terza iterazione, il team utilizza il seguente modello di stima basato sull'estrapolazione:\n$E(n)=\\frac{3*A(n-1)+A(n-2)}{4}$\nII grafico mostra la quantità di lavoro stimata e la quantità di lavoro effettiva per le prime quattro iterazioni:\nQual è la quantità di lavoro stimata per l'iterazione #5?",
+    "question_image": "img/C/31.png",
     "question_option": {
       "a": "10,5 giorni-persona",
       "b": "8,25 giorni-persona",
@@ -843,6 +874,7 @@
     "question_page": 19,
     "question_number": "32",
     "question_text": "State preparando una schedulazione di esecuzione dei test per l'esecuzione di sette test case, daTC1 a TC7.\nLa figura seguente riporta le priorità di questi test case ( $1=$ priorità massima, $3=$ priorità minima) e le dipendenze tra i test case attraverso le frecce.\nAd esempio, la freccia da TC4 a TC5 significa che TC5 può essere eseguito solo se TC4 è stato precedentemente eseguito.\nQuale test case dovrebbe essere eseguito per sesto?",
+    "question_image": "img/C/32.png",
     "question_option": {
       "a": "TC3",
       "b": "TC5",
@@ -870,6 +902,7 @@
     "question_page": 19,
     "question_number": "33",
     "question_text": "Cosa descrive il modello della piramide di test?",
+    "question_image": "",
     "question_option": {
       "a": "I test possono avere differenti priorità",
       "b": "I test possono avere differenti granularità",
@@ -897,6 +930,7 @@
     "question_page": 19,
     "question_number": "34",
     "question_text": "Qual è la relazione tra quadranti del testing, livelli di test e tipi di test?",
+    "question_image": "",
     "question_option": {
       "a": "I quadranti del testing rappresentano particolari combinazioni di livelli di test e tipi di test, definendo la loro posizione nel ciclo di vita dello sviluppo software",
       "b": "I quadranti del testing descrivono il grado di granularità dei singoli tipi di test che vengono eseguiti in ogni livello di test",
@@ -924,6 +958,7 @@
     "question_page": 20,
     "question_number": "35",
     "question_text": "Quale dei seguenti è un esempio di come l'analisi dei rischi di prodotto possa influenzare l'accuratezza e l'ambito del testing?",
+    "question_image": "",
     "question_option": {
       "a": "Il monitoraggio continuo dei rischi permette di identificare i rischi emergenti il prima possibile",
       "b": "L'identificazione del rischio permette di implementare le attività di mitigazione del rischio e di ridurre il livello di rischio",
@@ -951,6 +986,7 @@
     "question_page": 20,
     "question_number": "36",
     "question_text": "Quale delle seguenti attività nel processo di test utilizza MAGGIORMENTE i test progress report?",
+    "question_image": "",
     "question_option": {
       "a": "Progettazione dei test",
       "b": "Completamento dei test",
@@ -978,6 +1014,7 @@
     "question_page": 20,
     "question_number": "37",
     "question_text": "Quale dei seguenti NON è un esempio di come il configuration management supporta il testing?",
+    "question_image": "",
     "question_option": {
       "a": "Tutti gli elementi di documentazione approvati presenti nel repository sono identificati in modo univoco e sottoposti al controllo della versione",
       "b": "Tutte le modifiche agli elementi dell'ambiente di test vengono tracciate",
@@ -1005,6 +1042,7 @@
     "question_page": 21,
     "question_number": "38",
     "question_text": "Si consideri il seguente defect report di un'applicazione web-based di e-commerce:\nApplicazione: WebShop v0.99\nDifetto: Icona di login non funzionante\nPassi per la riproduzione:\n1. Avviare il sito web\n2. Selezionare l'icona di login\nRisultato atteso: L'utente dovrebbe essere reindirizzato alla pagina di login\nRisultato effettivo: L'icona di login non risponde quando viene selezionata\nSeverità: Alta\nPriorità: Urgente\nQual è l'informazione PIÙ importante che manca in questo report?",
+    "question_image": "",
     "question_option": {
       "a": "Nome del tester e data del report",
       "b": "Elementi dell'ambiente di test e relativi version number",
@@ -1032,6 +1070,7 @@
     "question_page": 21,
     "question_number": "39",
     "question_text": "Quali strumenti delle seguenti categorie aiutano a organizzare i test case, il configuration management, la tracciabilità con la base di test e i difetti rilevati?",
+    "question_image": "",
     "question_option": {
       "a": "Strumenti di esecuzione dei test e di copertura",
       "b": "Strumenti per la progettazione e l'implementazione dei test",
@@ -1059,6 +1098,7 @@
     "question_page": 21,
     "question_number": "40",
     "question_text": "Quale dei seguenti è PIU probabile che sia un vantaggio della test automation?",
+    "question_image": "",
     "question_option": {
       "a": "Capacità di generare test case senza accedere alla base di test",
       "b": "Ottenere una maggiore copertura attraverso una valutazione più obiettiva",

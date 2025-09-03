@@ -194,6 +194,42 @@ function getCorrectAnswers(question) {
 }
 
 /**
+ * Get image path for a question based on quiz name and question number
+ * @param {string} quizName - Name of the quiz (e.g., "ITASTQB-QTEST-FL-2023-B-QA")
+ * @param {string} questionNumber - Question number
+ * @returns {string|null} - Image path or null if no image exists
+ */
+function getQuestionImagePath(quizName, questionNumber) {
+    // Extract quiz letter from filename (A, B, C, D)
+    const quizMatch = quizName.match(/-(A|B|C|D)-/);
+    if (!quizMatch) {
+        return null;
+    }
+    
+    const quizLetter = quizMatch[1];
+    // Try both naming conventions: questionNumber.png and LetterQuestionNumber.png
+    const imagePath1 = `img/${quizLetter}/${questionNumber}.png`;
+    const imagePath2 = `img/${quizLetter}/${quizLetter}${questionNumber}.png`;
+    
+    // Return object with both possible paths for checking
+    return { primary: imagePath1, alternative: imagePath2 };
+}
+
+/**
+ * Check if an image exists for a question
+ * @param {string} imagePath - Path to the image
+ * @returns {Promise<boolean>} - True if image exists, false otherwise
+ */
+async function checkImageExists(imagePath) {
+    try {
+        const response = await fetch(imagePath, { method: 'HEAD' });
+        return response.ok;
+    } catch (error) {
+        return false;
+    }
+}
+
+/**
  * Prepare question for display with shuffled options
  * @param {Object} question - Original question object
  * @returns {Object} - Question with shuffled options and original key mapping
@@ -484,6 +520,8 @@ if (typeof module !== 'undefined' && module.exports) {
         loadQuizState,
         clearQuizState,
         escapeHtml,
-        debounce
+        debounce,
+        getQuestionImagePath,
+        checkImageExists
     };
 }

@@ -4,6 +4,7 @@
     "question_page": 6,
     "question_number": "1",
     "question_text": "Quale dei seguenti è un tipico obiettivo del test?",
+    "question_image": "",
     "question_option": {
       "a": "Rilevare e correggere difetti nell'oggetto di test",
       "b": "Mantenere una comunicazione efficace con gli sviluppatori",
@@ -31,6 +32,7 @@
     "question_page": 6,
     "question_number": "2",
     "question_text": "Un progettista documenta la progettazione di un'interfaccia utente che non indirizza in modo adeguato gli utenti disabili, perché il progettista è stanco. Il programmatore implementa l'interfaccia utente in linea con la progettazione ma, poiché sta lavorando sotto forte pressione sui tempi, non include nel codice del programma un'adeguata gestione delle eccezioni per il calcolo dei bonus. Quando il sistema operativo viene utilizzato, alcuni utenti disabili si lamentano dell'interfaccia e l'azienda viene successivamente multata dall'autorità rilevante per la normativa. Nessuno si accorge che i calcoli dei bonus a volte sono errati. Quale delle seguenti affermazioni è CORRETTA?",
+    "question_image": "",
     "question_option": {
       "a": "Il calcolo errato dei bonus è un difetto che si verifica occasionalmente",
       "b": "La multa ricevuta per non aver indirizzato in modo errato alcuni utenti disabili è un failure",
@@ -58,6 +60,7 @@
     "question_page": 6,
     "question_number": "3",
     "question_text": "Le condizioni di test di alto livello vengono utilizzate dai tester per generare test case ed eseguire i test. Anche se le condizioni di test rimangono le stesse, i test case variano ogni volta. Quale dei seguenti \"principi del testing\" viene indirizzato attraverso la variazione dei test case?",
+    "question_image": "",
     "question_option": {
       "a": "I test perdono di efficacia",
       "b": "L'assenza di difetti è un'idea sbagliata",
@@ -85,6 +88,7 @@
     "question_page": 7,
     "question_number": "4",
     "question_text": "Dati i seguenti compiti di test: 1. Derivare i test case dalle condizioni di test 2. Identificare il testware riutilizzabile 3. Organizzare i test case in test procedure 4. Valutare la base di test e l'oggetto di test E le seguenti attività di test: A. Analisi dei test B. Progettazione dei test C. Implementazione dei test D. Completamento dei test Quale delle seguenti combinazioni è la MIGLIORE corrispondenza tra compiti e attività?",
+    "question_image": "",
     "question_option": {
       "a": "1B, 2A, 3D, 4C",
       "b": "1B, 2D, 3C, 4A",
@@ -112,6 +116,7 @@
     "question_page": 7,
     "question_number": "5",
     "question_text": "Dato il seguente testware: i. Test completion report ii. Dati contenuti in un database utilizzato per gli input e i risultati attesi dei test iii. Test case iv. Lista degli elementi necessari per costruire l'ambiente di test v. Sequenze documentate di test case in ordine di esecuzione Quale delle seguenti risposte definisce MEGLIO il testware prodotto come risultato dell'implementazione dei test?",
+    "question_image": "",
     "question_option": {
       "a": "ii, iv",
       "b": "iii, v",
@@ -139,6 +144,7 @@
     "question_page": 7,
     "question_number": "6",
     "question_text": "Quale delle seguenti rappresenta con PIÙ probabilità la descrizione di un compito svolto da qualcuno nel ruolo di test management?",
+    "question_image": "",
     "question_option": {
       "a": "Valutare la base di test e l'oggetto di test",
       "b": "Definire i requisiti dell'ambiente di test",
@@ -166,6 +172,7 @@
     "question_page": 8,
     "question_number": "7",
     "question_text": "Quale dei seguenti è un vantaggio dell'approccio whole-team?",
+    "question_image": "",
     "question_option": {
       "a": "Miglioramento della comunicazione tra i membri del team",
       "b": "Diminuzione della responsabilità individuale rispetto alla qualità",
@@ -193,6 +200,7 @@
     "question_page": 8,
     "question_number": "8",
     "question_text": "Dati i seguenti vantaggi e svantaggi dell'indipendenza del testing: i. I tester lavorano in una sede diversa da quella degli sviluppatori ii. I tester mettono in discussione le assunzioni che i programmatori fanno durante la scrittura del codice iii. Viene stabilita una dinamica conflittuale tra tester e sviluppatori iv. Gli sviluppatori si convincono che i tester siano i principali responsabili della qualità v. I tester hanno bias (pregiudizi) diversi rispetto a quelli degli sviluppatori Quali sono PIÙ probabilmente considerati come vantaggi?",
+    "question_image": "",
     "question_option": {
       "a": "i, iv",
       "b": "ii, v",
@@ -220,6 +228,7 @@
     "question_page": 8,
     "question_number": "9",
     "question_text": "Quale delle seguenti è una buona pratica del testing che si applica a tutti i cicli di vita dello sviluppo software?",
+    "question_image": "",
     "question_option": {
       "a": "Ogni livello di test ha obiettivi del test specifici e distinti",
       "b": "L'implementazione e l'esecuzione dei test per un determinato livello di test dovrebbero iniziare durante la corrispondente fase di sviluppo",
@@ -247,6 +256,7 @@
     "question_page": 8,
     "question_number": "10",
     "question_text": "Quale dei seguenti è un esempio di approccio test-first allo sviluppo?",
+    "question_image": "",
     "question_option": {
       "a": "Behavior-Driven Development",
       "b": "Test Level Driven Development",
@@ -274,6 +284,7 @@
     "question_page": 9,
     "question_number": "11",
     "question_text": "Quale dei seguenti è PIÙ probabile essere una sfida che si incontra durante l'implementazione DevOps?",
+    "question_image": "",
     "question_option": {
       "a": "Assicurarsi che non vengano trascurate caratteristiche di qualità non-funzionali",
       "b": "Gestire ambienti di test in continuo cambiamento",
@@ -301,6 +312,7 @@
     "question_page": 9,
     "question_number": "12",
     "question_text": "Quale delle seguenti affermazioni descrive MEGLIO le retrospettive?",
+    "question_image": "",
     "question_option": {
       "a": "Le retrospettive consentono ai membri del team di identificare altri membri del team che non hanno contribuito pienamente al raggiungimento della qualità, come richiesto dall'approccio whole team",
       "b": "Le retrospettive offrono ai tester l'opportunità di identificare le attività che hanno avuto successo, in modo da mantenerle quando saranno implementati in futuro potenziali miglioramenti",
@@ -328,6 +340,7 @@
     "question_page": 9,
     "question_number": "13",
     "question_text": "Quale dei seguenti test è PIU probabile che venga eseguito come parte del testing funzionale?",
+    "question_image": "",
     "question_option": {
       "a": "Il test verifica che la funzione di ordinamento inserisca gli elementi della lista o della matrice in ordine crescente",
       "b": "Il test verifica se la funzione di ordinamento completa l'ordinamento entro un secondo dall'avvio",
@@ -355,6 +368,7 @@
     "question_page": 10,
     "question_number": "14",
     "question_text": "Quale tra le seguenti situazioni PIÙ probabile che sia un trigger che porta al testing di manutenzione di un sistema di cambio valuta?",
+    "question_image": "",
     "question_option": {
       "a": "Gli sviluppatori hanno riferito che la modifica del sistema di cambio valuta era difficile e i tester hanno deciso di verificare se questo fosse vero",
       "b": "L'opzione di rimborso del sistema di cambio valuta è stata eliminata perché non sempre restituiva ai clienti l'importo corretto",
@@ -382,6 +396,7 @@
     "question_page": 10,
     "question_number": "15",
     "question_text": "Quale dei seguenti elementi NON può essere esaminato dal testing statico?",
+    "question_image": "",
     "question_option": {
       "a": "Contratto",
       "b": "Test plan",
@@ -409,6 +424,7 @@
     "question_page": 10,
     "question_number": "16",
     "question_text": "Quale delle seguenti affermazioni sul valore del testing statico è CORRETTA?",
+    "question_image": "",
     "question_option": {
       "a": "I tipi di difetti rilevati dal testing statico sono differenti da quelli che possono essere rilevati dal testing dinamico",
       "b": "Il testing dinamico è in grado di rilevare tipi di difetti che possono essere rilevati dal testing statico, oltre a tipi di difetti aggiuntivi",
@@ -436,6 +452,7 @@
     "question_page": 11,
     "question_number": "17",
     "question_text": "Date le seguenti descrizioni delle attività di review: 1. Le anomalie identificate sono analizzate e concordate, identificando il loro stato, l'ownership ed eventuali passi aggiuntivi necessari 2. I problemi vengono memorizzati, e gli aggiornamenti necessari vengono indirizzati prima dell'accettazione del prodotto di lavoro 3. I reviewer utilizzano tecniche per formulare suggerimenti e domande sul prodotto di lavoro, e per identificare anomalie 4. L'obiettivo della review e la sua schedulazione sono vengono stabiliti per garantire una review focalizzata ed efficiente 5. Ai partecipanti viene fornito l'accesso all'elemento sottoposto a review Nel processo di review, quale delle seguenti è la sequenza CORRETTA delle attività corrispondenti alle descrizioni?",
+    "question_image": "",
     "question_option": {
       "a": "4-3-5-2-1",
       "b": "4-5-3-1-2",
@@ -463,6 +480,7 @@
     "question_page": 11,
     "question_number": "18",
     "question_text": "Quale partecipante al processo di review è responsabile di garantire che i review meeting si svolgano in modo efficace e che tutti i partecipanti possano esprimere liberamente le proprie opinioni?",
+    "question_image": "",
     "question_option": {
       "a": "Manager",
       "b": "Moderatore",
@@ -490,6 +508,7 @@
     "question_page": 11,
     "question_number": "19",
     "question_text": "State eseguendo il testing di sistema di un'applicazione web di e-commerce e vi viene fornito il seguente requisito: REQ 05-017. Se il costo totale degli acquisti supera i \\$100, il cliente riceve uno sconto del 5% sugli acquisti successivi. In caso contrario, il cliente non riceve alcuno sconto. Quali tecniche di test saranno le PIÙ utili per progettare i test case basati su questo requisito?",
+    "question_image": "",
     "question_option": {
       "a": "Tecniche di test white-box",
       "b": "Tecniche di test black-box",
@@ -517,6 +536,7 @@
     "question_page": 12,
     "question_number": "20",
     "question_text": "Un sistema per la vendita di biglietti del cinema calcola il tipo di sconto in base all'anno di nascita del cliente (BY) e all'anno attuale (CY), come segue: Sia D la differenza tra CY e BY, cioè $D=CY-BY.$ Se $D<0$ viene visualizzato il messaggio di errore \"l'anno di nascita non può essere maggiore dell'anno attuale\" Se $0\\le D<18$ viene applicato lo sconto per studenti Se $18\\le D<65$ non si applica alcuno sconto Se Dè $\\dot{e}\\ge65$ viene applicato lo sconto per pensionati La test suite contiene già due test case: $BY=1990$, $CY=2020$ risultato atteso: nessuno sconto $BY=2030$, $CY=2029,$ risultato atteso: messaggio di errore Tra i seguenti insiemi di dati di test, quali DUE dovrebbero essere aggiunti per ottenere la copertura completa delle partizioni di equivalenza valide per il tipo di sconto?",
+    "question_image": "",
     "question_option": {
       "a": "$BY=2001$, $CY=2065$",
       "b": "$BY=1900$, $CY=1965$",
@@ -546,6 +566,7 @@
     "question_page": 12,
     "question_number": "21",
     "question_text": "State testando un sistema di controllo della temperatura per una struttura di stoccaggio a freddo per orticoltura. Il sistema riceve la temperatura (espressa in gradi Celsius) come input. Se la temperatura è compresa tra 0 e 2 gradi (inclusi), il sistema visualizza il messaggio \"temperatura OK\". In caso di temperature inferiori, il sistema visualizza il messaggio \"temperatura troppo bassa\", e in caso di temperature superiori, il sistema visualizza il messaggio \"temperatura troppo alta\". Utilizzando l'analisi ai valori limite a due valori, quale dei seguenti insieme di input dei test fornisce il livello più alto di copertura dei valori limite?",
+    "question_image": "",
     "question_option": {
       "a": "-1,3",
       "b": "0,2",
@@ -573,6 +594,7 @@
     "question_page": 13,
     "question_number": "22",
     "question_text": "State progettando i test case in base alla seguente tabella delle decisioni: Finora avete progettato i seguenti test case: TC1: uomo di 19 anni, non registrato, senza esperienza; risultato atteso: categoria A TC2: donna di 65 anni, non registrata, con 5 anni di esperienza; risultato atteso: categoria B TC3: uomo di 66 anni, registrato, senza esperienza; risultato atteso: categoria C • TC4: donna di 65 anni, registrata, con 4 anni di esperienza; risultato atteso: categoria D Quale dei seguenti test case, se aggiunto all'insieme di test case esistenti, aumenterà la copertura della tabella delle decisioni?",
+    "question_image": "img/D/22.png",
     "question_option": {
       "a": "Uomo di 66 anni, non registrato, senza esperienza; risultato atteso: categoria B",
       "b": "Donna di 55 anni, non registrata, con 2 anni di esperienza; risultato atteso: categoria A",
@@ -600,6 +622,7 @@
     "question_page": 14,
     "question_number": "23",
     "question_text": "State applicando il testing delle transizioni di stato a un sistema per la prenotazione di camere di hotel, modellato dalla seguente tabella degli stati, con 4 stati e 5 eventi differenti: Assumendo che tutti i test case inizino nello stato \"Richiesta\", quale dei seguenti test case, rappresentati come sequenze di eventi, raggiunge la copertura più alta delle transizioni valide?",
+    "question_image": "img/D/23.png",
     "question_option": {
       "a": "Non Disponibile, Disponibile, CambioCamera, Non Disponibile, Annullamento",
       "b": "Disponibile, CambioCamera, Non Disponibile, Disponibile, Pagamento",
@@ -627,6 +650,7 @@
     "question_page": 14,
     "question_number": "24",
     "question_text": "La test suite S per un programma P raggiunge il 100% di copertura delle istruzioni. È composta da tre test case, ognuno dei quali raggiunge il 50% di copertura delle istruzioni. Quale delle seguenti affermazioni è CORRETTA?",
+    "question_image": "",
     "question_option": {
       "a": "L'esecuzione di S causerà tutti i possibili failure in P",
       "b": "S raggiunge il 100% della copertura dei rami per P",
@@ -654,6 +678,7 @@
     "question_page": 15,
     "question_number": "25",
     "question_text": "Perché il testing white-box facilita la rilevazione dei difetti anche quando le specifiche software sono vaghe, obsolete o incomplete?",
+    "question_image": "",
     "question_option": {
       "a": "I test case sono progettati in base alla struttura dell'oggetto di test piuttosto che in base alle specifiche",
       "b": "Per ogni tecnica di test white-box, la copertura può essere ben definita e facilmente misurata",
@@ -681,6 +706,7 @@
     "question_page": 15,
     "question_number": "26",
     "question_text": "Quale delle seguenti situazioni NON può essere prevista da un tester quando applica l'error guessing?",
+    "question_image": "",
     "question_option": {
       "a": "Lo sviluppatore ha frainteso la formula nella user story per il calcolo degli interessi",
       "b": "Lo sviluppatore ha scritto \"FA = A*(1+IR^N)\" invece di \"FA=A\"(1+lR)\"N\" nel codice sorgente",
@@ -708,6 +734,7 @@
     "question_page": 15,
     "question_number": "27",
     "question_text": "Quale delle seguenti è vera sul testing esplorativo?",
+    "question_image": "",
     "question_option": {
       "a": "I test case vengono progettati prima dell'inizio della sessione di testing esplorativo",
       "b": "Il tester può effettuare l'esecuzione dei test, ma non può effettuare la progettazione dei test",
@@ -735,6 +762,7 @@
     "question_page": 16,
     "question_number": "28",
     "question_text": "Quale pratica di scrittura collaborativa delle user story consente al team di raggiungere una comprensione collettiva di quello che deve essere rilasciato?",
+    "question_image": "",
     "question_option": {
       "a": "Planning poker, in modo che un team possa raggiungere il consenso sull'effort necessario per implementare una user story",
       "b": "Review, in modo che un team possa rilevare inconsistenze e contraddizioni in una user story",
@@ -762,6 +790,7 @@
     "question_page": 16,
     "question_number": "29",
     "question_text": "Avete appena iniziato a progettare i test case per la seguente user story: In tutti i test case la precondizione è la seguente: esistono solo due prodotti disponibili, A e B. II prodotto A costa \\$100 e il prodotto B costa \\$110. Quale dei seguenti è il MIGLIOR esempio di test case per questa user story?",
+    "question_image": "",
     "question_option": {
       "a": "Aprire la pagina web e impostare il filtro per visualizzare i prezzi tra \\$90 e \\$100. Risultato atteso: i risultati visualizzare solo il prodotto A. Impostare il prezzo massimo a \\$110. Risultato atteso: i risultati ora includono entrambi i prodotti A e B",
       "b": "Aprire la pagina web. Risultato atteso: i prezzi minimi e massimi predefiniti sono rispettivamente \\$100 e \\$110. Aggiungere il prodotto C al magazzino, con un prezzo di \\$120. Aggiornare la pagina web del cliente. Risultato atteso: il prezzo massimo predefinito passa a \\$120",
@@ -789,6 +818,7 @@
     "question_page": 17,
     "question_number": "30",
     "question_text": "Quali DUE delle seguenti situazioni definiscono MEGLIO i criteri di USCITA in un progetto di testing?",
+    "question_image": "",
     "question_option": {
       "a": "Il budget è approvato",
       "b": "Il budget si è esaurito",
@@ -818,6 +848,7 @@
     "question_page": 17,
     "question_number": "31",
     "question_text": "Il team vuole stimare il tempo necessario per un tester ad eseguire quattro test case per un componente software. Il team ha raccolto le seguenti misure dell'effort utilizzato per eseguire un singolo test case: Scenario migliore: 1 ora Scenario peggiore: 8 ore Scenario più probabile: 3 ore Si sta utilizzando la tecnica three-point estimation, qual è la stima finale del tempo necessario per eseguire tutti e quattro i test case?",
+    "question_image": "",
     "question_option": {
       "a": "14 ore",
       "b": "3,5 ore",
@@ -845,6 +876,7 @@
     "question_page": 18,
     "question_number": "32",
     "question_text": "La tabella mostra la matrice di tracciabilità tra i test case e i requisiti. \"X\" significa che un determinato test case copre il requisito corrispondente. Volete prioritizzare i test case in base alla prioritizzazione della copertura aggiuntiva. Eseguite tutti e quattro i test case. Quale test case dovrebbe essere eseguito per ULTIMO?",
+    "question_image": "img/D/32.png",
     "question_option": {
       "a": "TC1",
       "b": "TC2",
@@ -872,6 +904,7 @@
     "question_page": 18,
     "question_number": "33",
     "question_text": "Come possono i quadranti del testing essere utili per il testing?",
+    "question_image": "",
     "question_option": {
       "a": "Aiutano nella pianificazione dei test dividendo il processo di test in quattro fasi, corrispondenti ai quattro livelli di test principali: testing di componente, testing di integrazione, testing di sistema e testing di accettazione",
       "b": "Aiutano a valutare la copertura di alto livello (ad esempio, la copertura dei requisiti) in base alla copertura di basso livello (ad esempio, la copertura del codice)",
@@ -899,6 +932,7 @@
     "question_page": 19,
     "question_number": "34",
     "question_text": "Per un determinato rischio, il relativo livello di rischio è di \\$1.000 e la sua probabilità del rischio è stimata al 50%. Quanto è l'impatto del rischio?",
+    "question_image": "",
     "question_option": {
       "a": "\\$500",
       "b": "\\$2.000",
@@ -926,6 +960,7 @@
     "question_page": 19,
     "question_number": "35",
     "question_text": "Quali DUE dei seguenti sono rischi di prodotto?",
+    "question_image": "",
     "question_option": {
       "a": "Scope creep (crescita indesiderata delle funzioni, dei requisiti o delle funzionalità)",
       "b": "Architettura scadente",
@@ -955,6 +990,7 @@
     "question_page": 19,
     "question_number": "36",
     "question_text": "Quale dei seguenti NON è un obiettivo valido per un test report?",
+    "question_image": "",
     "question_option": {
       "a": "Tracciare l'avanzamento dei test e identificare le aree che richiedono ulteriore attenzione",
       "b": "Fornire informazioni sui test eseguiti, sui loro risultati e su eventuali problemi o difetti rilevati",
@@ -982,6 +1018,7 @@
     "question_page": 19,
     "question_number": "37",
     "question_text": "L'utente ha segnalato un failure del software. Un ingegnere del team di supporto ha chiesto all'utente il version number del software in cui è stato osservato il failure. In base al version number, il team ha identificato tutti i file che componevano il rilascio. In seguito, uno sviluppatore ha potuto eseguire un'analisi, localizzare il difetto e correggerlo. Quale dei seguenti elementi ha permesso al team di svolgere l'attività sopra descritta?",
+    "question_image": "",
     "question_option": {
       "a": "Risk management",
       "b": "Monitoraggio e controllo dei test",
@@ -1009,6 +1046,7 @@
     "question_page": 20,
     "question_number": "38",
     "question_text": "Considerate il seguente defect report per un sistema di Gestione Prestiti Libri: ID difetto: 001 | Titolo: Impossibile restituire un libro | Severità: Alta | Priorità: Ambiente: Windows 10, Google Chrome Descrizione: Quando si tenta di restituire un libro utilizzando la funzione Restituzione Libro, il sistema non registra la restituzione e il libro rimane in prestito all'utente. Passi per la riproduzione: Eseguire il Login al sistema Gestione Prestiti Libri come utente che ha preso in prestito un libro. Selezionare \"Restituzione Libro\" per il libro che è stato preso in prestito. Il sistema non registra la restituzione e il libro rimane in prestito. Risultato atteso: Il libro dovrebbe essere restituito e non dovrebbe più apparire all'utente come preso in prestito. Risultato effettivo: Il libro rimane in prestito all'utente e non viene registrato nel sistema come restituito. Allegati: [elenco vuoto] Quale delle seguenti azioni è PIÙ probabile che aiuti lo sviluppatore a riprodurre velocemente il failure?",
+    "question_image": "",
     "question_option": {
       "a": "Aggiungere informazioni nella sezione \"Descrizione\" su quali utenti e quali libri sono impattati dal problema",
       "b": "Compilare il valore mancante per il campo \"Priorità\"",
@@ -1036,6 +1074,7 @@
     "question_page": 20,
     "question_number": "39",
     "question_text": "Date le seguenti categorie di strumenti di test: i. Strumenti di collaborazione ii. Strumenti DevOps iii. Strumenti di management iv. Strumenti di testing non-funzionale v. Strumenti di progettazione e implementazione dei test Quali sono le categorie di strumenti che facilitano con MAGGIORE probabilità l'esecuzione dei test?",
+    "question_image": "",
     "question_option": {
       "a": "i, v",
       "b": "ii, iv",
@@ -1063,6 +1102,7 @@
     "question_page": 21,
     "question_number": "40",
     "question_text": "Quale dei seguenti è il rischio PIÙ probabile della test automation?",
+    "question_image": "",
     "question_option": {
       "a": "Rilevare difetti aggiuntivi di severità alta",
       "b": "Fornire misure che sono troppo complicate da derivare per l'uomo",

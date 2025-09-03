@@ -4,6 +4,7 @@
     "question_page": 7,
     "question_number": "1",
     "question_text": "Quale dei seguenti è un esempio del motivo per cui il testing è necessario?",
+    "question_image": "",
     "question_option": {
       "a": "Il testing dinamico aumenta la qualità causando il fallimento degli oggetti di test nei modi che non potrebbero mai essere realizzati dagli utenti",
       "b": "Il testing statico viene utilizzato dagli sviluppatori per identificare i failure nel loro codice prima che si verifichino nel testing dinamico",
@@ -31,6 +32,7 @@
     "question_page": 7,
     "question_number": "2",
     "question_text": "Quale delle seguenti affermazioni sulla Quality Assurance (QA) e/o sul Quality Control (QC) è corretta?",
+    "question_image": "",
     "question_option": {
       "a": "La Quality Assurance viene eseguita come parte del testing",
       "b": "Il testing viene eseguito come parte del Quality Control",
@@ -58,6 +60,7 @@
     "question_page": 7,
     "question_number": "3",
     "question_text": "Uno dei \"principi del testing\" afferma che il testing esaustivo è impossibile. Quale dei seguenti è un esempio di come indirizzare nella pratica questo principio?",
+    "question_image": "",
     "question_option": {
       "a": "Creare test case che coprano tutti i possibili output specificati",
       "b": "Documentare tutte le possibili varianti degli input dei test e prioritizzarli in base all'importanza",
@@ -85,6 +88,7 @@
     "question_page": 7,
     "question_number": "4",
     "question_text": "Quale attività di test implica di lavorare con i requisiti dei dati di test, con le condizioni di test, con i requisiti dell'ambiente di test e con i test case?",
+    "question_image": "",
     "question_option": {
       "a": "Progettazione dei test",
       "b": "Esecuzione dei test",
@@ -112,6 +116,7 @@
     "question_page": 8,
     "question_number": "5",
     "question_text": "Quale dei seguenti elementi è PIÙ probabile che abbia un impatto su come il testing viene eseguito per un determinato oggetto di test?",
+    "question_image": "",
     "question_option": {
       "a": "Il livello medio di esperienza del team di marketing dell'organizzazione",
       "b": "La consapevolezza da parte degli utenti che si sta sviluppando un nuovo sistema per loro",
@@ -139,6 +144,7 @@
     "question_page": 8,
     "question_number": "6",
     "question_text": "Quale delle seguenti affermazioni è un esempio CORRETTO del valore della tracciabilità?",
+    "question_image": "",
     "question_option": {
       "a": "La tracciabilità tra i rischi mitigati e i test case superati fornisce un mezzo per determinare il livello di rischio residuo",
       "b": "La tracciabilità tra i requisiti utente e i risultati dell'esecuzione dei test fornisce un mezzo per misurare i progressi del progetto rispetto agli obiettivi di business",
@@ -166,6 +172,7 @@
     "question_page": 8,
     "question_number": "7",
     "question_text": "Quale dei seguenti è il PIÙ probabile esempio di un tester che utilizza una competenza generica durante il testing?",
+    "question_image": "",
     "question_option": {
       "a": "La profonda conoscenza del tester su una varietà di giochi per computer gli ha permesso di andare d'accordo con uno degli sviluppatori, anche lui appassionato di giochi",
       "b": "Il tester ha lavorato in precedenza come pilota ed è stato in grado di comprendere meglio i criteri di accettazione del sistema di controllo dell'elicottero",
@@ -193,6 +200,7 @@
     "question_page": 8,
     "question_number": "8",
     "question_text": "Quale dei seguenti è un vantaggio dell'approccio whole-team?",
+    "question_image": "",
     "question_option": {
       "a": "Permette ai membri del team di assumere qualsiasi ruolo in qualsiasi momento",
       "b": "Necessita di un solo team per supportare l'intero progetto di sviluppo",
@@ -220,6 +228,7 @@
     "question_page": 9,
     "question_number": "9",
     "question_text": "Quale delle seguenti affermazioni sul ciclo di vita dello sviluppo software selezionato è CORRETTA?",
+    "question_image": "",
     "question_option": {
       "a": "Se si utilizza lo sviluppo software Agile, l'automazione dei test di sistema sostituisce la necessità di eseguire il regression testing",
       "b": "Se si utilizza un modello di sviluppo sequenziale, il testing dinamico è generalmente limitato alle fasi avanzate del ciclo di vita",
@@ -247,6 +256,7 @@
     "question_page": 9,
     "question_number": "10",
     "question_text": "Quale delle seguenti è una buona pratica del testing che si applica a tutti i cicli di vita dello sviluppo software?",
+    "question_image": "",
     "question_option": {
       "a": "I tester dovrebbero eseguire la review dei prodotti di lavoro come parte della successiva fase di sviluppo",
       "b": "I tester dovrebbero eseguire la review di un prodotto di lavoro non appena la versione draft è disponibile",
@@ -274,6 +284,7 @@
     "question_page": 9,
     "question_number": "11",
     "question_text": "Quale dei seguenti è un esempio di approccio test-first allo sviluppo?",
+    "question_image": "",
     "question_option": {
       "a": "Test-Driven Development",
       "b": "Coverage-Driven Development",
@@ -301,6 +312,7 @@
     "question_page": 9,
     "question_number": "12",
     "question_text": "Quale delle seguenti affermazioni su DevOps è CORRETTA?",
+    "question_image": "",
     "question_option": {
       "a": "Per accelerare i rilasci, viene utilizzata il continuous integration per incoraggiare gli sviluppatori a sottomettere velocemente il codice senza la necessità di completare il testing di componente",
       "b": "Per poter aggiornare e rilasciare i sistemi con maggiore frequenza, sono necessari molti regression test automatizzati per ridurre il pericolo di regressione",
@@ -328,6 +340,7 @@
     "question_page": 10,
     "question_number": "13",
     "question_text": "Quale dei seguenti è PIÙ probabile che venga eseguito come parte del testing di sistema?",
+    "question_image": "",
     "question_option": {
       "a": "Testing di sicurezza di un sistema di credit management da parte di un team di test indipendente",
       "b": "Testing dell'interfaccia di un sistema di cambio valuta con un sistema bancario esterno",
@@ -355,6 +368,7 @@
     "question_page": 10,
     "question_number": "14",
     "question_text": "Quale delle seguenti affermazioni è CORRETTA?",
+    "question_image": "",
     "question_option": {
       "a": "Il numero di regression test aumenta con l'avanzare del progetto, mentre il numero di test confermativi diminuisce con l'avanzare del progetto",
       "b": "I regression test vengono creati ed eseguiti quando l'oggetto di test è stato corretto, mentre i test confermativi vengono eseguiti ogni volta che l'oggetto di test viene migliorato",
@@ -382,6 +396,7 @@
     "question_page": 10,
     "question_number": "15",
     "question_text": "Quale dei seguenti è un esempio di difetto che può essere rilevato attraverso il testing statico ma NON attraverso il testing dinamico?",
+    "question_image": "",
     "question_option": {
       "a": "Mancanza di usabilità dell'interfaccia utente",
       "b": "Codice senza cammini non raggiungibili",
@@ -409,6 +424,7 @@
     "question_page": 10,
     "question_number": "16",
     "question_text": "Quale dei seguenti è un beneficio di feedback anticipati e frequente da parte degli stakeholder?",
+    "question_image": "",
     "question_option": {
       "a": "I manager sono consapevoli di quali sviluppatori sono meno produttivi",
       "b": "Consente ai project manager di prioritizzare le loro interazioni con gli stakeholder",
@@ -436,6 +452,7 @@
     "question_page": 11,
     "question_number": "17",
     "question_text": "Date le seguenti descrizioni dei compiti: 1. Vengono selezionate le caratteristiche di qualità da valutare e i criteri di uscita 2. Viene distribuito il prodotto di lavoro ai partecipanti della review 3. Vengono identificati i potenziali difetti nel prodotto di lavoro 4. Vengono discussi i potenziali difetti E le seguenti attività di review: A. Review individuale B. Inizio della review C. Pianificazione D. Comunicazione e analisi Quale delle seguenti risposte definisce MEGLIO la corrispondenza tra le descrizioni dei compiti e le attività?",
+    "question_image": "",
     "question_option": {
       "a": "1B, 2C, 3D, 4A",
       "b": "1B, 2D, 3C, 4A",
@@ -463,6 +480,7 @@
     "question_page": 11,
     "question_number": "18",
     "question_text": "Dati i seguenti ruoli nelle review: 1. Scribe 2. Review leader 3. Facilitatore 4. Manager E le seguenti responsabilità nelle review: A. Assicurare lo svolgimento efficace dei review meeting e la creazione di un ambiente di review sicuro B. Memorizzare le informazioni della review, come le decisioni e le nuove anomalie rilevate durante il review meeting C. Decidere cosa deve essere sottoposto a review e assegnare le risorse, come lo staff e il tempo per la review D. Assumere la responsabilità generale della review, organizzando ad esempio quando e dove si svolgerà la review Quale delle seguenti risposte definisce MEGLIO la corrispondenza tra i ruoli e le responsabilità nella review?",
+    "question_image": "",
     "question_option": {
       "a": "1A, 2B, 3D, 4C",
       "b": "1A, 2C, 3B, 4D",
@@ -490,6 +508,7 @@
     "question_page": 12,
     "question_number": "19",
     "question_text": "Quale delle seguenti affermazioni descrive MEGLIO la differenza tra il testing della tabella delle decisioni e il testing dei rami?",
+    "question_image": "",
     "question_option": {
       "a": "Nel testing della tabella delle decisioni, i test case sono derivati dalle decisioni presenti nel codice. Nel testing dei rami, i test case sono derivati dalla conoscenza del flusso di controllo dell'oggetto di test",
       "b": "Nel testing della tabella delle decisioni, i test case sono derivati dalle specifiche che descrivono la logica di business. Nel testing dei rami i test case si basano sull'anticipazione di potenziali difetti nel codice sorgente",
@@ -517,6 +536,7 @@
     "question_page": 12,
     "question_number": "20",
     "question_text": "I clienti della catena di autolavaggio TestWash hanno delle tessere che memorizzano il numero di lavaggi effettuati fino a quel momento. Il valore iniziale è 0. Dopo l'ingresso nell'autolavaggio, il sistema aumenta di uno il numero sulla tessera. Questo valore rappresenta il numero attuale di lavaggi effettuati. In base a questo numero, il sistema decide quale sconto applicare al cliente. Ad ogni decimo lavaggio effettuato (ogni dieci lavaggi) il sistema offre uno sconto del 10%. Per ogni ventesimo lavaggio effettuato (ogni venti lavaggi) il sistema offre un ulteriore sconto del 40% (per un totale di sconto del 50%). Quale dei seguenti insiemi di dati di input (intesi come numeri attuale di lavaggi effettuati) raggiunge la copertura più alta delle partizioni di equivalenza?",
+    "question_image": "",
     "question_option": {
       "a": "19, 20, 30",
       "b": "11, 12, 20",
@@ -544,6 +564,7 @@
     "question_page": 13,
     "question_number": "21",
     "question_text": "State testando un modulo che verifica la correttezza della lunghezza della password fornita come input. Il modulo accetta una password con la lunghezza corretta e rifiuta una password troppo corta o troppo lunga. La lunghezza corretta della password è compresa tra 6 e 12 caratteri, altrimenti viene considerata errata. In fase iniziale, il modulo è vuoto (lunghezza password =0 valida). Applicate l'analisi ai valori limite alla variabile \"lunghezza password\". L'insieme dei test case raggiunge il 100% di copertura dell'analisi ai valori limite a 2 valori. Il team ha deciso che, a causa dell'elevato rischio di questo componente, si dovrebbero aggiungere test case per garantire il 100% di copertura dell'analisi ai valori limite a 3 valori. Quali valori di \"lunghezza password\" dovrebbero essere aggiunti per ottenere questo risultato?",
+    "question_image": "",
     "question_option": {
       "a": "4, 5, 13, 14",
       "b": "7, 11",
@@ -571,6 +592,7 @@
     "question_page": 14,
     "question_number": "22",
     "question_text": "La seguente tabella delle decisioni contiene le regole per determinare il rischio di arteriosclerosi. Sono stati progettati cinque test case con i seguenti dati di input: TC1: Colesterolo = 125 mg/dl, Pressione sanguigna = 141 mm Hg; TC2: Colesterolo = 200 mg/dl, Pressione sanguigna = 201 mm Hg; TC3: Colesterolo = 124 mg/dl, Pressione sanguigna = 201 mm Hg; TC4: Colesterolo = 109 mg/dl, Pressione sanguigna = 200 mm Hg; TC5: Colesterolo = 201 mg/dl, Pressione sanguigna = 140 mm Hg. Quale è la copertura della tabella delle decisioni raggiunta con questi test case?",
+    "question_image": "img/B/22.png",
     "question_option": {
       "a": "40%",
       "b": "60%",
@@ -598,6 +620,7 @@
     "question_page": 15,
     "question_number": "23",
     "question_text": "Un sistema di archiviazione può memorizzare fino a tre elementi ed è stato modellato dal seguente state transition diagram. La variabile N rappresenta il numero di elementi attualmente archiviati. Quale dei seguenti test case, rappresentati come sequenze di eventi, raggiunge il livello di copertura più alto delle transizioni valide?",
+    "question_image": "img/B/23.png",
     "question_option": {
       "a": "Add, Remove, Add, Add, Add",
       "b": "Add, Add, Add, Add, Remove, Remove",
@@ -625,6 +648,7 @@
     "question_page": 15,
     "question_number": "24",
     "question_text": "Avete eseguito due test case, T1 e T2, sullo stesso codice. Il test case T1 ha ottenuto il 40% di copertura delle istruzioni e il test case T2 ha ottenuto il 65% di copertura delle istruzioni. Quale delle seguenti frasi deve essere necessariamente vera?",
+    "question_image": "",
     "question_option": {
       "a": "La test suite composta dai test case T1 e T2 raggiunge il 105% di copertura delle istruzioni",
       "b": "Esiste almeno un'istruzione che deve essere stata eseguita sia da T1 che da T2",
@@ -652,6 +676,7 @@
     "question_page": 16,
     "question_number": "25",
     "question_text": "La metrica di copertura dei rami è definita come BCov =(X/Y)*100% Cosa rappresentano X e Y in questa formula?",
+    "question_image": "",
     "question_option": {
       "a": "x= numero di esiti decisionali esercitati dai test case Y= numero totale di esiti decisionali nel codice",
       "b": "x= numero di rami condizionali esercitati dai test case Y= numero totale di rami nel codice",
@@ -679,6 +704,7 @@
     "question_page": 16,
     "question_number": "26",
     "question_text": "Quali DUE delle seguenti affermazioni forniscono la MIGLIORE motivazione per utilizzare il testing esplorativo?",
+    "question_image": "",
     "question_option": {
       "a": "Ai tester non è stato assegnato tempo sufficiente per la progettazione dei test e l'esecuzione dei test",
       "b": "La strategia di test esistente prevede che i tester utilizzino tecniche di test black-box formali",
@@ -708,6 +734,7 @@
     "question_page": 16,
     "question_number": "27",
     "question_text": "Quale delle seguenti risposte si adatta MEGLIO ad essere un elemento di una checklist utilizzata nel testing checklist-based?",
+    "question_image": "",
     "question_option": {
       "a": "\"Lo sviluppatore ha commesso un errore nell'implementazione del codice\"",
       "b": "\"La copertura delle istruzioni raggiunta supera l'85%\"",
@@ -735,6 +762,7 @@
     "question_page": 17,
     "question_number": "28",
     "question_text": "Considerate i seguenti criteri di accettazione per una user story scritta dal punto di vista del proprietario di un negozio online. (Given) Dato che l'utente ha effettuato il login e si trova nella homepage, (When) Quando l'utente seleziona \"Aggiungi Elemento\", (Then) Allora dovrebbe apparire il modulo \"Crea Elemento\", (And) e l'utente dovrebbe poter inserire un nome e un prezzo per il nuovo elemento. In quale formato è scritto questo criterio di accettazione?",
+    "question_image": "",
     "question_option": {
       "a": "Rule-oriented",
       "b": "Scenario-oriented",
@@ -762,6 +790,7 @@
     "question_page": 17,
     "question_number": "29",
     "question_text": "Il vostro team analizza la seguente user story in modo da poter definire i criteri di accettazione: Come cliente registrato, voglio poter visualizzare i miei ordini precedenti sul sito web dell'azienda, in modo da tenere traccia dei miei acquisti. Quale dei seguenti test case NON è rilevante per questa user story?",
+    "question_image": "",
     "question_option": {
       "a": "Input: il cliente accede al proprio account sul sito web e seleziona \"vedi cronologia ordini\" Output atteso: il sistema visualizza un elenco di tutti gli ordini precedenti del cliente, inclusi la data, il numero dell'ordine e il costo totale",
       "b": "Input: il cliente seleziona un ordine dall'elenco degli ordini Output atteso: il sistema visualizza i singoli articoli acquistati, con i relativi prezzi e quantità",
@@ -789,6 +818,7 @@
     "question_page": 18,
     "question_number": "30",
     "question_text": "Il vostro team segue il processo che utilizza la pipeline di delivery DevOps. Le prime tre fasi di questo processo sono: (1) Sviluppo del codice (2) Sottomettere il codice in un sistema di controllo della versione ed eseguire il merge al branch (ramo) \"test\" (3) Eseguire il testing di componente per il codice sottomesso Quale dei seguenti è il criterio di ingresso PIÙ adatto per la fase (2) di questa pipeline?",
+    "question_image": "",
     "question_option": {
       "a": "L'analisi statica non restituisce warning di severità alta per il codice sottomesso",
       "b": "II controllo della versione del sistema non segnala conflitti durante il merge del codice nel branch\"test\"",
@@ -816,6 +846,7 @@
     "question_page": 18,
     "question_number": "31",
     "question_text": "Volete stimare l'effort del test per il nuovo progetto utilizzando una stima basata su valori statistici. Calcolate l'effort del test rispetto all'effort totale dello sviluppo utilizzando i valori medi per l'effort dello sviluppo e per l'effort del test di quattro progetti storici che sono similari al nuovo progetto. La tabella mostra questi dati storici. L'effort dello sviluppo stimato per il nuovo progetto è di $800.000. Quale è la vostra stima dell'effort del test per questo progetto?",
+    "question_image": "img/B/31.png",
     "question_option": {
       "a": "$40.000",
       "b": "$80.000",
@@ -843,6 +874,7 @@
     "question_page": 19,
     "question_number": "32",
     "question_text": "State eseguendo il testing di un'applicazione web che permette agli utenti di eseguire la RICERCA di prodotti, VISUALIZZARE i dettagli dei prodotti, AGGIUNGERE prodotti al carrello ed effettuare un ORDINE. Avete progettato i seguenti sette test case, che volete eseguire secondo la migliore sequenza, basata sulle priorità dei test: Avete inoltre identificato le seguenti dipendenze logiche tra i test case: La funzionalità RICERCA deve essere testata prima della funzionalità VISUALIZZARE • La funzionalità VISUALIZZARE deve essere testata prima della funzionalità AGGIUNGERE La funzionalità AGGIUNGERE deve essere testata prima della funzionalità ORDINE. Quale test case dovrebbe essere eseguito come quarto test case?",
+    "question_image": "img/B/32.png",
     "question_option": {
       "a": "TC3",
       "b": "TC1",
@@ -870,6 +902,7 @@
     "question_page": 19,
     "question_number": "33",
     "question_text": "In base al modello dei quadranti del testing, quale dei seguenti appartiene al quadrante Q1 (\"Test orientati alla tecnologia che supportano il team di sviluppo\")?",
+    "question_image": "",
     "question_option": {
       "a": "Testing di usabilità",
       "b": "Testing funzionale",
@@ -897,6 +930,7 @@
     "question_page": 20,
     "question_number": "34",
     "question_text": "Dati i seguenti rischi: 1. Un'implementazione inefficace del ciclo genera risposte di sistema molto lente 2. I consumatori hanno cambiato le loro preferenze 3. Allagamento della sala server 4. I pazienti al di sopra di una certa età ricevono report non accurati E le seguenti attività di mitigazione: A. Accettazione del rischio B. Performance testing C. Utilizzo della tecnica di test analisi ai valori limite D. Trasferimento del rischio Quale delle seguenti risposte è la MIGLIORE corrispondenza tra rischi e attività di mitigazione?",
+    "question_image": "",
     "question_option": {
       "a": "1C, 2D, 3A, 4B",
       "b": "1B, 2D, 3A, 4C",
@@ -924,6 +958,7 @@
     "question_page": 20,
     "question_number": "35",
     "question_text": "Quale delle seguenti è una metrica di qualità del prodotto?",
+    "question_image": "",
     "question_option": {
       "a": "Mean time to failure",
       "b": "Numero di difetti rilevati",
@@ -951,6 +986,7 @@
     "question_page": 20,
     "question_number": "36",
     "question_text": "Il vostro team di test fa parte di un team di progetto situato in Nord America, che sta sviluppando un prodotto per un cliente in Europa. Il progetto applica uno sviluppo software Agile e segue l'approccio DevOps, utilizzando una pipeline di continuous integration/continuous delivery. Quale dei seguenti è il modo MENO efficace per comunicare al cliente l'avanzamento dei test?",
+    "question_image": "",
     "question_option": {
       "a": "Face-to-face",
       "b": "Dashboard",
@@ -978,6 +1014,7 @@
     "question_page": 21,
     "question_number": "37",
     "question_text": "Quale delle seguenti risposte descrive MEGLIO un esempio di come il configuration management (CM) supporta il testing?",
+    "question_image": "",
     "question_option": {
       "a": "A partire dal version number dell'ambiente, lo strumento di CM può recuperare i version number delle librerie, degli stub e dei driver utilizzati nell'ambiente",
       "b": "A partire dalle configurazioni di test definite dal record dei valori di input dei test, lo strumento di CM può eseguire i test case per queste configurazioni e calcolare la copertura dei test",
@@ -1005,6 +1042,7 @@
     "question_page": 21,
     "question_number": "38",
     "question_text": "State eseguendo il testing di una funzione di ordinamento che riceve come input un insieme di numeri e restituisce lo stesso insieme di numeri ordinati in ordine crescente. Il log dell'esecuzione dei test è il seguente: Configurazione dell'ambiente: Quale delle seguenti risposte fornisce la MIGLIORE descrizione di un failure in un defect report?",
+    "question_image": "img/B/38.png",
     "question_option": {
       "a": "Il sistema non riesce a ordinare diverse serie di numeri. Riferimento: TC3, TC4, TC5",
       "b": "Il sistema sembra non tenere conto dei duplicati durante l'ordinamento. Riferimento: TC3, TC4, TC5",
@@ -1032,6 +1070,7 @@
     "question_page": 22,
     "question_number": "39",
     "question_text": "Date le seguenti descrizioni: 1. Supporto al tracciamento del workflow (flusso di lavoro) 2. Facilitare la comunicazione 3. Virtual machine 4. Review di supporto E le seguenti categorie di strumenti di test: A. Strumenti di testing statico B. Strumenti che supportano la scalabilità e la standardizzazione del rilascio C. Strumenti DevOps D. Strumenti di collaborazione Quale delle seguenti risposte è la MIGLIORE corrispondenza tra le descrizioni e le categorie di strumenti di test?",
+    "question_image": "",
     "question_option": {
       "a": "1A, 2B, 3C, 4D",
       "b": "1B, 2D, 3C, 4A",
@@ -1059,6 +1098,7 @@
     "question_page": 22,
     "question_number": "40",
     "question_text": "Quale dei seguenti è il vantaggio PIÙ probabile della test automation?",
+    "question_image": "",
     "question_option": {
       "a": "Fornisce misure di copertura che sono troppo complicate da ricavare per l'uomo",
       "b": "Condivide la responsabilità del testing con il fornitore dello strumento",
