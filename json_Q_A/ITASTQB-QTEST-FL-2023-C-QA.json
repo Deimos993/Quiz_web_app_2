@@ -545,7 +545,7 @@
     "question_pdf": "ITASTQB-QTEST-FL-2023-C.pdf",
     "question_page": 12,
     "question_number": "21",
-    "question_text": "Uno sviluppatore è stato ingaggiato per implementare la seguente regola di business:\nINPUT: valore (numero intero)\nIF (valore $\\le100$ OR valore $\\ge200$) THEN scrivere \"valore non corretto\"\nELSE scrivere \"valore OK\"\nCome tester, progettate i test case utilizzando l'analisi ai valori limite a 2 valori.\nQuale dei seguenti insiemi di input dei test raggiunge la copertura maggiore?",
+    "question_text": "Uno sviluppatore è stato ingaggiato per implementare la seguente regola di business:\nINPUT: valore (numero intero)\nIF (valore <=100 OR valore >= 200) THEN scrivere \"valore non corretto\"\nELSE scrivere \"valore OK\"\nCome tester, progettate i test case utilizzando l'analisi ai valori limite a 2 valori.\nQuale dei seguenti insiemi di input dei test raggiunge la copertura maggiore?",
     "question_option": {
       "a": "100, 150, 200, 201",
       "b": "99, 100, 200, 201",

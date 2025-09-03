@@ -1004,7 +1004,7 @@
     "question_pdf": "ITASTQB-QTEST-FL-2023-B.pdf",
     "question_page": 21,
     "question_number": "38",
-    "question_text": "State eseguendo il testing di una funzione di ordinamento che riceve come input un insieme di numeri e restituisce lo stesso insieme di numeri ordinati in ordine crescente. Il log dell'esecuzione dei test è il seguente: Configurazione dell'ambiente: build della funzione di ordinamento 2.002.2182, insieme di test case: TCS-3, numero di TC (test case): 5 ID test run: 736 Inizio 12:43:21.003 12:43:21.003 Esecuzione TC1. Input: 3. Output: 3. Risultato: superato 12:43: 21.003 Esecuzione TC2. Input: 3 11 6 5. Output: 3 5 6 11. Risultato: superato 12:43:21.004 Esecuzione TC3. Input: 8737 1. Output: 13 7 8. Risultato: fallito 12:43:21.005 Esecuzione TC4. Input: -2-2-2-3-3. Output: -3-2. Risultato: fallito 12:43:21.005 Esecuzione TC5. Input: 0-2 0 3 4 4. Output: -20 3 4. Risultato: fallito Fine 12:43:21.005 Tempo totale del ciclo di test: 0:00:00.002 Quale delle seguenti risposte fornisce la MIGLIORE descrizione di un failure in un defect report?",
+    "question_text": "State eseguendo il testing di una funzione di ordinamento che riceve come input un insieme di numeri e restituisce lo stesso insieme di numeri ordinati in ordine crescente. Il log dell'esecuzione dei test è il seguente: Configurazione dell'ambiente: Quale delle seguenti risposte fornisce la MIGLIORE descrizione di un failure in un defect report?",
     "question_option": {
       "a": "Il sistema non riesce a ordinare diverse serie di numeri. Riferimento: TC3, TC4, TC5",
       "b": "Il sistema sembra non tenere conto dei duplicati durante l'ordinamento. Riferimento: TC3, TC4, TC5",
