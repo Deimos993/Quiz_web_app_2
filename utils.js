@@ -485,6 +485,157 @@ function escapeHtml(text) {
 }
 
 /**
+ * Format text with bullet points and lists for better readability
+ * @param {string} text - Text to format
+ * @returns {string} - Formatted text with proper HTML structure
+ */
+function formatQuestionText(text) {
+    if (!text) return text;
+    
+    // Pattern per elenchi con bullet point •
+    const bulletPointPattern = /•\s*([^•]+?)(?=•|$)/g;
+    
+    // Pattern per elenchi numerici romani (i, ii, iii, iv, v, vi, vii, viii, ix, x)
+    const romanNumeralPattern = /\b(i{1,3}|iv|v|vi{0,3}|ix|x)\.\s+([^]*?)(?=\b(?:i{1,3}|iv|v|vi{0,3}|ix|x)\.|$)/gi;
+    
+    // Pattern per elenchi numerati (1. 2. 3. etc.)
+    const numberedListPattern = /(\d+)\.\s*([^0-9]+?)(?=\d+\.|$)/g;
+    
+    // Pattern per elenchi con lettere (A. B. C. etc.)
+    const letterListPattern = /([A-D])\.\s*([^A-D]+?)(?=[A-D]\.|$)/g;
+    
+    // Pattern per elenchi con "primo", "secondo", etc.
+    const ordinalPattern = /(primo|secondo|terzo|quarto|quinto)\s+([\w\s]+?)(?=primo|secondo|terzo|quarto|quinto|\.|:|$)/gi;
+    
+    // Pattern per range di punti (0-50 punti:, 51-60 punti:, etc.)
+    const pointRangePattern = /(\d+-\d+\s*punti?):\s*([^0-9•]+?)(?=\d+-\d+\s*punti?:|•|$)/g;
+    
+    // Pattern per stime temporali (ore-persona, ore, etc.)
+    const timeEstimatePattern = /(Stima\s+[^:]+):\s*([^S]+?)(?=Stima|$)/g;
+    
+    // Pattern per tipi di failure numerati
+    const failureTypePattern = /(\d+)\.\s*(Failure[^0-9]+?)(?=\d+\.|$)/g;
+    
+    // Pattern per livelli di test con lettere
+    const testLevelPattern = /([A-D])\.\s*(Testing[^A-D]+?)(?=[A-D]\.|$)/g;
+    
+    // Pattern per criteri di ricerca
+    const searchCriteriaPattern = /(Piano\s+dell'appartamento|Tipo\s+di\s+giardino)\s*\([^)]+\)([^(]+?)(?=Piano|Tipo|$)/g;
+    
+    // Pattern per opzioni con parentesi
+    const optionParenthesesPattern = /\(([^)]+?):\s*([^;)]+?)(?=;|\)|$)/g;
+    
+    let formattedText = text;
+    
+    // 1. Formatta gli elenchi con numerazione romana
+    const romanMatches = formattedText.match(romanNumeralPattern);
+    if (romanMatches) {
+        formattedText = formattedText.replace(romanNumeralPattern, (match, numeral, content) => {
+            return `<li data-roman="${numeral.toLowerCase()}"><strong>${numeral.toLowerCase()}.</strong> ${content.trim()}</li>`;
+        });
+        
+        // Avvolgi in una lista se ci sono elementi li con data-roman
+        if (formattedText.includes('data-roman=')) {
+            formattedText = formattedText.replace(/(<li data-roman="[^"]*">.*?<\/li>)/gs, '<ul class="formatted-list roman-list">$1</ul>');
+            // Rimuovi l'attributo data-roman dopo aver creato la lista
+            formattedText = formattedText.replace(/data-roman="[^"]*"/g, '');
+        }
+    }
+    
+    // 2. Formatta gli elenchi con bullet point •
+    const bulletMatches = formattedText.match(bulletPointPattern);
+    if (bulletMatches) {
+        formattedText = formattedText.replace(bulletPointPattern, (match, content) => {
+            return `<li>${content.trim()}</li>`;
+        });
+        
+        // Avvolgi in una lista se ci sono elementi li (ma non quelli già processati)
+        if (formattedText.includes('<li>') && !formattedText.includes('<ul class="formatted-list">')) {
+            formattedText = formattedText.replace(/(<li>.*<\/li>)/s, '<ul class="formatted-list">$1</ul>');
+        }
+    }
+    
+    // 3. Formatta i range di punti
+    const pointMatches = formattedText.match(pointRangePattern);
+    if (pointMatches && !formattedText.includes('<ul class="formatted-list">')) {
+        formattedText = formattedText.replace(pointRangePattern, (match, range, description) => {
+            return `<li><strong>${range}:</strong> ${description.trim()}</li>`;
+        });
+        
+        // Avvolgi in una lista se non è già stata processata
+        if (formattedText.includes('<li><strong>') && !formattedText.includes('<ul class="formatted-list">')) {
+            formattedText = formattedText.replace(/(<li><strong>.*<\/li>)/s, '<ul class="formatted-list points-list">$1</ul>');
+        }
+    }
+    
+    // 4. Formatta le stime temporali
+    const timeMatches = formattedText.match(timeEstimatePattern);
+    if (timeMatches && !formattedText.includes('<ul class="formatted-list">')) {
+        formattedText = formattedText.replace(timeEstimatePattern, (match, label, value) => {
+            return `<li><strong>${label}:</strong> ${value.trim()}</li>`;
+        });
+        
+        if (formattedText.includes('<li><strong>Stima') && !formattedText.includes('<ul class="formatted-list">')) {
+            formattedText = formattedText.replace(/(<li><strong>Stima.*<\/li>)/s, '<ul class="formatted-list estimates-list">$1</ul>');
+        }
+    }
+    
+    // 5. Formatta i tipi di failure numerati
+    const failureMatches = formattedText.match(failureTypePattern);
+    if (failureMatches && !formattedText.includes('<ul class="formatted-list">')) {
+        formattedText = formattedText.replace(failureTypePattern, (match, number, description) => {
+            return `<li><strong>${number}.</strong> ${description.trim()}</li>`;
+        });
+        
+        if (formattedText.includes('<li><strong>1.</strong>') && !formattedText.includes('<ul class="formatted-list">')) {
+            formattedText = formattedText.replace(/(<li><strong>\d+\..*<\/li>)/s, '<ul class="formatted-list numbered-list">$1</ul>');
+        }
+    }
+    
+    // 6. Formatta i livelli di test con lettere
+    const testLevelMatches = formattedText.match(testLevelPattern);
+    if (testLevelMatches && !formattedText.includes('<ul class="formatted-list">')) {
+        formattedText = formattedText.replace(testLevelPattern, (match, letter, description) => {
+            return `<li><strong>${letter}.</strong> ${description.trim()}</li>`;
+        });
+        
+        if (formattedText.includes('<li><strong>A.</strong>') && !formattedText.includes('<ul class="formatted-list">')) {
+            formattedText = formattedText.replace(/(<li><strong>[A-D]\..*<\/li>)/s, '<ul class="formatted-list letter-list">$1</ul>');
+        }
+    }
+    
+    // 7. Formatta le opzioni con parentesi (tre possibili opzioni: ...)
+    formattedText = formattedText.replace(optionParenthesesPattern, (match, option, description) => {
+        return `<span class="option-item"><strong>${option}:</strong> ${description.trim()}</span>`;
+    });
+    
+    // 8. Formatta linee che iniziano con numeri seguiti da punto e spazio (solo se non già processate)
+    if (!formattedText.includes('<ul class="formatted-list">')) {
+        formattedText = formattedText.replace(/(\d+)\.\s+([^0-9]+?)(?=\d+\.|$)/g, (match, number, content) => {
+            return `<div class="numbered-item"><strong>${number}.</strong> ${content.trim()}</div>`;
+        });
+    }
+    
+    // 9. Formatta linee che iniziano con lettere seguite da punto e spazio (solo se non già processate)
+    if (!formattedText.includes('<ul class="formatted-list">')) {
+        formattedText = formattedText.replace(/([A-D])\.\s+([^A-D]+?)(?=[A-D]\.|$)/g, (match, letter, content) => {
+            return `<div class="letter-item"><strong>${letter}.</strong> ${content.trim()}</div>`;
+        });
+    }
+    
+    // 10. Aggiungi interruzioni di linea per migliorare la leggibilità
+    formattedText = formattedText.replace(/:\s*([A-Z])/g, ':<br>$1');
+    
+    // 11. Formatta pattern specifici comuni
+    formattedText = formattedText.replace(/seguenti regole:/g, 'seguenti regole:<br>');
+    formattedText = formattedText.replace(/seguenti stime:/g, 'seguenti stime:<br>');
+    formattedText = formattedText.replace(/seguenti affermazioni/g, 'seguenti affermazioni');
+    formattedText = formattedText.replace(/vantaggi del DevOps\?/g, 'vantaggi del DevOps?<br>');
+    
+    return formattedText;
+}
+
+/**
  * Debounce function to limit function calls
  * @param {Function} func - Function to debounce
  * @param {number} wait - Wait time in milliseconds
@@ -522,6 +673,7 @@ if (typeof module !== 'undefined' && module.exports) {
         escapeHtml,
         debounce,
         getQuestionImagePath,
-        checkImageExists
+        checkImageExists,
+        formatQuestionText
     };
 }

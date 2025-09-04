@@ -422,7 +422,10 @@ class QuizApp {
         const questionImageContainer = document.getElementById('question-image-container');
         const questionImage = document.getElementById('question-image');
         
-        questionTextEl.textContent = question.question_text;
+        // Format question text with proper list formatting
+        const formattedQuestionText = formatQuestionText(question.question_text);
+        questionTextEl.innerHTML = formattedQuestionText;
+        
         progressEl.textContent = `Domanda ${this.currentQuestionIndex + 1}/${this.currentQuestions.length}`;
         
         // Add multi-answer indicator
@@ -831,7 +834,7 @@ class QuizApp {
             
             resultEl.innerHTML = `
                 <h4>Domanda ${index + 1} ${result.learningObjective ? `(${result.learningObjective})` : ''} ${questionTypeIndicator}</h4>
-                <p>${escapeHtml(result.question)}</p>
+                <div class="question-text">${formatQuestionText(result.question)}</div>
                 ${allOptionsHtml}
                 <div class="result-info">
                     <div class="correct-answer">

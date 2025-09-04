@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Formattazione Testo</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 2rem;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+        
+        .test-section {
+            margin: 2rem 0;
+            padding: 1.5rem;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background: #fff;
+        }
+        
+        .test-section h2 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 0.5rem;
+        }
+        
+        .original {
+            background: #fff3cd;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 4px;
+            border-left: 4px solid #ffc107;
+        }
+        
+        .formatted {
+            background: #d1ecf1;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 4px;
+            border-left: 4px solid #17a2b8;
+        }
+    </style>
+</head>
+<body>
+    <h1>Test della Formattazione del Testo delle Domande</h1>
+    
+    <div class="test-section">
+        <h2>Test 1: Elenco con bullet point • e range di punti</h2>
+        <div class="original">
+            <strong>Testo originale:</strong>
+            <div id="test1-original"></div>
+        </div>
+        <div class="formatted">
+            <strong>Testo formattato:</strong>
+            <div id="test1-formatted"></div>
+        </div>
+    </div>
+    
+    <div class="test-section">
+        <h2>Test 2: Stime temporali (three-point estimation)</h2>
+        <div class="original">
+            <strong>Testo originale:</strong>
+            <div id="test2-original"></div>
+        </div>
+        <div class="formatted">
+            <strong>Testo formattato:</strong>
+            <div id="test2-formatted"></div>
+        </div>
+    </div>
+    
+    <div class="test-section">
+        <h2>Test 3: Tipi di failure numerati</h2>
+        <div class="original">
+            <strong>Testo originale:</strong>
+            <div id="test3-original"></div>
+        </div>
+        <div class="formatted">
+            <strong>Testo formattato:</strong>
+            <div id="test3-formatted"></div>
+        </div>
+    </div>
+    
+    <div class="test-section">
+        <h2>Test 4: Livelli di test con lettere</h2>
+        <div class="original">
+            <strong>Testo originale:</strong>
+            <div id="test4-original"></div>
+        </div>
+        <div class="formatted">
+            <strong>Testo formattato:</strong>
+            <div id="test4-formatted"></div>
+        </div>
+    </div>
+    
+    <div class="test-section">
+        <h2>Test 5: Criteri di ricerca appartamenti</h2>
+        <div class="original">
+            <strong>Testo originale:</strong>
+            <div id="test5-original"></div>
+        </div>
+        <div class="formatted">
+            <strong>Testo formattato:</strong>
+            <div id="test5-formatted"></div>
+        </div>
+    </div>
+    
+    <div class="test-section">
+        <h2>Test 6: Elenco con numerazione romana (DevOps)</h2>
+        <div class="original">
+            <strong>Testo originale:</strong>
+            <div id="test6-original"></div>
+        </div>
+        <div class="formatted">
+            <strong>Testo formattato:</strong>
+            <div id="test6-formatted"></div>
+        </div>
+    </div>
+
+    <script src="utils.js"></script>
+    <script>
+        // Test data
+        const testTexts = {
+            test1: "State testando un sistema che calcola il voto finale del corso per un determinato studente. Il voto finale viene assegnato in base al risultato finale, secondo le seguenti regole: • 0-50 punti: bocciato • 51-60 punti: discreto • 61-70 punti: sufficiente • 71-80 punti: buono • 81-90 punti: ottimo • 91-100 punti: eccellente Avete preparato la seguente lista di test case: Qual è la copertura dell'analisi ai valori limite a 2 valori per il risultato finale, che è stata ottenuta con i test case riportati nella lista?",
+            
+            test2: "Il vostro team utilizza la tecnica di stima three-point estimation (stima dei tre punti), per stimare l'effort del test per una nuova funzionalità ad alto rischio. Sono state effettuate le seguenti stime: Stima più ottimistica: 2 ore-persona Stima più probabile: 11 ore-persona Stima più pessimistica: 14 ore-persona Qual è la stima finale corretta, quando è richiesto che la tecnica applicata debba prendere in considerazione l'errore di misura?",
+            
+            test3: "Quali tipi di failure (1-4): 1. Failure nel comportamento del sistema, a causa di una deviazione dalle esigenze di business dell'utente. 2. Failure nella comunicazione tra i componenti 3. Failure nella logica in un modulo 4. Failure in regole di business non correttamente implementate si associano MEGLIO ai livelli di test (A-D)?",
+            
+            test4: "A. Testing di componente B. Testing di integrazione dei componenti C. Testing di sistema D. Testing di accettazione",
+            
+            test5: "State testando un form semplificato per la ricerca di appartamenti, che prevede solo due criteri di ricerca: Piano dell'appartamento (tre possibili opzioni: piano terra; primo piano; secondo piano o superiore) Tipo di giardino (tre possibili opzioni: nessun giardino; giardino piccolo; giardino grande) Solo gli appartamenti al piano terra hanno un giardino.",
+            
+            test6: "Quali dei seguenti sono vantaggi del DevOps? i. Rilascio del prodotto più rapido e time to market più veloce ii. Aumento della necessità di testing manuale ripetitivo iii. Disponibilità costante di software eseguibile iv. Riduzione del numero di regression test associati al refactoring del codice v. Impostare il framework di test automation è poco costoso, poiché tutto è automatizzato"
+        };
+
+        // Display original and formatted text for each test
+        Object.keys(testTexts).forEach(testKey => {
+            const originalEl = document.getElementById(`${testKey}-original`);
+            const formattedEl = document.getElementById(`${testKey}-formatted`);
+            
+            originalEl.textContent = testTexts[testKey];
+            formattedEl.innerHTML = formatQuestionText(testTexts[testKey]);
+        });
+    </script>
+</body>
+</html>
