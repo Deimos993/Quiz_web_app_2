@@ -565,7 +565,7 @@
     "question_pdf": "ITASTQB-QTEST-FL-2023-A.pdf",
     "question_page": 15,
     "question_number": "21",
-    "question_text": "State testando un sistema che calcola il voto finale del corso per un determinato studente. Il voto finale viene assegnato in base al risultato finale, secondo le seguenti regole: • 0-50 punti: bocciato • 51-60 punti: discreto • 61-70 punti: sufficiente 71-80 punti: buono 8190 punti: ottimo 91100 punti: eccellente Avete preparato la seguente lista di test case: Qual è la copertura dell'analisi ai valori limite a 2 valori per il risultato finale, che è stata ottenuta con i test case riportati nella lista?",
+    "question_text": "State testando un sistema che calcola il voto finale del corso per un determinato studente. Il voto finale viene assegnato in base al risultato finale, secondo le seguenti regole: • 0-50 punti: bocciato • 51-60 punti: discreto • 61-70 punti: sufficiente • 71-80 punti: buono • 81-90 punti: ottimo • 91-100 punti: eccellente Avete preparato la seguente lista di test case: Qual è la copertura dell'analisi ai valori limite a 2 valori per il risultato finale, che è stata ottenuta con i test case riportati nella lista?",
     "question_image": "img/A/21.png",
     "question_option": {
       "a": "50%",
