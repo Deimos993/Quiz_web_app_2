@@ -163,6 +163,7 @@ class QuizApp {
         // In a real-world scenario, this would use a server endpoint
         // For static deployment, we'll try to load known files based on the workspace structure
         const knownFiles = [
+            'ITASTQB-gloss&sylla.json',
             'ITASTQB-QTEST-FL-2023-A-QA.json',
             'ITASTQB-QTEST-FL-2023-B-QA.json',
             'ITASTQB-QTEST-FL-2023-C-QA.json',
