@@ -675,7 +675,7 @@
     "question_pdf": "ITASTQB-QTEST-FL-2023-B.pdf",
     "question_page": 16,
     "question_number": "25",
-    "question_text": "La metrica di copertura dei rami è definita come BCov =(X/Y)*100% Cosa rappresentano X e Y in questa formula?",
+    "question_text": "La metrica di copertura dei rami è definita come BCov =[X/Y]*100% Cosa rappresentano X e Y in questa formula?",
     "question_image": "",
     "question_option": {
       "a": "x= numero di esiti decisionali esercitati dai test case Y= numero totale di esiti decisionali nel codice",
