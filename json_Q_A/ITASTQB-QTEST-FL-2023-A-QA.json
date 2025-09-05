@@ -789,7 +789,7 @@
     "question_pdf": "ITASTQB-QTEST-FL-2023-A.pdf",
     "question_page": 19,
     "question_number": "29",
-    "question_text": "Si consideri la seguente user story: Come Editore Voglio eseguire la review dei contenuti prima che vengano pubblicati in modo da assicurarmi che la grammatica sia corretta e i relativi criteri di accettazione: L'utente può accedere al sistema di content management con il ruolo di \"Editore\" L'editore può visualizzare le pagine di contenuto esistenti L'editore può modificare il contenuto della pagina L'editore può aggiungere commenti di markup L'editore può salvare le modifiche L'editore può riassegnare il ruolo di \"proprietario dei contenuti\" per eseguire gli aggiornamenti Quale dei seguenti è il MIGLIOR esempio di test ATDD per questa user story?",
+    "question_text": "Si consideri la seguente user story: \nCome Editore Voglio eseguire la review dei contenuti prima che vengano pubblicati in modo da assicurarmi che la grammatica sia corretta \n\ne i relativi criteri di accettazione: \nL'utente può accedere al sistema di content management con il ruolo di \"Editore\" \nL'editore può visualizzare le pagine di contenuto esistenti \nL'editore può modificare il contenuto della pagina \nL'editore può aggiungere commenti di markup \nL'editore può salvare le modifiche \nL'editore può riassegnare il ruolo di \"proprietario dei contenuti\" per eseguire gli aggiornamenti \nQuale dei seguenti è il MIGLIOR esempio di test ATDD per questa user story?",
     "question_image": "",
     "question_option": {
       "a": "Testare se l'editore può salvare il documento dopo aver modificato il contenuto della pagina",
@@ -959,7 +959,7 @@
     "question_pdf": "ITASTQB-QTEST-FL-2023-A.pdf",
     "question_page": 22,
     "question_number": "35",
-    "question_text": "Durante l'analisi del rischio è stato identificato e valutato il seguente rischio: Rischio: tempi di risposta troppo lunghi per generare un report Probabilità del rischio: media; impatto del rischio: alto Risposta al rischio: 0 Un team di test indipendente esegue il performance testing durante il testing di sistema Un campione selezionato di utenti finali esegue il testing di accettazione alpha e beta testing prima del rilascio Quale delle seguenti azioni di risposta viene applicata al rischio analizzato?",
+    "question_text": "Durante l'analisi del rischio è stato identificato e valutato il seguente rischio: \nRischio: tempi di risposta troppo lunghi per generare un report \nProbabilità del rischio: media; impatto del rischio: alto \nRisposta al rischio: \n\n Un team di test indipendente esegue il performance testing durante il testing di sistema \n\nUn campione selezionato di utenti finali esegue il testing di accettazione alpha e beta testing prima del rilascio \nQuale delle seguenti azioni di risposta viene applicata al rischio analizzato?",
     "question_image": "",
     "question_option": {
       "a": "Accettazione del rischio",
