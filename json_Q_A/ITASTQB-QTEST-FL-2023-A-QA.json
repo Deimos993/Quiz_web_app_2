@@ -369,7 +369,7 @@
     "question_pdf": "ITASTQB-QTEST-FL-2023-A.pdf",
     "question_page": 12,
     "question_number": "14",
-    "question_text": "State testando una user story con tre criteri di accettazione: AC1, AC2 e AC3. AC1 è coperto dal test case TC1, AC2 da TC2 e AC3 da TC3. La schedulazione dell'esecuzione dei test prevedeva tre esecuzioni dei test (test run) su tre versioni consecutive del software, come segue: I tre test vengono ripetuti una volta che siete stato informato che tutti i difetti rilevati durante il test run sono stati corretti e che è disponibile una nuova versione del software. Quali dei test descritti nella tabella vengono eseguiti come regression test?",
+    "question_text": "State testando una user story con tre criteri di accettazione: AC1, AC2 e AC3. AC1 è coperto dal test case TC1, AC2 da TC2 e AC3 da TC3 La schedulazione dell'esecuzione dei test prevedeva tre esecuzioni dei test (test run) su tre versioni consecutive del software, come segue: I tre test vengono ripetuti una volta che siete stato informato che tutti i difetti rilevati durante il test run sono stati corretti e che è disponibile una nuova versione del software. Quali dei test descritti nella tabella vengono eseguiti come regression test?",
     "question_image": "img/A/14.png",
     "question_option": {
       "a": "Solo 4, 7, 8, 9",
@@ -565,7 +565,7 @@
     "question_pdf": "ITASTQB-QTEST-FL-2023-A.pdf",
     "question_page": 15,
     "question_number": "21",
-    "question_text": "State testando un sistema che calcola il voto finale del corso per un determinato studente. Il voto finale viene assegnato in base al risultato finale, secondo le seguenti regole: • 0-50 punti: bocciato • 51-60 punti: discreto • 61-70 punti: sufficiente • 71-80 punti: buono • 81-90 punti: ottimo • 91-100 punti: eccellente Avete preparato la seguente lista di test case: Qual è la copertura dell'analisi ai valori limite a 2 valori per il risultato finale, che è stata ottenuta con i test case riportati nella lista?",
+    "question_text": "State testando un sistema che calcola il voto finale del corso per un determinato studente. Il voto finale viene assegnato in base al risultato finale, secondo le seguenti regole: • 0-50 punti: bocciato • 51-60 punti: discreto • 61-70 punti: sufficiente • 71-80 punti: buono • 81-90 punti: ottimo • 91-100 punti: eccellente • Avete preparato la seguente lista di test case: Qual è la copertura dell'analisi ai valori limite a 2 valori per il risultato finale, che è stata ottenuta con i test case riportati nella lista?",
     "question_image": "img/A/21.png",
     "question_option": {
       "a": "50%",
@@ -1043,8 +1043,8 @@
     "question_pdf": "ITASTQB-QTEST-FL-2023-A.pdf",
     "question_page": 23,
     "question_number": "38",
-    "question_text": "Avete ricevuto il seguente defect report dagli sviluppatori, in cui si afferma che l'anomalia descritta in questo test report non è riproducibile. L'applicazione si blocca 03-maggio-2022 - John Doe - Rifiutato L'applicazione si blocca dopo aver inserito \"Input del test: $ä\" nel campo Nome nella schermata di creazione di un nuovo utente. Ho provato a disconnettermi e ad accederecon l'account test_admin01, stesso problema. Ho provato con altri account test_admin, stesso problema. Non è stato ricevuto alcun messaggio di errore; il log (vedi allegato) contiene una notifica di errore fatale. In base al test case TC-1305, l'applicazione dovrebbe accettare l'input inserito e creare l'utente. Si prega di risolvere il problema con priorità elevata, poiché questa funzionalità è correlata a REQ-0012, che è un nuovo requisito di business critico. Quali informazioni critiche sono MANCANTI in questo test report che sarebbero state utili per gli sviluppatori?",
-    "question_image": "",
+    "question_text": "Avete ricevuto il seguente defect report dagli sviluppatori, in cui si afferma che l'anomalia descritta in questo test report non è riproducibile. Quali informazioni critiche sono MANCANTI in questo test report che sarebbero state utili per gli sviluppatori?",
+    "question_image": "img/A/38.png",
     "question_option": {
       "a": "Risultato atteso e risultato ottenuto",
       "b": "Riferimenti e stato del difetto",
