@@ -499,10 +499,10 @@ function formatQuestionText(text) {
     const romanNumeralPattern = /\b(i{1,3}|iv|v|vi{0,3}|ix|x)\.\s+([^]*?)(?=\b(?:i{1,3}|iv|v|vi{0,3}|ix|x)\.|$)/gi;
     
     // Pattern per elenchi numerati (1. 2. 3. etc.)
-    const numberedListPattern = /(\d+)\.\s*([^0-9]+?)(?=\d+\.|$)/g;
+    const numberedListPattern = /(\d+)\.\s*([^0-9]+?)(?=\s*\d+\.|<br>|$)/g;
     
     // Pattern per elenchi con lettere (A. B. C. etc.)
-    const letterListPattern = /([A-D])\.\s*([^A-D]+?)(?=[A-D]\.|$)/g;
+    const letterListPattern = /([A-D])\.\s*((?:(?![A-D]\.).)*?)(?=\s+[A-D]\.|<br>|$)/g;
     
     // Pattern per elenchi con "primo", "secondo", etc.
     const ordinalPattern = /(primo|secondo|terzo|quarto|quinto)\s+([\w\s]+?)(?=primo|secondo|terzo|quarto|quinto|\.|:|$)/gi;
@@ -517,7 +517,7 @@ function formatQuestionText(text) {
     const failureTypePattern = /(\d+)\.\s*(Failure[^0-9]+?)(?=\d+\.|$)/g;
     
     // Pattern per livelli di test con lettere
-    const testLevelPattern = /([A-D])\.\s*(Testing[^A-D]+?)(?=[A-D]\.|$)/g;
+    const testLevelPattern = /([A-D])\.\s*(Testing(?:(?![A-D]\.).)*?)(?=\s+[A-D]\.|<br>|$)/g;
     
     // Pattern per criteri di ricerca
     const searchCriteriaPattern = /(Piano\s+dell'appartamento|Tipo\s+di\s+giardino)\s*\([^)]+\)([^(]+?)(?=Piano|Tipo|$)/g;
@@ -526,6 +526,9 @@ function formatQuestionText(text) {
     const optionParenthesesPattern = /\(([^)]+?):\s*([^;)]+?)(?=;|\)|$)/g;
     
     let formattedText = text;
+    
+    // 0. Convert actual newline characters to line breaks
+    formattedText = formattedText.replace(/\n/g, '<br>');
     
     // 1. Formatta gli elenchi con numerazione romana
     const romanMatches = formattedText.match(romanNumeralPattern);
@@ -611,14 +614,14 @@ function formatQuestionText(text) {
     
     // 8. Formatta linee che iniziano con numeri seguiti da punto e spazio (solo se non già processate)
     if (!formattedText.includes('<ul class="formatted-list">')) {
-        formattedText = formattedText.replace(/(\d+)\.\s+([^0-9]+?)(?=\d+\.|$)/g, (match, number, content) => {
+        formattedText = formattedText.replace(/(\d+)\.\s*([^0-9]+?)(?=\s*\d+\.|<br>|$)/g, (match, number, content) => {
             return `<div class="numbered-item"><strong>${number}.</strong> ${content.trim()}</div>`;
         });
     }
     
     // 9. Formatta linee che iniziano con lettere seguite da punto e spazio (solo se non già processate)
     if (!formattedText.includes('<ul class="formatted-list">')) {
-        formattedText = formattedText.replace(/([A-D])\.\s+([^A-D]+?)(?=[A-D]\.|$)/g, (match, letter, content) => {
+        formattedText = formattedText.replace(/([A-D])\.\s*((?:(?![A-D]\.).)*?)(?=\s+[A-D]\.|<br>|$)/g, (match, letter, content) => {
             return `<div class="letter-item"><strong>${letter}.</strong> ${content.trim()}</div>`;
         });
     }

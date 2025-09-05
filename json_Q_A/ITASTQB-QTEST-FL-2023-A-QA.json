@@ -931,7 +931,7 @@
     "question_pdf": "ITASTQB-QTEST-FL-2023-A.pdf",
     "question_page": 21,
     "question_number": "34",
-    "question_text": "Considerate le seguenti categorie di test (1-4): 1. Testing di usabilità 2. Testing di componente 3. Testing funzionale 4. Testing di affidabilità e i seguenti quadranti del testing (A-D): A. Quadrante del testing Q1: orientato alla tecnologia che supporta il team di sviluppo B. Quadrante del testing Q2: orientato al business che supporta il team di sviluppo C. Quadrante del testing Q3: orientato al business che critica il prodotto D. Quadrante del testing Q4: orientato alla tecnologia che critica il prodotto A quali quadranti del testing appartengono le categorie di test?",
+    "question_text": "Considerate le seguenti categorie di test (1-4): 1. Testing di usabilità 2. Testing di componente 3. Testing funzionale 4. Testing di affidabilità \ne i seguenti quadranti del testing (A-D): A. Quadrante del testing Q1: orientato alla tecnologia che supporta il team di sviluppo B. Quadrante del testing Q2: orientato al business che supporta il team di sviluppo C. Quadrante del testing Q3: orientato al business che critica il prodotto D. Quadrante del testing Q4: orientato alla tecnologia che critica il prodotto A \nquali quadranti del testing appartengono le categorie di test?",
     "question_image": "",
     "question_option": {
       "a": "1C, 2A, 3B, 4D",
