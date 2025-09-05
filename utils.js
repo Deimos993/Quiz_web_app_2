@@ -523,7 +523,7 @@ function formatQuestionText(text) {
     const searchCriteriaPattern = /(Piano\s+dell'appartamento|Tipo\s+di\s+giardino)\s*\([^)]+\)([^(]+?)(?=Piano|Tipo|$)/g;
     
     // Pattern per opzioni con parentesi
-    const optionParenthesesPattern = /\(([^)]+?):\s*([^;)]+?)(?=;|\)|$)/g;
+    const optionParenthesesPattern = /\(([^)]+?)\)/g;
     
     let formattedText = text;
     
@@ -608,8 +608,15 @@ function formatQuestionText(text) {
     }
     
     // 7. Formatta le opzioni con parentesi (tre possibili opzioni: ...)
-    formattedText = formattedText.replace(optionParenthesesPattern, (match, option, description) => {
-        return `<span class="option-item"><strong>${option}:</strong> ${description.trim()}</span>`;
+    formattedText = formattedText.replace(optionParenthesesPattern, (match, content) => {
+        // Check if content contains a colon pattern like "tre possibili opzioni: nessun giardino"
+        const colonMatch = content.match(/^([^:]+):\s*(.+)$/);
+        if (colonMatch) {
+            return `<span class="option-item"><strong>${colonMatch[1].trim()}:</strong> ${colonMatch[2].trim()}</span>`;
+        } else {
+            // If no colon pattern, wrap the entire content
+            return `<span class="option-item">${content.trim()}</span>`;
+        }
     });
     
     // 8. Formatta linee che iniziano con numeri seguiti da punto e spazio (solo se non già processate)
