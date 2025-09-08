@@ -365,7 +365,7 @@ class QuizApp {
             const total = this.currentQuestions ? this.currentQuestions.length : 0;
             const passPercent = 65; // default pass percent
             const required = Math.ceil((passPercent / 100) * total);
-            passThresholdEl.textContent = `soglia di superamento è${required}/${total}`;
+            passThresholdEl.textContent = `soglia di superamento è ${required}/${total}`;
         }
 
         this.startTimer();
