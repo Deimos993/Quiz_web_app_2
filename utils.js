@@ -194,6 +194,21 @@ function getCorrectAnswers(question) {
 }
 
 /**
+ * Get the maximum number of allowed selections for a multi-answer question
+ * @param {Object} question - Question object
+ * @returns {number} - Maximum number of selections allowed
+ */
+function getMaxAllowedSelections(question) {
+    if (question.answer_option_text && typeof question.answer_option_text === 'object') {
+        // For multi-answer questions, the limit is the number of correct answers
+        return Object.keys(question.answer_option_text).length;
+    }
+    
+    // For single-answer questions, only 1 selection is allowed
+    return 1;
+}
+
+/**
  * Get image path for a question based on quiz name and question number
  * @param {string} quizName - Name of the quiz (e.g., "ITASTQB-QTEST-FL-2023-B-QA")
  * @param {string} questionNumber - Question number
@@ -675,6 +690,7 @@ if (typeof module !== 'undefined' && module.exports) {
         getOptionText,
         isMultiAnswerQuestion,
         getCorrectAnswers,
+        getMaxAllowedSelections,
         prepareQuestionForDisplay,
         gradeQuiz,
         saveQuizState,

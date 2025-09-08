@@ -978,6 +978,25 @@ header p {
     color: #c0392b;
 }
 
+.selection-limit-message {
+    text-align: center;
+    padding: 0.75rem;
+    margin: 1rem 0;
+    background: #fff3cd;
+    border: 1px solid #ffeaa7;
+    border-radius: 8px;
+    color: #856404;
+    font-weight: 500;
+    animation: fadeInOut 3s ease-in-out;
+}
+
+@keyframes fadeInOut {
+    0% { opacity: 0; transform: translateY(-10px); }
+    10% { opacity: 1; transform: translateY(0); }
+    90% { opacity: 1; transform: translateY(0); }
+    100% { opacity: 0; transform: translateY(-10px); }
+}
+
 .validation-errors {
     background: #fff3cd;
     border: 1px solid #ffeaa7;

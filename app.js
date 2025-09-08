@@ -429,7 +429,8 @@ class QuizApp {
         
         // Add multi-answer indicator
         if (question.isMultiAnswer) {
-            progressEl.textContent += ' (Risposta multipla)';
+            const maxSelections = getMaxAllowedSelections(question);
+            progressEl.textContent += ` (Risposta multipla - seleziona ${maxSelections} opzioni)`;
         }
         
         // Handle question image
@@ -592,6 +593,7 @@ class QuizApp {
      */
     selectMultiOption(optionValue, isChecked) {
         const questionIndex = this.currentQuestionIndex;
+        const currentQuestion = this.currentQuestions[questionIndex];
         
         if (!this.userAnswers[questionIndex]) {
             this.userAnswers[questionIndex] = [];
@@ -602,6 +604,22 @@ class QuizApp {
         }
         
         if (isChecked) {
+            // Check if we've reached the maximum allowed selections
+            const maxSelections = getMaxAllowedSelections(currentQuestion);
+            const currentSelections = this.userAnswers[questionIndex].length;
+            
+            if (currentSelections >= maxSelections) {
+                // Prevent selection and show feedback
+                const checkbox = document.querySelector(`input[value="${optionValue}"]`);
+                if (checkbox) {
+                    checkbox.checked = false;
+                }
+                
+                // Show temporary feedback message
+                this.showSelectionLimitMessage(maxSelections);
+                return;
+            }
+            
             // Add option if not already present
             if (!this.userAnswers[questionIndex].includes(optionValue)) {
                 this.userAnswers[questionIndex].push(optionValue);
@@ -627,6 +645,34 @@ class QuizApp {
         
         // Save state after answer selection
         this.saveCurrentState();
+    }
+
+    /**
+     * Show temporary message when selection limit is reached
+     */
+    showSelectionLimitMessage(maxSelections) {
+        // Remove any existing message
+        const existingMessage = document.getElementById('selection-limit-message');
+        if (existingMessage) {
+            existingMessage.remove();
+        }
+        
+        // Create and show new message
+        const message = document.createElement('div');
+        message.id = 'selection-limit-message';
+        message.className = 'selection-limit-message';
+        message.textContent = `Puoi selezionare al massimo ${maxSelections} opzioni per questa domanda.`;
+        
+        // Insert message after progress indicator
+        const progressEl = document.getElementById('question-progress');
+        progressEl.parentNode.insertBefore(message, progressEl.nextSibling);
+        
+        // Remove message after 3 seconds
+        setTimeout(() => {
+            if (message.parentNode) {
+                message.remove();
+            }
+        }, 3000);
     }
 
     /**
