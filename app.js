@@ -166,7 +166,8 @@ class QuizApp {
             'ITASTQB-QTEST-FL-2023-A-QA.json',
             'ITASTQB-QTEST-FL-2023-B-QA.json',
             'ITASTQB-QTEST-FL-2023-C-QA.json',
-            'ITASTQB-QTEST-FL-2023-D-QA.json'
+            'ITASTQB-QTEST-FL-2023-D-QA.json',
+            'ITASTQB-QTEST-FL-2023-ABCD-QA.json'
         ];
 
         const existingFiles = [];
