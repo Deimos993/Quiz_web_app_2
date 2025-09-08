@@ -422,11 +422,18 @@ function gradeQuiz(questions, userAnswers) {
         });
     });
     
+    const totalQuestions = questions.length;
+    const percentage = totalQuestions > 0 ? Math.round((correctCount / totalQuestions) * 100) : 0;
+    // Pass threshold: at least 65% correct answers
+    const PASS_PERCENT = 65;
+    const passed = percentage >= PASS_PERCENT;
+
     return {
         score: correctCount,
-        total: questions.length,
-        percentage: Math.round((correctCount / questions.length) * 100),
-        passed: correctCount >= 26, // Fixed pass threshold
+        total: totalQuestions,
+        percentage,
+        passed,
+        passPercent: PASS_PERCENT,
         results,
         learningObjectiveStats
     };

@@ -774,16 +774,22 @@ class QuizApp {
         // Pass/Fail status
         statusEl.textContent = results.passed ? 'PASSA' : 'RESPINGE';
         statusEl.className = `pass-status ${results.passed ? 'pass' : 'fail'}`;
+
+        // Update visible pass rule to reflect current pass percentage
+        const passRuleEl = document.querySelector('.pass-rule');
+        if (passRuleEl) {
+            const passPercent = results.passPercent || 65;
+            passRuleEl.textContent = `Soglia di superamento: ${passPercent}%`;
+        }
         
-        // Show note if quiz doesn't have exactly 40 questions
-        if (results.total !== 40) {
+        // Always show a note about the pass threshold (use dynamic percent)
+        {
+            const passPercent = results.passPercent || 65;
             noteEl.innerHTML = `
                 <strong>Nota:</strong> Questo quiz contiene ${results.total} domande. 
-                La soglia di superamento rimane fissa a 26/40 come da regolamento.
+                La soglia di superamento è impostata al ${passPercent}% delle risposte corrette.
             `;
             noteEl.classList.remove('hidden');
-        } else {
-            noteEl.classList.add('hidden');
         }
         
         // Display learning objective statistics
