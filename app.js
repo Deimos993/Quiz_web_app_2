@@ -358,7 +358,16 @@ class QuizApp {
         document.querySelector('.quiz-controls').classList.remove('hidden');
         
         document.getElementById('quiz-title').textContent = this.currentQuiz;
-        
+        // Update pass threshold display next to timer
+        const passThresholdEl = document.getElementById('pass-threshold');
+        if (passThresholdEl) {
+            // Determine total questions for current quiz
+            const total = this.currentQuestions ? this.currentQuestions.length : 0;
+            const passPercent = 65; // default pass percent
+            const required = Math.ceil((passPercent / 100) * total);
+            passThresholdEl.textContent = `soglia di superamento è${required}/${total}`;
+        }
+
         this.startTimer();
         this.displayCurrentQuestion();
         this.updateNavigationButtons();
@@ -785,9 +794,11 @@ class QuizApp {
         // Always show a note about the pass threshold (use dynamic percent)
         {
             const passPercent = results.passPercent || 65;
+            const total = results.total || 0;
+            const required = Math.ceil((passPercent / 100) * total);
             noteEl.innerHTML = `
-                <strong>Nota:</strong> Questo quiz contiene ${results.total} domande. 
-                La soglia di superamento è impostata al ${passPercent}% delle risposte corrette.
+                <strong>Nota:</strong> Questo quiz contiene ${total} domande. 
+                La soglia di superamento è impostata al ${passPercent}% delle risposte corrette. (${passPercent}% di ${total} è ${required}/${total})
             `;
             noteEl.classList.remove('hidden');
         }
