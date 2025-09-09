@@ -343,7 +343,14 @@ class QuizApp {
         this.currentQuestions = shuffleArray(questions).map(prepareQuestionForDisplay);
         this.currentQuestionIndex = 0;
         this.userAnswers = {};
-        this.timeRemaining = 60 * 60; // Reset timer to 60 minutes
+        // Default timer is 60 minutes, but make an exception for the ABCD combined quiz
+        try {
+            const abcdTitle = getQuizTitle('ITASTQB-QTEST-FL-2023-ABCD-QA.json');
+            this.timeRemaining = (quizName === abcdTitle) ? 300 * 60 : 60 * 60; // 300 minutes for ABCD quiz
+        } catch (e) {
+            // If getQuizTitle isn't available or fails, fallback to default 60 minutes
+            this.timeRemaining = 60 * 60;
+        }
         
         this.startQuizDisplay();
     }
