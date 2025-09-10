@@ -11,7 +11,11 @@ class QuizApp {
         this.currentQuestionIndex = 0;
         this.userAnswers = {};
         this.timer = null;
-        this.timeRemaining = 60 * 60; // 60 minutes in seconds
+    // Default is a countdown timer (seconds remaining)
+    this.timeRemaining = 60 * 60; // 60 minutes in seconds
+    // Chronometer mode (count-up) support
+    this.isChronometer = false;
+    this.timeElapsed = 0; // seconds elapsed when in chronometer mode
         this.validationErrors = [];
         
         this.initializeApp();
@@ -318,7 +322,10 @@ class QuizApp {
         this.currentQuestions = this.savedState.questions;
         this.currentQuestionIndex = this.savedState.currentQuestionIndex;
         this.userAnswers = this.savedState.userAnswers;
-        this.timeRemaining = this.savedState.timeRemaining;
+    // Restore timer mode and values (support both countdown and chronometer)
+    this.isChronometer = !!this.savedState.isChronometer;
+    this.timeElapsed = this.savedState.timeElapsed || 0;
+    this.timeRemaining = this.savedState.timeRemaining || 0;
         
         this.startQuizDisplay();
         this.savedState = null;
@@ -346,14 +353,27 @@ class QuizApp {
         // Default timer is 60 minutes, but make an exception for the ABCD combined quiz
         try {
             const abcdTitle = getQuizTitle('ITASTQB-QTEST-FL-2023-ABCD-QA.json');
-            this.timeRemaining = (quizName === abcdTitle) ? 300 * 60 : 60 * 60; // 300 minutes for ABCD quiz
+            if (quizName === abcdTitle) {
+                // For the combined ABCD quiz use a chronometer (count-up)
+                this.isChronometer = true;
+                this.timeElapsed = 0;
+                // Still allow a very large theoretical cap (optional) but chronometer will count up
+                this.timeRemaining = 0;
+            } else {
+                this.isChronometer = false;
+                this.timeElapsed = 0;
+                this.timeRemaining = 60 * 60;
+            }
         } catch (e) {
             // If getQuizTitle isn't available or fails, fallback to default 60 minutes
+            this.isChronometer = false;
+            this.timeElapsed = 0;
             this.timeRemaining = 60 * 60;
         }
         
         this.startQuizDisplay();
     }
+
 
     /**
      * Start the quiz display and timer
@@ -384,21 +404,41 @@ class QuizApp {
      * Start the countdown timer
      */
     startTimer() {
+        // Clear any existing timer
+        if (this.timer) {
+            clearInterval(this.timer);
+            this.timer = null;
+        }
+
         this.updateTimerDisplay();
-        
-        this.timer = setInterval(() => {
-            this.timeRemaining--;
-            this.updateTimerDisplay();
-            
-            // Auto-save every 30 seconds
-            if (this.timeRemaining % 30 === 0) {
-                this.saveCurrentState();
-            }
-            
-            if (this.timeRemaining <= 0) {
-                this.timeUp();
-            }
-        }, 1000);
+
+        if (this.isChronometer) {
+            // Chronometer: count up
+            this.timer = setInterval(() => {
+                this.timeElapsed++;
+                this.updateTimerDisplay();
+
+                // Auto-save every 30 seconds based on elapsed time
+                if (this.timeElapsed % 30 === 0) {
+                    this.saveCurrentState();
+                }
+            }, 1000);
+        } else {
+            // Countdown: original behavior
+            this.timer = setInterval(() => {
+                this.timeRemaining--;
+                this.updateTimerDisplay();
+
+                // Auto-save every 30 seconds
+                if (this.timeRemaining % 30 === 0) {
+                    this.saveCurrentState();
+                }
+
+                if (this.timeRemaining <= 0) {
+                    this.timeUp();
+                }
+            }, 1000);
+        }
     }
 
     /**
@@ -406,15 +446,21 @@ class QuizApp {
      */
     updateTimerDisplay() {
         const timerEl = document.getElementById('timer');
-        timerEl.textContent = `Tempo rimanente: ${formatTime(this.timeRemaining)}`;
-        
-        // Change color when time is running low
-        if (this.timeRemaining <= 300) { // 5 minutes
-            timerEl.style.color = '#c0392b';
-        } else if (this.timeRemaining <= 600) { // 10 minutes
-            timerEl.style.color = '#f39c12';
+        if (this.isChronometer) {
+            timerEl.textContent = `Tempo trascorso: ${formatTime(this.timeElapsed)}`;
+            // Chronometer style (neutral/positive color)
+            timerEl.style.color = '#27ae60';
         } else {
-            timerEl.style.color = '#c0392b';
+            timerEl.textContent = `Tempo rimanente: ${formatTime(this.timeRemaining)}`;
+
+            // Change color when time is running low
+            if (this.timeRemaining <= 300) { // 5 minutes
+                timerEl.style.color = '#c0392b';
+            } else if (this.timeRemaining <= 600) { // 10 minutes
+                timerEl.style.color = '#f39c12';
+            } else {
+                timerEl.style.color = '#2c3e50';
+            }
         }
     }
 
@@ -1107,11 +1153,14 @@ class QuizApp {
      * Save current quiz state to localStorage
      */
     saveCurrentState() {
-        if (this.currentQuiz && this.timeRemaining > 0) {
+        if (this.currentQuiz) {
             const state = {
                 questions: this.currentQuestions,
                 currentQuestionIndex: this.currentQuestionIndex,
                 userAnswers: this.userAnswers,
+                // persist whether we're using a chronometer and the elapsed time
+                isChronometer: !!this.isChronometer,
+                timeElapsed: this.timeElapsed || 0,
                 timeRemaining: this.timeRemaining
             };
             saveQuizState(this.currentQuiz, state);
@@ -1148,7 +1197,9 @@ class QuizApp {
         this.currentQuestions = [];
         this.currentQuestionIndex = 0;
         this.userAnswers = {};
-        this.timeRemaining = 60 * 60;
+    this.timeRemaining = 60 * 60;
+    this.isChronometer = false;
+    this.timeElapsed = 0;
     }
 
     /**
@@ -1162,10 +1213,12 @@ class QuizApp {
     }
 }
 
-// Initialize the app when DOM is loaded
-document.addEventListener('DOMContentLoaded', () => {
-    new QuizApp();
-});
+// Initialize the app when DOM is loaded (guarded so file can be required in Node during tests)
+if (typeof document !== 'undefined' && document.addEventListener) {
+    document.addEventListener('DOMContentLoaded', () => {
+        new QuizApp();
+    });
+}
 
 // Export for testing
 if (typeof module !== 'undefined' && module.exports) {
