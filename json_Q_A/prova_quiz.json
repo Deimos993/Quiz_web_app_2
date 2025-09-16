@@ -1,0 +1,842 @@
+[
+  {
+    "question_pdf": "syllabus_istqb.txt",
+    "question_page": [0],
+    "question_number": "Q1",
+    "question_text": "Un team di sviluppo sta lavorando su un'applicazione medicale dove i requisiti sono vaghi e cambiano frequentemente, e la pressione sul time-to-market è elevata. In questo contesto, quale combinazione di approccio e tecnica di test offre la massima efficacia nel mitigare i rischi di prodotto, in linea con il principio del 'testing anticipato'?",
+    "question_image": "",
+    "question_option": {
+      [cite_start]"a": "Un approccio 'shift-right' con un testing esaustivo a livello di sistema per garantire la conformità normativa prima del rilascio. [cite: 154]",
+      [cite_start]"b": "L'applicazione rigorosa del testing white-box (es. copertura dei rami al 100%) per garantire la robustezza del codice, posticipando il testing funzionale. [cite: 351, 571]",
+      [cite_start]"c": "L'implementazione del testing confermativo automatizzato su ogni build, focalizzandosi esclusivamente sui difetti corretti per accelerare il ciclo. [cite: 75, 356]",
+      [cite_start]"d": "Un approccio 'shift-left' [cite: 53] [cite_start]che integra il testing esplorativo [cite: 64, 598] fin dalle prime fasi per fornire feedback rapido e continuo, nonostante la carenza di specifiche formali."
+    },
+    "answer_pdf": "syllabus_istqb.txt",
+    "answer_page": [0],
+    "answer_option": "d",
+    "answer_option_text": {
+      [cite_start]"d": "Un approccio 'shift-left' [cite: 53] [cite_start]che integra il testing esplorativo [cite: 64, 598] fin dalle prime fasi per fornire feedback rapido e continuo, nonostante la carenza di specifiche formali."
+    },
+    "no_answer_option_text": {
+      [cite_start]"a": "Un approccio 'shift-right' con un testing esaustivo a livello di sistema per garantire la conformità normativa prima del rilascio. [cite: 154]",
+      [cite_start]"b": "L'applicazione rigorosa del testing white-box (es. copertura dei rami al 100%) per garantire la robustezza del codice, posticipando il testing funzionale. [cite: 351, 571]",
+      [cite_start]"c": "L'implementazione del testing confermativo automatizzato su ogni build, focalizzandosi esclusivamente sui difetti corretti per accelerare il ciclo. [cite: 75, 356]"
+    },
+    "ambiguous": false,
+    "learning_objective": "Analizzare un contesto di progetto complesso per selezionare la combinazione ottimale di approccio strategico (Shift-Left) e tecnica di test (Esplorativo) in risposta a requisiti incerti e vincoli temporali.",
+    "k_level": "Analysis",
+    "points": 3
+  },
+  {
+    "question_pdf": "syllabus_istqb.txt",
+    "question_page": [0],
+    "question_number": "Q2",
+    "question_text": "Un team deve valutare un componente critico per la sicurezza la cui logica algoritmica è complessa. L'obiettivo primario è ottenere il consenso tra gli esperti tecnici sulla correttezza dell'implementazione rispetto agli standard e identificare discrepanze. Quale tipo di review formale è più idoneo e perché, rispetto alle altre opzioni?",
+    "question_image": "",
+    "question_option": {
+      [cite_start]"a": "Un Walkthrough [cite: 92][cite_start], perché essendo condotto dall'autore, permette di educare rapidamente gli altri membri del team sulla logica implementata. [cite: 445]",
+      [cite_start]"b": "Una Ispezione [cite: 28, 449][cite_start], perché il suo focus sulla raccolta di metriche per il miglioramento del processo è l'obiettivo più importante per un componente critico. [cite: 451]",
+      [cite_start]"c": "Una Review informale[cite: 46], perché l'assenza di un processo definito permette agli esperti di concentrarsi liberamente solo sugli aspetti tecnici senza vincoli burocratici.",
+      [cite_start]"d": "Una Review tecnica [cite: 47][cite_start], perché è specificamente condotta da esperti tecnici con l'obiettivo di raggiungere il consenso e valutare la qualità rispetto a specifiche e standard. [cite: 448]"
+    },
+    "answer_pdf": "syllabus_istqb.txt",
+    "answer_page": [0],
+    "answer_option": "d",
+    "answer_option_text": {
+      [cite_start]"d": "Una Review tecnica [cite: 47][cite_start], perché è specificamente condotta da esperti tecnici con l'obiettivo di raggiungere il consenso e valutare la qualità rispetto a specifiche e standard. [cite: 448]"
+    },
+    "no_answer_option_text": {
+      [cite_start]"a": "Un Walkthrough [cite: 92][cite_start], perché essendo condotto dall'autore, permette di educare rapidamente gli altri membri del team sulla logica implementata. [cite: 445]",
+      [cite_start]"b": "Una Ispezione [cite: 28, 449][cite_start], perché il suo focus sulla raccolta di metriche per il miglioramento del processo è l'obiettivo più importante per un componente critico. [cite: 451]",
+      [cite_start]"c": "Una Review informale[cite: 46], perché l'assenza di un processo definito permette agli esperti di concentrarsi liberamente solo sugli aspetti tecnici senza vincoli burocratici."
+    },
+    "ambiguous": false,
+    "learning_objective": "Discriminare tra diversi tipi di review formale, analizzando un obiettivo specifico (consenso tecnico) per identificare il processo di review più appropriato (Review Tecnica).",
+    "k_level": "Analysis",
+    "points": 3
+  },
+  {
+    "question_pdf": "syllabus_istqb.txt",
+    "question_page": [0],
+    "question_number": "Q3",
+    [cite_start]"question_text": "In un progetto Agile che adotta DevOps e Continuous Integration, come dovrebbe essere interpretato il modello della Piramide di Test [cite: 36] [cite_start]per strutturare una strategia di regression testing [cite: 43] efficiente e robusta?",
+    "question_image": "",
+    "question_option": {
+      [cite_start]"a": "La maggior parte dell'effort di automazione dovrebbe concentrarsi sui test end-to-end (UI), poiché coprono la maggior parte delle funzionalità e sono più facili da comprendere per il business. [cite: 716]",
+      [cite_start]"b": "La piramide suggerisce di eseguire un numero uguale di test a ogni livello (componente, integrazione, sistema) per garantire una copertura bilanciata. [cite: 719, 720]",
+      [cite_start]"c": "La maggior parte dei test di regressione dovrebbe essere manuale e a livello di sistema, in quanto l'automazione è troppo costosa e lenta per un ciclo di CI/CD. [cite: 299, 365]",
+      [cite_start]"d": "La base della piramide, composta da test di componente/unit test automatizzati, dovrebbe costituire la suite di regressione più ampia per fornire un feedback rapido e a basso costo all'interno della pipeline di CI. [cite: 714, 299]"
+    },
+    "answer_pdf": "syllabus_istqb.txt",
+    "answer_page": [0],
+    "answer_option": "d",
+    "answer_option_text": {
+      [cite_start]"d": "La base della piramide, composta da test di componente/unit test automatizzati, dovrebbe costituire la suite di regressione più ampia per fornire un feedback rapido e a basso costo all'interno della pipeline di CI. [cite: 714, 299]"
+    },
+    "no_answer_option_text": {
+      [cite_start]"a": "La maggior parte dell'effort di automazione dovrebbe concentrarsi sui test end-to-end (UI), poiché coprono la maggior parte delle funzionalità e sono più facili da comprendere per il business. [cite: 716]",
+      [cite_start]"b": "La piramide suggerisce di eseguire un numero uguale di test a ogni livello (componente, integrazione, sistema) per garantire una copertura bilanciata. [cite: 719, 720]",
+      [cite_start]"c": "La maggior parte dei test di regressione dovrebbe essere manuale e a livello di sistema, in quanto l'automazione è troppo costosa e lenta per un ciclo di CI/CD. [cite: 299, 365]"
+    },
+    "ambiguous": false,
+    "learning_objective": "Sintetizzare i concetti di Piramide di Test, Regression Testing e Continuous Integration per definire una strategia di automazione efficace in un contesto DevOps.",
+    "k_level": "Synthesis",
+    "points": 4
+  },
+  {
+    "question_pdf": "syllabus_istqb.txt",
+    "question_page": [0],
+    "question_number": "Q4",
+    "question_text": "Durante la pianificazione dei test, viene identificato un rischio di prodotto critico: 'Calcoli finanziari complessi potrebbero essere errati in condizioni limite'. Quale sequenza di attività, dal processo di test, rappresenta l'approccio più rigoroso e tracciabile per mitigare questo rischio specifico?",
+    "question_image": "",
+    "question_option": {
+      [cite_start]"a": "Esecuzione dei Test [cite: 24] [cite_start]utilizzando la tecnica Error Guessing [cite: 583][cite_start], seguita dalla stesura di un Test Completion Report[cite: 62].",
+      [cite_start]"b": "Pianificazione dei Test [cite: 35] [cite_start]con focus sul budget, seguita da Implementazione dei Test [cite: 27] [cite_start]per creare dati generici e infine Debugging [cite: 19] da parte degli sviluppatori.",
+      [cite_start]"c": "Analisi dei Test [cite: 3] [cite_start]per definire le condizioni di test relative ai calcoli, Progettazione dei Test [cite: 39] [cite_start]applicando l'Analisi ai Valori Limite [cite: 2, 490][cite_start], e mantenimento della Tracciabilità [cite: 89, 224] tra rischio, test e risultati.",
+      [cite_start]"d": "Monitoraggio dei Test [cite: 32] [cite_start]per controllare lo stato, seguito da Controllo dei Test [cite: 11] [cite_start]per aggiungere test esplorativi [cite: 64] se il tempo lo consente."
+    },
+    "answer_pdf": "syllabus_istqb.txt",
+    "answer_page": [0],
+    "answer_option": "c",
+    "answer_option_text": {
+      [cite_start]"c": "Analisi dei Test [cite: 3] [cite_start]per definire le condizioni di test relative ai calcoli, Progettazione dei Test [cite: 39] [cite_start]applicando l'Analisi ai Valori Limite [cite: 2, 490][cite_start], e mantenimento della Tracciabilità [cite: 89, 224] tra rischio, test e risultati."
+    },
+    "no_answer_option_text": {
+      [cite_start]"a": "Esecuzione dei Test [cite: 24] [cite_start]utilizzando la tecnica Error Guessing [cite: 583][cite_start], seguita dalla stesura di un Test Completion Report[cite: 62].",
+      [cite_start]"b": "Pianificazione dei Test [cite: 35] [cite_start]con focus sul budget, seguita da Implementazione dei Test [cite: 27] [cite_start]per creare dati generici e infine Debugging [cite: 19] da parte degli sviluppatori.",
+      [cite_start]"d": "Monitoraggio dei Test [cite: 32] [cite_start]per controllare lo stato, seguito da Controllo dei Test [cite: 11] [cite_start]per aggiungere test esplorativi [cite: 64] se il tempo lo consente."
+    },
+    "ambiguous": false,
+    "learning_objective": "Sintetizzare le fasi del processo di test (Analisi, Progettazione) e le tecniche specifiche (BVA) per costruire una strategia di mitigazione mirata per un rischio di prodotto identificato, enfatizzando l'importanza della tracciabilità.",
+    "k_level": "Synthesis",
+    "points": 4
+  },
+  {
+    "question_pdf": "syllabus_istqb.txt",
+    "question_page": [0],
+    "question_number": "Q5",
+    [cite_start]"question_text": "Durante il testing di sistema, si osserva un 'failure'[cite: 25]: un utente con privilegi standard riesce ad accedere a una funzione amministrativa. [cite_start]Un'analisi successiva rivela che un 'difetto' [cite: 22] nel codice è causato da un operatore logico errato (OR invece di AND). [cite_start]Quale delle seguenti opzioni descrive più plausibilmente l''errore' umano [cite: 23] [cite_start]e la 'root cause' [cite: 52] che hanno portato a questa situazione?",
+    "question_image": "",
+    "question_option": {
+      "a": "Errore: il tester ha eseguito il test case sbagliato. [cite_start]Root Cause: l'ambiente di test non era configurato correttamente. [cite: 196]",
+      "b": "Errore: l'utente ha cliccato sul link sbagliato. Root Cause: la documentazione utente era poco chiara.",
+      "c": "Errore: lo sviluppatore ha digitato un operatore logico errato. [cite_start]Root Cause: una pressione eccessiva sui tempi di consegna ha impedito un'adeguata code review. [cite: 140]",
+      "d": "Errore: il sistema ha generato un'eccezione non gestita. [cite_start]Root Cause: un difetto nel firmware del server. [cite: 146]"
+    },
+    "answer_pdf": "syllabus_istqb.txt",
+    "answer_page": [0],
+    "answer_option": "c",
+    "answer_option_text": {
+      "c": "Errore: lo sviluppatore ha digitato un operatore logico errato. [cite_start]Root Cause: una pressione eccessiva sui tempi di consegna ha impedito un'adeguata code review. [cite: 140]"
+    },
+    "no_answer_option_text": {
+      "a": "Errore: il tester ha eseguito il test case sbagliato. [cite_start]Root Cause: l'ambiente di test non era configurato correttamente. [cite: 196]",
+      "b": "Errore: l'utente ha cliccato sul link sbagliato. Root Cause: la documentazione utente era poco chiara.",
+      "d": "Errore: il sistema ha generato un'eccezione non gestita. [cite_start]Root Cause: un difetto nel firmware del server. [cite: 146]"
+    },
+    "ambiguous": false,
+    "learning_objective": "Analizzare una catena causale di un problema di qualità, distinguendo correttamente tra i concetti interconnessi di Failure, Difetto, Errore e Root Cause.",
+    "k_level": "Analysis",
+    "points": 4
+  },
+  {
+    "question_pdf": "syllabus_istqb.txt",
+    "question_page": [0],
+    "question_number": "Q6",
+    [cite_start]"question_text": "Un progetto ottiene il 100% di copertura dei rami [cite: 14, 571] durante il testing di componente. Tuttavia, dopo il rilascio, gli utenti lamentano che il sistema è estremamente lento e inusabile sotto carichi di lavoro moderati. Quale principio del testing spiega meglio questo scenario e quale tipo di test avrebbe potuto prevenire il problema?",
+    "question_image": "",
+    "question_option": {
+      [cite_start]"a": "Principio: 'I difetti si raggruppano in cluster'[cite: 160]. [cite_start]Tipo di test: Testing di Manutenzione [cite: 83] per ottimizzare i cluster di codice problematici.",
+      [cite_start]"b": "Principio: 'Il testing esaustivo è impossibile'[cite: 154]. [cite_start]Tipo di test: Testing della Tabella delle Decisioni [cite: 76] per coprire più combinazioni logiche.",
+      [cite_start]"c": "Principio: 'L'assenza di difetti è un’idea sbagliata'[cite: 167]. [cite_start]Tipo di test: Testing non funzionale (efficienza delle prestazioni) [cite: 66, 341] per validare il comportamento del sistema sotto carico.",
+      [cite_start]"d": "Principio: 'Il testing mostra la presenza di difetti, non la loro assenza'[cite: 151]. [cite_start]Tipo di test: Testing statico [cite: 70] tramite ispezioni del codice per trovare inefficienze."
+    },
+    "answer_pdf": "syllabus_istqb.txt",
+    "answer_page": [0],
+    "answer_option": "c",
+    "answer_option_text": {
+      [cite_start]"c": "Principio: 'L'assenza di difetti è un’idea sbagliata'[cite: 167]. [cite_start]Tipo di test: Testing non funzionale (efficienza delle prestazioni) [cite: 66, 341] per validare il comportamento del sistema sotto carico."
+    },
+    "no_answer_option_text": {
+      [cite_start]"a": "Principio: 'I difetti si raggruppano in cluster'[cite: 160]. [cite_start]Tipo di test: Testing di Manutenzione [cite: 83] per ottimizzare i cluster di codice problematici.",
+      [cite_start]"b": "Principio: 'Il testing esaustivo è impossibile'[cite: 154]. [cite_start]Tipo di test: Testing della Tabella delle Decisioni [cite: 76] per coprire più combinazioni logiche.",
+      [cite_start]"d": "Principio: 'Il testing mostra la presenza di difetti, non la loro assenza'[cite: 151]. [cite_start]Tipo di test: Testing statico [cite: 70] tramite ispezioni del codice per trovare inefficienze."
+    },
+    "ambiguous": false,
+    "learning_objective": "Valutare uno scenario di fallimento post-rilascio per identificare il principio del testing più pertinente ('Absence of errors fallacy') e il tipo di test (non funzionale) che è stato trascurato, dimostrando una comprensione olistica della qualità.",
+    "k_level": "Evaluation",
+    "points": 5
+  },
+  {
+    "question_pdf": "syllabus_istqb.txt",
+    "question_page": [0],
+    "question_number": "Q7",
+    "question_text": "Un'organizzazione sta pianificando il testing per un prodotto software completamente nuovo, senza precedenti storici. Il team di sviluppo è composto da esperti eterogenei. Si deve fornire una stima dell'effort di test. Quale tecnica di stima sarebbe più appropriata e perché le altre sono meno adatte in questo contesto?",
+    "question_image": "",
+    "question_option": {
+      [cite_start]"a": "Stima basata su valori statistici (metrics-based)[cite: 678], perché i dati di progetti passati, anche se non correlati, forniscono una baseline oggettiva.",
+      [cite_start]"b": "Estrapolazione[cite: 682], perché permette di prevedere l'effort totale basandosi sui dati raccolti nella prima iterazione di test.",
+      [cite_start]"c": "Wideband Delphi (expert-based)[cite: 686], perché sfrutta l'esperienza collettiva degli esperti per raggiungere un consenso su un problema incerto, mitigando i bias individuali attraverso un processo iterativo.",
+      [cite_start]"d": "Planning Poker [cite: 690] applicato solo dal Test Manager, per centralizzare la decisione e garantire una stima rapida e coerente."
+    },
+    "answer_pdf": "syllabus_istqb.txt",
+    "answer_page": [0],
+    "answer_option": "c",
+    "answer_option_text": {
+      [cite_start]"c": "Wideband Delphi (expert-based)[cite: 686], perché sfrutta l'esperienza collettiva degli esperti per raggiungere un consenso su un problema incerto, mitigando i bias individuali attraverso un processo iterativo."
+    },
+    "no_answer_option_text": {
+      [cite_start]"a": "Stima basata su valori statistici (metrics-based)[cite: 678], perché i dati di progetti passati, anche se non correlati, forniscono una baseline oggettiva.",
+      [cite_start]"b": "Estrapolazione[cite: 682], perché permette di prevedere l'effort totale basandosi sui dati raccolti nella prima iterazione di test.",
+      [cite_start]"d": "Planning Poker [cite: 690] applicato solo dal Test Manager, per centralizzare la decisione e garantire una stima rapida e coerente."
+    },
+    "ambiguous": false,
+    "learning_objective": "Valutare la idoneità di diverse tecniche di stima del test in un contesto specifico (prodotto nuovo, assenza di dati storici) e giustificare la scelta della tecnica più adatta (Wideband Delphi).",
+    "k_level": "Evaluation",
+    "points": 4
+  },
+  {
+    "question_pdf": "syllabus_istqb.txt",
+    "question_page": [0],
+    "question_number": "Q8",
+    "question_text": "In un modello di sviluppo sequenziale, l'analisi dei test per il testing di sistema inizia durante la fase di progettazione del sistema. Allo stesso tempo, il team di QA propone di introdurre l'Acceptance Test-Driven Development (ATDD). Qual è la principale contraddizione o sinergia tra queste due pratiche in questo specifico modello di sviluppo?",
+    "question_image": "",
+    "question_option": {
+      [cite_start]"a": "C'è una forte sinergia, poiché l'ATDD [cite: 1, 630] fornisce test case concreti che possono essere usati direttamente nell'analisi dei test a livello di sistema.",
+      [cite_start]"b": "C'è una contraddizione fondamentale: l'ATDD è un approccio 'test-first' [cite: 630] [cite_start]che guida lo sviluppo, intrinsecamente legato ai cicli iterativi, e si scontra con la natura sequenziale del modello dove lo sviluppo precede il testing. [cite: 282]",
+      [cite_start]"c": "Non c'è né sinergia né contraddizione, perché l'analisi dei test si occupa di 'cosa' testare[cite: 188], mentre l'ATDD si occupa di 'come' automatizzare.",
+      [cite_start]"d": "La sinergia sta nel fatto che entrambi gli approcci si basano sui criteri di accettazione [cite: 624][cite_start], ma l'ATDD è applicabile solo al testing di accettazione [cite: 78] e non al testing di sistema."
+    },
+    "answer_pdf": "syllabus_istqb.txt",
+    "answer_page": [0],
+    "answer_option": "b",
+    "answer_option_text": {
+      [cite_start]"b": "C'è una contraddizione fondamentale: l'ATDD è un approccio 'test-first' [cite: 630] [cite_start]che guida lo sviluppo, intrinsecamente legato ai cicli iterativi, e si scontra con la natura sequenziale del modello dove lo sviluppo precede il testing. [cite: 282]"
+    },
+    "no_answer_option_text": {
+      [cite_start]"a": "C'è una forte sinergia, poiché l'ATDD [cite: 1, 630] fornisce test case concreti che possono essere usati direttamente nell'analisi dei test a livello di sistema.",
+      [cite_start]"c": "Non c'è né sinergia né contraddizione, perché l'analisi dei test si occupa di 'cosa' testare[cite: 188], mentre l'ATDD si occupa di 'come' automatizzare.",
+      [cite_start]"d": "La sinergia sta nel fatto che entrambi gli approcci si basano sui criteri di accettazione [cite: 624][cite_start], ma l'ATDD è applicabile solo al testing di accettazione [cite: 78] e non al testing di sistema."
+    },
+    "ambiguous": false,
+    "learning_objective": "Valutare la compatibilità di una pratica di test (ATDD) con un modello di ciclo di vita dello sviluppo software (Sequenziale), identificando le contraddizioni concettuali e operative.",
+    "k_level": "Evaluation",
+    "points": 5
+  },
+  {
+    "question_pdf": "syllabus_istqb.txt",
+    "question_page": [0],
+    "question_number": "Q9",
+    "question_text": "Un sistema di e-commerce deve integrarsi con un gateway di pagamento esterno e un servizio di logistica di terze parti. [cite_start]Durante il testing di integrazione dei sistemi[cite: 82, 332], qual è la strategia più efficace per isolare e verificare le interfacce, considerando che i sistemi esterni sono instabili e non sempre disponibili?",
+    "question_image": "",
+    "question_option": {
+      "a": "Eseguire solo testing end-to-end con i sistemi reali, accettando i ritardi causati dalla loro indisponibilità per avere test più realistici.",
+      [cite_start]"b": "Utilizzare stub, driver, simulatori e virtualizzazioni di servizi [cite: 221] per emulare il comportamento dei sistemi esterni, permettendo un testing di integrazione controllato e ripetibile indipendentemente dalla disponibilità dei servizi reali.",
+      [cite_start]"c": "Focalizzarsi esclusivamente sul testing di componente [cite: 79, 324] dei moduli interni, assumendo che le interfacce funzioneranno correttamente una volta connessi i sistemi reali.",
+      [cite_start]"d": "Applicare il testing black-box [cite: 74] basato esclusivamente sulle specifiche delle API, senza eseguire alcun test dinamico fino a quando tutti i sistemi non saranno stabili."
+    },
+    "answer_pdf": "syllabus_istqb.txt",
+    "answer_page": [0],
+    "answer_option": "b",
+    "answer_option_text": {
+      [cite_start]"b": "Utilizzare stub, driver, simulatori e virtualizzazioni di servizi [cite: 221] per emulare il comportamento dei sistemi esterni, permettendo un testing di integrazione controllato e ripetibile indipendentemente dalla disponibilità dei servizi reali."
+    },
+    "no_answer_option_text": {
+      "a": "Eseguire solo testing end-to-end con i sistemi reali, accettando i ritardi causati dalla loro indisponibilità per avere test più realistici.",
+      [cite_start]"c": "Focalizzarsi esclusivamente sul testing di componente [cite: 79, 324] dei moduli interni, assumendo che le interfacce funzioneranno correttamente una volta connessi i sistemi reali.",
+      [cite_start]"d": "Applicare il testing black-box [cite: 74] basato esclusivamente sulle specifiche delle API, senza eseguire alcun test dinamico fino a quando tutti i sistemi non saranno stabili."
+    },
+    "ambiguous": false,
+    "learning_objective": "Sintetizzare i concetti di testing di integrazione dei sistemi e l'uso di elementi dell'ambiente di test (stub, simulatori) per proporre una soluzione pratica a un problema comune di disponibilità dei sistemi esterni.",
+    "k_level": "Synthesis",
+    "points": 5
+  },
+  {
+    "question_pdf": "syllabus_istqb.txt",
+    "question_page": [0],
+    "question_number": "Q10",
+    [cite_start]"question_text": "Un'organizzazione decide di abbandonare l'indipendenza del testing, integrando i tester nei team di sviluppo secondo un 'approccio whole-team'[cite: 256]. Quale delle seguenti rappresenta la più significativa riallocazione delle responsabilità del ruolo di Test Management e del ruolo di Testing in questo nuovo contesto?",
+    "question_image": "",
+    "question_option": {
+      [cite_start]"a": "Il ruolo di Test Management [cite: 235] viene eliminato e tutte le attività di pianificazione e controllo sono delegate ai singoli sviluppatori, mentre il ruolo di Testing si concentra solo sull'automazione.",
+      [cite_start]"b": "Il ruolo di Testing assume la responsabilità della pianificazione [cite: 35] [cite_start]e del reporting[cite: 69], mentre il Test Manager si occupa solo dell'esecuzione manuale dei test.",
+      [cite_start]"c": "Il Test Manager mantiene un ruolo di coordinamento trasversale per strategie e processi a livello organizzativo [cite: 239][cite_start], mentre il team Agile gestisce la pianificazione dell'iterazione e il ruolo di Testing si focalizza sull'analisi, progettazione ed esecuzione dei test in collaborazione con gli sviluppatori[cite: 241, 261].",
+      [cite_start]"d": "L'approccio whole-team implica che non esistono più ruoli specializzati; pertanto, sia le attività di Test Management sia quelle di Testing vengono eseguite indistintamente da qualsiasi membro del team. [cite: 257]"
+    },
+    "answer_pdf": "syllabus_istqb.txt",
+    "answer_page": [0],
+    "answer_option": "c",
+    "answer_option_text": {
+      [cite_start]"c": "Il Test Manager mantiene un ruolo di coordinamento trasversale per strategie e processi a livello organizzativo [cite: 239][cite_start], mentre il team Agile gestisce la pianificazione dell'iterazione e il ruolo di Testing si focalizza sull'analisi, progettazione ed esecuzione dei test in collaborazione con gli sviluppatori[cite: 241, 261]."
+    },
+    "no_answer_option_text": {
+      [cite_start]"a": "Il ruolo di Test Management [cite: 235] viene eliminato e tutte le attività di pianificazione e controllo sono delegate ai singoli sviluppatori, mentre il ruolo di Testing si concentra solo sull'automazione.",
+      [cite_start]"b": "Il ruolo di Testing assume la responsabilità della pianificazione [cite: 35] [cite_start]e del reporting[cite: 69], mentre il Test Manager si occupa solo dell'esecuzione manuale dei test.",
+      [cite_start]"d": "L'approccio whole-team implica che non esistono più ruoli specializzati; pertanto, sia le attività di Test Management sia quelle di Testing vengono eseguite indistintamente da qualsiasi membro del team. [cite: 257]"
+    },
+    "ambiguous": false,
+    "learning_objective": "Valutare l'impatto di un cambiamento organizzativo (adozione del 'whole-team approach') sulla distribuzione delle responsabilità dei ruoli di Test Management e Testing, sintetizzando le informazioni del syllabus sui contesti Agile.",
+    "k_level": "Evaluation",
+    "points": 5
+  },
+  {
+    "question_pdf": "syllabus_istqb.txt",
+    "question_page": [0],
+    "question_number": "Q11",
+    "question_text": "Un'organizzazione ha una 'Politica di Test' aziendale che impone 'zero difetti critici noti al momento del rilascio'. Per un nuovo progetto, la 'Strategia di Test' adottata è il testing basato sul rischio con alta automazione. Come dovrebbe un Test Manager tradurre questi due livelli di direttive all'interno del 'Test Plan' di progetto, specificamente nella sezione 'Criteri di Uscita'?",
+    "question_image": "",
+    "question_option": {
+      "a": "I Criteri di Uscita dovrebbero indicare solo il 100% di copertura dei test case, poiché questo è l'unico modo per dimostrare l'assenza di difetti.",
+      "b": "Dovrebbero definire che tutti i test automatizzati devono essere eseguiti con successo, ignorando i difetti aperti purché non critici, per rispettare la strategia di automazione.",
+      "c": "Dovrebbero specificare che 'nessun difetto di priorità/severità critica deve rimanere aperto' (dalla Politica) e che 'il 100% dei rischi di prodotto identificati come critici deve essere coperto da test superati' (dalla Strategia).",
+      "d": "Il Test Plan non dovrebbe contenere Criteri di Uscita, poiché in un approccio basato sul rischio la decisione di rilascio è determinata esclusivamente dal budget residuo."
+    },
+    "answer_pdf": "syllabus_istqb.txt",
+    "answer_page": [0],
+    "answer_option": "c",
+    "answer_option_text": {
+      "c": "Dovrebbero specificare che 'nessun difetto di priorità/severità critica deve rimanere aperto' (dalla Politica) e che 'il 100% dei rischi di prodotto identificati come critici deve essere coperto da test superati' (dalla Strategia)."
+    },
+    "no_answer_option_text": {
+      "a": "I Criteri di Uscita dovrebbero indicare solo il 100% di copertura dei test case, poiché questo è l'unico modo per dimostrare l'assenza di difetti.",
+      "b": "Dovrebbero definire che tutti i test automatizzati devono essere eseguiti con successo, ignorando i difetti aperti purché non critici, per rispettare la strategia di automazione.",
+      "d": "Il Test Plan non dovrebbe contenere Criteri di Uscita, poiché in un approccio basato sul rischio la decisione di rilascio è determinata esclusivamente dal budget residuo."
+    },
+    "ambiguous": false,
+    "learning_objective": "Sintetizzare i concetti gerarchici di Politica di Test, Strategia di Test e Test Plan per formulare criteri di uscita specifici e misurabili che allineino gli obiettivi aziendali con l'approccio tattico del progetto.",
+    "k_level": "Synthesis",
+    "points": 5
+  },
+  {
+    "question_pdf": "syllabus_istqb.txt",
+    "question_page": [0],
+    "question_number": "Q12",
+    "question_text": "Un 'Test Completion Report' indica che i 'Criteri di Uscita' relativi alla copertura funzionale (95% dei requisiti coperti) sono stati raggiunti. Tuttavia, evidenzia anche che i test non funzionali per la sicurezza, identificati nell'analisi dei rischi come ad 'alto impatto', sono stati eseguiti solo parzialmente. Qual è la valutazione più critica che gli stakeholder dovrebbero derivare da questo report per la decisione di rilascio?",
+    "question_image": "",
+    "question_option": {
+      "a": "Il progetto è un successo perché i principali criteri di uscita sono stati formalmente soddisfatti.",
+      "b": "Il livello di rischio residuo relativo alla sicurezza è probabilmente inaccettabile, nonostante il raggiungimento della copertura funzionale, e rappresenta la principale minaccia per il valore del prodotto.",
+      "c": "Il team di test ha fallito nel completare il proprio lavoro e dovrebbe essere allocato più tempo per raggiungere il 100% di copertura funzionale.",
+      "d": "Il report dimostra che i difetti funzionali sono più importanti di quelli non funzionali, giustificando un rilascio immediato."
+    },
+    "answer_pdf": "syllabus_istqb.txt",
+    "answer_page": [0],
+    "answer_option": "b",
+    "answer_option_text": {
+      "b": "Il livello di rischio residuo relativo alla sicurezza è probabilmente inaccettabile, nonostante il raggiungimento della copertura funzionale, e rappresenta la principale minaccia per il valore del prodotto."
+    },
+    "no_answer_option_text": {
+      "a": "Il progetto è un successo perché i principali criteri di uscita sono stati formalmente soddisfatti.",
+      "c": "Il team di test ha fallito nel completare il proprio lavoro e dovrebbe essere allocato più tempo per raggiungere il 100% di copertura funzionale.",
+      "d": "Il report dimostra che i difetti funzionali sono più importanti di quelli non funzionali, giustificando un rilascio immediato."
+    },
+    "ambiguous": false,
+    "learning_objective": "Valutare le implicazioni di un Test Completion Report che presenta dati contrastanti, soppesando il raggiungimento di criteri formali rispetto alla mancata mitigazione di rischi critici per formulare un giudizio sulla qualità del prodotto.",
+    "k_level": "Evaluation",
+    "points": 5
+  },
+  {
+    "question_pdf": "syllabus_istqb.txt",
+    "question_page": [0],
+    "question_number": "Q13",
+    "question_text": "Un sistema bancario operativo richiede un 'testing di manutenzione' a causa di due eventi simultanei: una migrazione dell'ambiente operativo (modifica adattativa) e un hotfix per un calcolo errato degli interessi (modifica correttiva). Quale approccio integrato di testing è il più completo e logicamente corretto?",
+    "question_image": "",
+    "question_option": {
+      "a": "Eseguire unicamente il regression testing sull'intero sistema dopo che entrambe le modifiche sono state applicate contemporaneamente.",
+      "b": "Prima, eseguire il testing confermativo solo per l'hotfix nell'ambiente legacy. Poi, migrare ed eseguire il testing di regressione.",
+      "c": "Applicare l'hotfix, eseguire un testing confermativo mirato e una suite di regressione focalizzata sulle aree impattate nell'ambiente legacy. Successivamente, eseguire la migrazione e ripetere l'intera suite di regressione nel nuovo ambiente.",
+      "d": "Ignorare il testing confermativo, poiché il testing di regressione completo nel nuovo ambiente rileverà comunque se la correzione ha funzionato."
+    },
+    "answer_pdf": "syllabus_istqb.txt",
+    "answer_page": [0],
+    "answer_option": "c",
+    "answer_option_text": {
+      "c": "Applicare l'hotfix, eseguire un testing confermativo mirato e una suite di regressione focalizzata sulle aree impattate nell'ambiente legacy. Successivamente, eseguire la migrazione e ripetere l'intera suite di regressione nel nuovo ambiente."
+    },
+    "no_answer_option_text": {
+      "a": "Eseguire unicamente il regression testing sull'intero sistema dopo che entrambe le modifiche sono state applicate contemporaneamente.",
+      "b": "Prima, eseguire il testing confermativo solo per l'hotfix nell'ambiente legacy. Poi, migrare ed eseguire il testing di regressione.",
+      "d": "Ignorare il testing confermativo, poiché il testing di regressione completo nel nuovo ambiente rileverà comunque se la correzione ha funzionato."
+    },
+    "ambiguous": false,
+    "learning_objective": "Sintetizzare i concetti di testing di manutenzione (correttivo, adattativo), testing confermativo e testing di regressione per progettare una sequenza di test logicamente valida e completa per uno scenario complesso a più variabili.",
+    "k_level": "Synthesis",
+    "points": 5
+  },
+  {
+    "question_pdf": "syllabus_istqb.txt",
+    "question_page": [0],
+    "question_number": "Q14",
+    "question_text": "Si consideri una suite di test in cui il test case TC1 copre un rischio di prodotto 'critico', ma ha una dipendenza logica dal TC5, che copre un rischio 'basso'. La strategia di prioritizzazione è basata sul rischio. Qual è la valutazione più corretta della schedulazione dell'esecuzione?",
+    "question_image": "",
+    "question_option": {
+      "a": "TC1 deve essere eseguito per primo in ogni caso per aderire strettamente alla prioritizzazione basata sul rischio.",
+      "b": "La dipendenza logica deve avere la precedenza. Eseguire TC5 e poi TC1 è l'unica sequenza tecnicamente possibile, anche se contraddice la prioritizzazione del rischio.",
+      "c": "La schedulazione deve essere TC5 seguito da TC1. Questa è la scelta ottimale che rispetta il vincolo tecnico (dipendenza) massimizzando al contempo la mitigazione del rischio il prima possibile.",
+      "d": "Nessuno dei due test case dovrebbe essere eseguito finché la dipendenza non viene rimossa tramite refactoring del codice per consentire l'esecuzione indipendente."
+    },
+    "answer_pdf": "syllabus_istqb.txt",
+    "answer_page": [0],
+    "answer_option": "c",
+    "answer_option_text": {
+      "c": "La schedulazione deve essere TC5 seguito da TC1. Questa è la scelta ottimale che rispetta il vincolo tecnico (dipendenza) massimizzando al contempo la mitigazione del rischio il prima possibile."
+    },
+    "no_answer_option_text": {
+      "a": "TC1 deve essere eseguito per primo in ogni caso per aderire strettamente alla prioritizzazione basata sul rischio.",
+      "b": "La dipendenza logica deve avere la precedenza. Eseguire TC5 e poi TC1 è l'unica sequenza tecnicamente possibile, anche se contraddice la prioritizzazione del rischio.",
+      "d": "Nessuno dei due test case dovrebbe essere eseguito finché la dipendenza non viene rimossa tramite refactoring del codice per consentire l'esecuzione indipendente."
+    },
+    "ambiguous": false,
+    "learning_objective": "Valutare uno scenario di pianificazione dell'esecuzione dei test con priorità e vincoli contrastanti, giustificando la scelta della schedulazione che bilancia in modo ottimale la mitigazione del rischio con le dipendenze tecniche.",
+    "k_level": "Evaluation",
+    "points": 5
+  },
+  {
+    "question_pdf": "syllabus_istqb.txt",
+    "question_page": [0],
+    "question_number": "Q15",
+    "question_text": "Un tester segnala un difetto che lo sviluppatore non riesce a riprodurre. L'indagine rivela che l'ambiente di test del tester utilizzava una versione di una libreria non allineata alla 'baseline' definita per la build corrente. Quale processo, se implementato correttamente, avrebbe prevenuto questo spreco di effort nel ciclo di 'defect management'?",
+    "question_image": "",
+    "question_option": {
+      "a": "Risk Management, identificando il rischio di ambienti non allineati.",
+      "b": "Il processo di Review, che avrebbe dovuto analizzare il defect report più attentamente.",
+      "c": "Il Configuration Management, che garantisce che tutti gli elementi dell'ambiente di test siano identificati, versionati e coerenti con la baseline dell'oggetto di test.",
+      "d": "Il Test Monitoring, che avrebbe dovuto tracciare l'avanzamento dei test e segnalare l'anomalia."
+    },
+    "answer_pdf": "syllabus_istqb.txt",
+    "answer_page": [0],
+    "answer_option": "c",
+    "answer_option_text": {
+      "c": "Il Configuration Management, che garantisce che tutti gli elementi dell'ambiente di test siano identificati, versionati e coerenti con la baseline dell'oggetto di test."
+    },
+    "no_answer_option_text": {
+      "a": "Risk Management, identificando il rischio di ambienti non allineati.",
+      "b": "Il processo di Review, che avrebbe dovuto analizzare il defect report più attentamente.",
+      "d": "Il Test Monitoring, che avrebbe dovuto tracciare l'avanzamento dei test e segnalare l'anomalia."
+    },
+    "ambiguous": false,
+    "learning_objective": "Sintetizzare i concetti di Defect Management e Configuration Management per identificare la causa radice di un problema di processo (difetto non riproducibile) in una mancanza di controllo della configurazione.",
+    "k_level": "Synthesis",
+    "points": 5
+  },
+  {
+    "question_pdf": "syllabus_istqb.txt",
+    "question_page": [0],
+    "question_number": "Q16",
+    "question_text": "Un team Agile che sviluppa un software medicale deve conciliare la necessità di 'documentazione leggera', tipica dell'Agile, con i requisiti normativi che esigono un 'audit trail' completo e una prova oggettiva della copertura dei test. Quale delle seguenti strategie offre il miglior compromesso per soddisfare entrambi i requisiti?",
+    "question_image": "",
+    "question_option": {
+      "a": "Abbandonare l'Agile e adottare un modello a V per garantire una documentazione completa e formale.",
+      "b": "Ignorare i requisiti normativi per mantenere la velocità e la flessibilità dell'approccio Agile.",
+      "c": "Mantenere testware 'leggero' (es. test charter) ma implementare una rigorosa tracciabilità bidirezionale automatizzata tra requisiti, user story, test case, risultati ed elementi di codice in un tool di test management.",
+      "d": "Produrre manualmente documenti di test plan e test report estremamente dettagliati alla fine di ogni sprint, duplicando il lavoro per soddisfare i revisori."
+    },
+    "answer_pdf": "syllabus_istqb.txt",
+    "answer_page": [0],
+    "answer_option": "c",
+    "answer_option_text": {
+      "c": "Mantenere testware 'leggero' (es. test charter) ma implementare una rigorosa tracciabilità bidirezionale automatizzata tra requisiti, user story, test case, risultati ed elementi di codice in un tool di test management."
+    },
+    "no_answer_option_text": {
+      "a": "Abbandonare l'Agile e adottare un modello a V per garantire una documentazione completa e formale.",
+      "b": "Ignorare i requisiti normativi per mantenere la velocità e la flessibilità dell'approccio Agile.",
+      "d": "Produrre manualmente documenti di test plan e test report estremamente dettagliati alla fine di ogni sprint, duplicando il lavoro per soddisfare i revisori."
+    },
+    "ambiguous": false,
+    "learning_objective": "Valutare il conflitto tra un paradigma di sviluppo (Agile) e un vincolo esterno (normativo), proponendo una soluzione che sintetizza i concetti di testware e tracciabilità per raggiungere un equilibrio praticabile.",
+    "k_level": "Evaluation",
+    "points": 5
+  },
+  {
+    "question_pdf": "syllabus_istqb.txt",
+    "question_page": [0],
+    "question_number": "Q17",
+    "question_text": "Un tool di analisi statica, integrato in una pipeline CI/CD, segnala costantemente moduli con alta complessità ciclomatica. In che modo questa informazione dovrebbe guidare un tester nella progettazione di test white-box per questi specifici moduli?",
+    "image": "",
+    "question_option": {
+      "a": "L'alta complessità suggerisce che è sufficiente raggiungere il 100% di copertura delle istruzioni, poiché coprire tutti i percorsi logici sarebbe troppo dispendioso.",
+      "b": "L'informazione non è rilevante per il testing dinamico e dovrebbe essere usata solo dagli sviluppatori per il refactoring.",
+      "c": "L'alta complessità indica un elevato numero di percorsi decisionali. Pertanto, il tester dovrebbe prioritizzare il raggiungimento di un'alta copertura dei rami (branch coverage) o, se possibile, di criteri più forti, poiché la sola copertura delle istruzioni sarebbe inadeguata a testare la logica complessa.",
+      "d": "Il tester dovrebbe ignorare il testing white-box e applicare esclusivamente tecniche black-box come il partizionamento di equivalenza per verificare la funzionalità dall'esterno."
+    },
+    "answer_pdf": "syllabus_istqb.txt",
+    "answer_page": [0],
+    "answer_option": "c",
+    "answer_option_text": {
+      "c": "L'alta complessità indica un elevato numero di percorsi decisionali. Pertanto, il tester dovrebbe prioritizzare il raggiungimento di un'alta copertura dei rami (branch coverage) o, se possibile, di criteri più forti, poiché la sola copertura delle istruzioni sarebbe inadeguata a testare la logica complessa."
+    },
+    "no_answer_option_text": {
+      "a": "L'alta complessità suggerisce che è sufficiente raggiungere il 100% di copertura delle istruzioni, poiché coprire tutti i percorsi logici sarebbe troppo dispendioso.",
+      "b": "L'informazione non è rilevante per il testing dinamico e dovrebbe essere usata solo dagli sviluppatori per il refactoring.",
+      "d": "Il tester dovrebbe ignorare il testing white-box e applicare esclusivamente tecniche black-box come il partizionamento di equivalenza per verificare la funzionalità dall'esterno."
+    },
+    "ambiguous": false,
+    "learning_objective": "Sintetizzare l'output di un tool di testing statico (analisi della complessità) con le strategie di progettazione del testing dinamico white-box, giustificando la scelta di un livello di copertura (branch coverage) più adeguato al rischio identificato.",
+    "k_level": "Synthesis",
+    "points": 5
+  },
+  {
+    "question_pdf": "syllabus_istqb.txt",
+    "question_page": [0],
+    "question_number": "Q18",
+    "question_text": "In una revisione di fine iterazione, il Product Owner considera una user story 'completa' perché la funzionalità è stata dimostrata con successo. Tuttavia, il team segnala che la 'Definition of Done' (DoD) non è soddisfatta, poiché i test di regressione associati non sono stati automatizzati. Qual è la valutazione più corretta di questa situazione secondo i principi Agile e di Quality Assurance?",
+    "image": "",
+    "question_option": {
+      "a": "Il Product Owner ha l'autorità finale; la user story deve essere considerata completata per non rallentare la velocity del team.",
+      "b": "La user story non è 'Done'. La DoD è un accordo del team che definisce la qualità del rilascio e ignorarla introduce debito tecnico e aumenta il rischio di regressioni future.",
+      "c": "La DoD è solo una linea guida. Se la funzionalità principale funziona, l'automazione può essere inserita nel backlog come un task a bassa priorità per un'iterazione futura.",
+      "d": "La responsabilità è degli sviluppatori, che avrebbero dovuto completare l'automazione. La user story è funzionalmente completa e può essere accettata."
+    },
+    "answer_pdf": "syllabus_istqb.txt",
+    "answer_page": [0],
+    "answer_option": "b",
+    "answer_option_text": {
+      "b": "La user story non è 'Done'. La DoD è un accordo del team che definisce la qualità del rilascio e ignorarla introduce debito tecnico e aumenta il rischio di regressioni future."
+    },
+    "no_answer_option_text": {
+      "a": "Il Product Owner ha l'autorità finale; la user story deve essere considerata completata per non rallentare la velocity del team.",
+      "c": "La DoD è solo una linea guida. Se la funzionalità principale funziona, l'automazione può essere inserita nel backlog come un task a bassa priorità per un'iterazione futura.",
+      "d": "La responsabilità è degli sviluppatori, che avrebbero dovuto completare l'automazione. La user story è funzionalmente completa e può essere accettata."
+    },
+    "ambiguous": false,
+    "learning_objective": "Valutare una situazione di conflitto tra il raggiungimento di un obiettivo di business apparente e l'aderenza a un criterio di qualità di processo (Definition of Done), applicando i principi di Quality Assurance in un contesto Agile.",
+    "k_level": "Evaluation",
+    "points": 5
+  },
+  {
+    "question_pdf": "syllabus_istqb.txt",
+    "question_page": [0],
+    "question_number": "Q19",
+    "question_text": "Un team Agile utilizza con successo l'Acceptance Test-Driven Development (ATDD), generando test automatizzati che supportano il team e sono orientati al business. Secondo il modello dei Quadranti del Testing, quale tipo di rischio viene affrontato in modo incompleto da questa sola pratica e quali attività, appartenenti ad altri quadranti, dovrebbero essere integrate per una copertura olistica della qualità?",
+    "image": "",
+    "question_option": {
+      "a": "L'ATDD copre tutti i quadranti in modo esaustivo, quindi non sono necessarie altre attività.",
+      "b": "L'ATDD (Quadrante Q2) non copre adeguatamente i rischi tecnologici che criticano il prodotto (Q4). Sarebbe necessario integrare test non funzionali come performance e security testing.",
+      "c": "L'ATDD (Quadrante Q1) è orientato alla tecnologia. È necessario aggiungere test orientati al business (Q2) come le demo agli utenti.",
+      "d": "L'ATDD copre i quadranti Q1 e Q2. Manca la copertura del Q3, che può essere ottenuta sostituendo l'ATDD con il testing manuale."
+    },
+    "answer_pdf": "syllabus_istqb.txt",
+    "answer_page": [0],
+    "answer_option": "b",
+    "answer_option_text": {
+      "b": "L'ATDD (Quadrante Q2) non copre adeguatamente i rischi tecnologici che criticano il prodotto (Q4). Sarebbe necessario integrare test non funzionali come performance e security testing."
+    },
+    "no_answer_option_text": {
+      "a": "L'ATDD copre tutti i quadranti in modo esaustivo, quindi non sono necessarie altre attività.",
+      "c": "L'ATDD (Quadrante Q1) è orientato alla tecnologia. È necessario aggiungere test orientati al business (Q2) come le demo agli utenti.",
+      "d": "L'ATDD copre i quadranti Q1 e Q2. Manca la copertura del Q3, che può essere ottenuta sostituendo l'ATDD con il testing manuale."
+    },
+    "ambiguous": false,
+    "learning_objective": "Sintetizzare l'applicazione di una pratica specifica (ATDD) all'interno di un modello concettuale più ampio (Quadranti del Testing) per identificare le lacune strategiche e proporre attività di test complementari.",
+    "k_level": "Synthesis",
+    "points": 5
+  },
+  {
+    "question_pdf": "syllabus_istqb.txt",
+    "question_page": [0],
+    "question_number": "Q20",
+    "question_text": "Dovete definire una strategia di test per un sistema non deterministico basato su IA, come un motore di raccomandazione, i cui requisiti sono del tipo 'le raccomandazioni devono essere pertinenti'. Basandovi sui principi e processi fondamentali del syllabus ISTQB, quale delle seguenti strategie sarebbe la più robusta e adattabile a questo contesto innovativo?",
+    "image": "",
+    "question_option": {
+      "a": "Focalizzarsi esclusivamente sul testing white-box, verificando la correttezza matematica degli algoritmi, poiché il risultato funzionale è troppo variabile per essere testato.",
+      "b": "Applicare un approccio basato sul rischio, combinando testing esplorativo (Q3) per valutare la pertinenza percepita dall'utente, e testing non funzionale (Q4) per monitorare l'affidabilità e le prestazioni del sistema nel tempo, accettando una certa variabilità nei risultati attesi.",
+      "c": "Definire risultati attesi esatti per ogni input e creare una suite di regressione automatizzata che segnali qualsiasi deviazione, trattando il sistema come se fosse deterministico.",
+      "d": "Utilizzare solo il testing di accettazione con gli utenti finali, poiché è l'unico modo per ottenere un feedback valido, eliminando tutti gli altri livelli di test."
+    },
+    "answer_pdf": "syllabus_istqb.txt",
+    "answer_page": [0],
+    "answer_option": "b",
+    "answer_option_text": {
+      "b": "Applicare un approccio basato sul rischio, combinando testing esplorativo (Q3) per valutare la pertinenza percepita dall'utente, e testing non funzionale (Q4) per monitorare l'affidabilità e le prestazioni del sistema nel tempo, accettando una certa variabilità nei risultati attesi."
+    },
+    "no_answer_option_text": {
+      "a": "Focalizzarsi esclusivamente sul testing white-box, verificando la correttezza matematica degli algoritmi, poiché il risultato funzionale è troppo variabile per essere testato.",
+      "c": "Definire risultati attesi esatti per ogni input e creare una suite di regressione automatizzata che segnali qualsiasi deviazione, trattando il sistema come se fosse deterministico.",
+      "d": "Utilizzare solo il testing di accettazione con gli utenti finali, poiché è l'unico modo per ottenere un feedback valido, eliminando tutti gli altri livelli di test."
+    },
+    "ambiguous": false,
+    "learning_objective": "Adattare e applicare i principi di test fondamentali (basato sul rischio, esplorativo, non funzionale) a uno scenario nuovo e non deterministico (IA), valutando quale combinazione di strategie esistenti offre la soluzione più pragmatica e completa.",
+    "k_level": "Evaluation",
+    "points": 5
+  },
+    {
+    "question_pdf": "syllabus_istqb.txt",
+    "question_page": [0],
+    "question_number": "Q21",
+    "question_text": "In un progetto con un budget fisso e una scadenza imminente, il tempo rimanente per il testing di sistema consente di scegliere tra due opzioni: A) Raggiungere il 100% della copertura delle istruzioni sui moduli rimanenti con test automatizzati; B) Utilizzare lo stesso tempo per condurre sessioni di testing esplorativo mirate sulle funzionalità ad alto rischio identificate dagli stakeholder. Quale opzione rappresenta la migliore allocazione delle risorse e perché?",
+    "question_image": "",
+    "question_option": {
+      "a": "Opzione A, perché il raggiungimento di una metrica di copertura del 100% fornisce una prova oggettiva e difendibile del completamento del testing, garantendo l'assenza di difetti nel codice esercitato.",
+      "b": "Opzione B, perché il testing esplorativo è intrinsecamente più veloce del testing automatizzato e quindi consente di coprire più funzionalità nello stesso arco di tempo, indipendentemente dal rischio.",
+      "c": "Opzione A, perché il testing basato sulla struttura è l'unico modo per validare la qualità interna del codice, che è più importante del comportamento esterno del sistema quando il tempo è limitato.",
+      "d": "Opzione B, perché in un contesto con risorse limitate, il testing basato sul rischio (come il testing esplorativo mirato) è più efficace nel ridurre il livello di rischio residuo rispetto al perseguimento di una metrica di copertura che non garantisce la scoperta dei difetti più importanti."
+    },
+    "answer_pdf": "syllabus_istqb.txt",
+    "answer_page": [0],
+    "answer_option": "d",
+    "answer_option_text": {
+      "d": "Opzione B, perché in un contesto con risorse limitate, il testing basato sul rischio (come il testing esplorativo mirato) è più efficace nel ridurre il livello di rischio residuo rispetto al perseguimento di una metrica di copertura che non garantisce la scoperta dei difetti più importanti."
+    },
+    "no_answer_option_text": {
+      "a": "Opzione A, perché il raggiungimento di una metrica di copertura del 100% fornisce una prova oggettiva e difendibile del completamento del testing, garantendo l'assenza di difetti nel codice esercitato.",
+      "b": "Opzione B, perché il testing esplorativo è intrinsecamente più veloce del testing automatizzato e quindi consente di coprire più funzionalità nello stesso arco di tempo, indipendentemente dal rischio.",
+      "c": "Opzione A, perché il testing basato sulla struttura è l'unico modo per validare la qualità interna del codice, che è più importante del comportamento esterno del sistema quando il tempo è limitato."
+    },
+    "ambiguous": false,
+    "learning_objective": "Valutare un trade-off strategico tra un approccio basato su metriche quantitative (copertura del codice) e un approccio qualitativo basato sul rischio (testing esplorativo), giustificando la decisione in base al principio di massimizzazione della mitigazione del rischio sotto vincoli di progetto.",
+    "k_level": "Evaluation",
+    "points": 5
+  },
+  {
+    "question_pdf": "syllabus_istqb.txt",
+    "question_page": [0],
+    "question_number": "Q22",
+    "question_text": "Per eseguire un test di carico (load testing) realistico su un'applicazione finanziaria, è necessario un database con un milione di profili utente. Le normative sulla privacy (es. GDPR) vietano l'uso di dati di produzione reali. Quale strategia di preparazione dei dati di test offre il miglior equilibrio tra realismo del test e conformità normativa?",
+    "question_image": "",
+    "question_option": {
+      "a": "Utilizzare un piccolo sottoinsieme di dati reali (circa 100 record), perché questo è l'unico modo per garantire che la struttura dei dati sia corretta, anche se il volume non è rappresentativo.",
+      "b": "Generare dati di test completamente casuali, perché questo garantisce la conformità alla privacy e la velocità di generazione, anche se i dati potrebbero non riflettere i pattern di utilizzo reali.",
+      "c": "Eseguire il test in produzione durante le ore di minor traffico, perché questo utilizza dati reali e carichi reali, accettando il rischio di impattare gli utenti attivi.",
+      "d": "Utilizzare una combinazione di 'data masking' (mascheramento) sui dati di produzione e generazione di dati sintetici basati su modelli statistici reali, perché questo approccio preserva la referential integrity e la distribuzione statistica dei dati reali garantendo al contempo l'anonimato."
+    },
+    "answer_pdf": "syllabus_istqb.txt",
+    "answer_page": [0],
+    "answer_option": "d",
+    "answer_option_text": {
+      "d": "Utilizzare una combinazione di 'data masking' (mascheramento) sui dati di produzione e generazione di dati sintetici basati su modelli statistici reali, perché questo approccio preserva la referential integrity e la distribuzione statistica dei dati reali garantendo al contempo l'anonimato."
+    },
+    "no_answer_option_text": {
+      "a": "Utilizzare un piccolo sottoinsieme di dati reali (circa 100 record), perché questo è l'unico modo per garantire che la struttura dei dati sia corretta, anche se il volume non è rappresentativo.",
+      "b": "Generare dati di test completamente casuali, perché questo garantisce la conformità alla privacy e la velocità di generazione, anche se i dati potrebbero non riflettere i pattern di utilizzo reali.",
+      "c": "Eseguire il test in produzione durante le ore di minor traffico, perché questo utilizza dati reali e carichi reali, accettando il rischio di impattare gli utenti attivi."
+    },
+    "ambiguous": false,
+    "learning_objective": "Sintetizzare i requisiti del testing non funzionale (realismo dei dati per test di carico) con vincoli esterni (normative sulla privacy) per proporre una strategia di gestione dei dati di test sofisticata.",
+    "k_level": "Synthesis",
+    "points": 5
+  },
+  {
+    "question_pdf": "syllabus_istqb.txt",
+    "question_page": [0],
+    "question_number": "Q23",
+    "question_text": "Un tester identifica un difetto estetico in un'interfaccia utente (es. un'icona disallineata) e lo classifica correttamente come 'bassa severità'. Il Product Owner assegna al difetto una 'priorità altissima', richiedendo una correzione immediata. Qual è la valutazione più accurata di questa apparente discrepanza?",
+    "question_image": "",
+    "question_option": {
+      "a": "La valutazione è errata perché la priorità deve sempre corrispondere alla severità; quindi, il difetto dovrebbe avere una priorità bassa.",
+      "b": "La valutazione è corretta. La severità si riferisce all'impatto tecnico del difetto sul sistema, mentre la priorità è determinata dall'urgenza di business, che in questo caso potrebbe essere legata a una demo imminente per un cliente importante.",
+      "c": "La valutazione è errata perché i difetti di bassa severità non dovrebbero mai bloccare un rilascio e quindi non possono avere priorità alta.",
+      "d": "La valutazione è corretta perché la severità è soggettiva e decisa dal tester, mentre la priorità è una metrica oggettiva calcolata automaticamente dal sistema di defect management."
+    },
+    "answer_pdf": "syllabus_istqb.txt",
+    "answer_page": [0],
+    "answer_option": "b",
+    "answer_option_text": {
+      "b": "La valutazione è corretta. La severità si riferisce all'impatto tecnico del difetto sul sistema, mentre la priorità è determinata dall'urgenza di business, che in questo caso potrebbe essere legata a una demo imminente per un cliente importante."
+    },
+    "no_answer_option_text": {
+      "a": "La valutazione è errata perché la priorità deve sempre corrispondere alla severità; quindi, il difetto dovrebbe avere una priorità bassa.",
+      "c": "La valutazione è errata perché i difetti di bassa severità non dovrebbero mai bloccare un rilascio e quindi non possono avere priorità alta.",
+      "d": "La valutazione è corretta perché la severità è soggettiva e decisa dal tester, mentre la priorità è una metrica oggettiva calcolata automaticamente dal sistema di defect management."
+    },
+    "ambiguous": false,
+    "learning_objective": "Valutare uno scenario di defect management che evidenzia la distinzione critica tra severità (impatto tecnico) e priorità (urgenza di business), giustificando la validità di una classificazione apparentemente contraddittoria.",
+    "k_level": "Evaluation",
+    "points": 5
+  },
+  {
+    "question_pdf": "syllabus_istqb.txt",
+    "question_page": [0],
+    "question_number": "Q24",
+    "question_text": "In un team che adotta un 'approccio whole-team', uno sviluppatore, durante il refactoring, scopre e corregge un difetto prima di committare il codice. Quale processo di 'defect management' è più coerente con i principi di efficienza e collaborazione di questo approccio?",
+    "question_image": "",
+    "question_option": {
+      "a": "Lo sviluppatore deve seguire il processo formale: fermare il lavoro, creare un defect report dettagliato, assegnarlo a sé stesso, documentare la correzione e attendere la verifica di un tester.",
+      "b": "Lo sviluppatore può correggere il difetto e committare il codice senza informare nessuno, perché il difetto non è mai esistito in una build formale e quindi non richiede tracciamento.",
+      "c": "Lo sviluppatore corregge il difetto e ne discute con un tester in una sessione di pair programming per verificare la correzione, documentando l'evento in modo informale nel log del commit, perché questo massimizza il feedback rapido e minimizza l'overhead burocratico.",
+      "d": "Lo sviluppatore deve creare un defect report, ma può omettere i dettagli sulla riproduzione, perché nell'approccio whole-team tutti hanno accesso diretto al codice e possono investigare autonomamente."
+    },
+    "answer_pdf": "syllabus_istqb.txt",
+    "answer_page": [0],
+    "answer_option": "c",
+    "answer_option_text": {
+      "c": "Lo sviluppatore corregge il difetto e ne discute con un tester in una sessione di pair programming per verificare la correzione, documentando l'evento in modo informale nel log del commit, perché questo massimizza il feedback rapido e minimizza l'overhead burocratico."
+    },
+    "no_answer_option_text": {
+      "a": "Lo sviluppatore deve seguire il processo formale: fermare il lavoro, creare un defect report dettagliato, assegnarlo a sé stesso, documentare la correzione e attendere la verifica di un tester.",
+      "b": "Lo sviluppatore può correggere il difetto e committare il codice senza informare nessuno, perché il difetto non è mai esistito in una build formale e quindi non richiede tracciamento.",
+      "d": "Lo sviluppatore deve creare un defect report, ma può omettere i dettagli sulla riproduzione, perché nell'approccio whole-team tutti hanno accesso diretto al codice e possono investigare autonomamente."
+    },
+    "ambiguous": false,
+    "learning_objective": "Sintetizzare i principi dell'approccio 'whole-team' con le pratiche di 'defect management' per definire un flusso di lavoro ottimizzato che favorisca l'efficienza e la collaborazione rispetto alla formalità rigida.",
+    "k_level": "Synthesis",
+    "points": 5
+  },
+  {
+    "question_pdf": "syllabus_istqb.txt",
+    "question_page": [0],
+    "question_number": "Q25",
+    "question_text": "Dato un sistema modellato da una tabella degli stati, si sospetta un difetto per cui un evento inatteso in un determinato stato non viene gestito correttamente, lasciando il sistema in uno stato inconsistente invece di generare un errore o rimanere nello stato corrente. Quale strategia di test, basata sul testing delle transizioni di stato, è specificamente progettata per rilevare questa classe di difetti?",
+    "question_image": "",
+    "question_option": {
+      "a": "Ottenere il 100% di copertura di tutti gli stati (all-states coverage), perché garantisce che ogni stato del sistema sia visitato almeno una volta, verificandone l'esistenza.",
+      "b": "Ottenere il 100% di copertura delle transizioni valide (0-switch coverage), perché assicura che ogni percorso definito tra gli stati funzioni come previsto.",
+      "c": "Ottenere il 100% di copertura di tutte le transizioni (all-transitions coverage), testando esplicitamente le transizioni invalide (celle vuote nella tabella degli stati), perché questo verifica direttamente come il sistema reagisce a eventi non permessi in ogni stato.",
+      "d": "Progettare sequenze di test che coprano i percorsi più lunghi possibili attraverso il diagramma, perché questo aumenta la probabilità di incontrare casualmente una condizione di errore."
+    },
+    "answer_pdf": "syllabus_istqb.txt",
+    "answer_page": [0],
+    "answer_option": "c",
+    "answer_option_text": {
+      "c": "Ottenere il 100% di copertura di tutte le transizioni (all-transitions coverage), testando esplicitamente le transizioni invalide (celle vuote nella tabella degli stati), perché questo verifica direttamente come il sistema reagisce a eventi non permessi in ogni stato."
+    },
+    "no_answer_option_text": {
+      "a": "Ottenere il 100% di copertura di tutti gli stati (all-states coverage), perché garantisce che ogni stato del sistema sia visitato almeno una volta, verificandone l'esistenza.",
+      "b": "Ottenere il 100% di copertura delle transizioni valide (0-switch coverage), perché assicura che ogni percorso definito tra gli stati funzioni come previsto.",
+      "d": "Progettare sequenze di test che coprano i percorsi più lunghi possibili attraverso il diagramma, perché questo aumenta la probabilità di incontrare casualmente una condizione di errore."
+    },
+    "ambiguous": false,
+    "learning_objective": "Analizzare i diversi livelli di copertura del testing delle transizioni di stato per determinare quale criterio specifico (all-transitions coverage) sia più efficace per identificare una particolare classe di difetti (gestione di eventi invalidi).",
+    "k_level": "Analysis",
+    "points": 5
+  },
+  {
+    "question_pdf": "syllabus_istqb.txt",
+    "question_page": [0],
+    "question_number": "Q26",
+    "question_text": "Un'organizzazione sta valutando l'introduzione della test automation. L'opzione A è un tool commerciale costoso con un eccellente supporto del fornitore. L'opzione B è un framework open-source gratuito ma che richiede un significativo effort interno per la configurazione e la manutenzione. Quale valutazione, basata sui rischi e benefici della test automation, è la più completa?",
+    "question_image": "",
+    "question_option": {
+      "a": "L'opzione B è sempre superiore, perché l'assenza di costi di licenza si traduce in un ROI (Return on Investment) immediato e più elevato.",
+      "b": "L'opzione A è sempre superiore, perché la dipendenza da un fornitore esterno garantisce la risoluzione di qualsiasi problema tecnico, eliminando i rischi del progetto.",
+      "c": "La scelta dipende dal contesto. L'opzione A mitiga il rischio di 'competenze interne insufficienti' ma introduce il rischio di 'dipendenza dal fornitore'. L'opzione B offre flessibilità ma introduce il rischio di 'costi di manutenzione non stimati correttamente', che potrebbero superare il costo della licenza del tool A.",
+      "d": "La scelta è irrilevante. Il successo della test automation dipende al 90% dalla qualità degli script di test e solo al 10% dal tool o framework utilizzato."
+    },
+    "answer_pdf": "syllabus_istqb.txt",
+    "answer_page": [0],
+    "answer_option": "c",
+    "answer_option_text": {
+      "c": "La scelta dipende dal contesto. L'opzione A mitiga il rischio di 'competenze interne insufficienti' ma introduce il rischio di 'dipendenza dal fornitore'. L'opzione B offre flessibilità ma introduce il rischio di 'costi di manutenzione non stimati correttamente', che potrebbero superare il costo della licenza del tool A."
+    },
+    "no_answer_option_text": {
+      "a": "L'opzione B è sempre superiore, perché l'assenza di costi di licenza si traduce in un ROI (Return on Investment) immediato e più elevato.",
+      "b": "L'opzione A è sempre superiore, perché la dipendenza da un fornitore esterno garantisce la risoluzione di qualsiasi problema tecnico, eliminando i rischi del progetto.",
+      "d": "La scelta è irrilevante. Il successo della test automation dipende al 90% dalla qualità degli script di test e solo al 10% dal tool o framework utilizzato."
+    },
+    "ambiguous": false,
+    "learning_objective": "Valutare una decisione strategica (scelta di un tool di automazione) analizzando i trade-off tra opzioni diverse e mappandoli ai rischi e benefici specifici discussi nel syllabus.",
+    "k_level": "Evaluation",
+    "points": 5
+  },
+  {
+    "question_pdf": "syllabus_istqb.txt",
+    "question_page": [0],
+    "question_number": "Q27",
+    "question_text": "Durante una 'Ispezione' formale di un documento di requisiti, i revisori utilizzano una checklist che include la domanda: 'Le regole di business per la gestione delle promozioni multiple (es. sconto percentuale vs buono fisso) sono definite senza ambiguità e coprono tutti i casi di interazione?'. L'identificazione di ambiguità in questa fase quale attività di test successiva informa più direttamente?",
+    "question_image": "",
+    "question_option": {
+      "a": "Il testing di usabilità, perché le promozioni complesse possono confondere l'utente.",
+      "b": "L'analisi statica del codice, perché permette di verificare se le regole sono state implementate secondo gli standard di codifica.",
+      "c": "La progettazione dei test tramite la 'tecnica della tabella delle decisioni', perché questa tecnica è specificamente progettata per modellare e testare in modo sistematico logiche complesse con multiple condizioni e azioni, come le interazioni tra promozioni.",
+      "d": "Il testing di regressione, perché ogni modifica alle regole di promozione richiederà una nuova esecuzione di tutti i test esistenti."
+    },
+    "answer_pdf": "syllabus_istqb.txt",
+    "answer_page": [0],
+    "answer_option": "c",
+    "answer_option_text": {
+      "c": "La progettazione dei test tramite la 'tecnica della tabella delle decisioni', perché questa tecnica è specificamente progettata per modellare e testare in modo sistematico logiche complesse con multiple condizioni e azioni, come le interazioni tra promozioni."
+    },
+    "no_answer_option_text": {
+      "a": "Il testing di usabilità, perché le promozioni complesse possono confondere l'utente.",
+      "b": "L'analisi statica del codice, perché permette di verificare se le regole sono state implementate secondo gli standard di codifica.",
+      "d": "Il testing di regressione, perché ogni modifica alle regole di promozione richiederà una nuova esecuzione di tutti i test esistenti."
+    },
+    "ambiguous": false,
+    "learning_objective": "Sintetizzare il risultato di un processo di review (identificazione di logiche di business complesse) con la scelta della tecnica di test black-box più appropriata (decision table testing) per la successiva fase di progettazione dei test.",
+    "k_level": "Synthesis",
+    "points": 5
+  },
+  {
+    "question_pdf": "syllabus_istqb.txt",
+    "question_page": [0],
+    "question_number": "Q28",
+    "question_text": "In una pipeline CI/CD matura, il tempo di esecuzione della suite di regressione automatizzata è diventato un collo di bottiglia, ritardando il feedback agli sviluppatori. Quale strategia, basata sui concetti del syllabus, è la più efficace per ottimizzare questa situazione senza compromettere significativamente la qualità?",
+    "question_image": "",
+    "question_option": {
+      "a": "Eseguire la suite di regressione completa solo una volta a settimana, perché questo libera la pipeline per le build giornaliere, accettando il rischio di integrare difetti non rilevati per più giorni.",
+      "b": "Analizzare la suite di test secondo la Piramide di Test, identificando i test end-to-end lenti e rifattorizzandoli in test di integrazione o di API più veloci, combinato con una selezione di test basata sull'analisi dell'impatto delle modifiche.",
+      "c": "Eliminare tutti i test che non hanno trovato difetti negli ultimi tre mesi, perché questo segue il principio che 'i test perdono di efficacia' e riduce immediatamente la dimensione della suite.",
+      "d": "Aumentare le risorse hardware per l'esecuzione dei test, perché questo risolve il problema della velocità senza dover modificare la strategia o il contenuto della suite di test."
+    },
+    "answer_pdf": "syllabus_istqb.txt",
+    "answer_page": [0],
+    "answer_option": "b",
+    "answer_option_text": {
+      "b": "Analizzare la suite di test secondo la Piramide di Test, identificando i test end-to-end lenti e rifattorizzandoli in test di integrazione o di API più veloci, combinato con una selezione di test basata sull'analisi dell'impatto delle modifiche."
+    },
+    "no_answer_option_text": {
+      "a": "Eseguire la suite di regressione completa solo una volta a settimana, perché questo libera la pipeline per le build giornaliere, accettando il rischio di integrare difetti non rilevati per più giorni.",
+      "c": "Eliminare tutti i test che non hanno trovato difetti negli ultimi tre mesi, perché questo segue il principio che 'i test perdono di efficacia' e riduce immediatamente la dimensione della suite.",
+      "d": "Aumentare le risorse hardware per l'esecuzione dei test, perché questo risolve il problema della velocità senza dover modificare la strategia o il contenuto della suite di test."
+    },
+    "ambiguous": false,
+    "learning_objective": "Valutare diverse soluzioni a un problema di performance della pipeline CI/CD, scegliendo la strategia che sintetizza in modo più efficace i principi della Piramide di Test e del testing basato sul rischio per un'ottimizzazione sostenibile.",
+    "k_level": "Evaluation",
+    "points": 5
+  },
+  {
+    "question_pdf": "syllabus_istqb.txt",
+    "question_page": [0],
+    "question_number": "Q29",
+    "question_text": "Al termine di un ciclo di rilascio, la matrice di tracciabilità evidenzia che un requisito a bassa priorità, 'R-097: Esportazione in formato CSV', non ha test case associati. Tutti gli altri criteri di uscita sono soddisfatti. Come dovrebbe essere rappresentata questa informazione nella sezione 'Rischi non mitigati' del 'Test Completion Report'?",
+    "question_image": "",
+    "question_option": {
+      "a": "L'informazione non deve essere inclusa, perché il requisito è a bassa priorità e la sua mancata copertura non rappresenta un rischio significativo per il rilascio.",
+      "b": "Si deve indicare che il 100% dei requisiti è stato coperto, assumendo che altre funzionalità correlate abbiano implicitamente testato l'esportazione.",
+      "c": "Si deve documentare esplicitamente un rischio residuo: 'La funzionalità di esportazione CSV (R-097) non è stata verificata. Esiste una probabilità sconosciuta di difetti in questa area, con un impatto stimato basso per il business', perché questo fornisce agli stakeholder informazioni trasparenti per una decisione informata.",
+      "d": "Si deve creare un difetto di massima priorità con il titolo 'Mancata copertura del requisito R-097', perché ogni lacuna nella tracciabilità deve essere trattata come un bug critico del processo."
+    },
+    "answer_pdf": "syllabus_istqb.txt",
+    "answer_page": [0],
+    "answer_option": "c",
+    "answer_option_text": {
+      "c": "Si deve documentare esplicitamente un rischio residuo: 'La funzionalità di esportazione CSV (R-097) non è stata verificata. Esiste una probabilità sconosciuta di difetti in questa area, con un impatto stimato basso per il business', perché questo fornisce agli stakeholder informazioni trasparenti per una decisione informata."
+    },
+    "no_answer_option_text": {
+      "a": "L'informazione non deve essere inclusa, perché il requisito è a bassa priorità e la sua mancata copertura non rappresenta un rischio significativo per il rilascio.",
+      "b": "Si deve indicare che il 100% dei requisiti è stato coperto, assumendo che altre funzionalità correlate abbiano implicitamente testato l'esportazione.",
+      "d": "Si deve creare un difetto di massima priorità con il titolo 'Mancata copertura del requisito R-097', perché ogni lacuna nella tracciabilità deve essere trattata come un bug critico del processo."
+    },
+    "ambiguous": false,
+    "learning_objective": "Sintetizzare i concetti di tracciabilità, criteri di uscita e reporting di completamento per formulare il modo corretto di comunicare un rischio residuo agli stakeholder, basandosi su una lacuna identificata nella copertura dei test.",
+    "k_level": "Synthesis",
+    "points": 5
+  },
+  {
+    "question_pdf": "syllabus_istqb.txt",
+    "question_page": [0],
+    "question_number": "Q30",
+    "question_text": "Un'organizzazione vuole istituzionalizzare il miglioramento continuo del processo di test. Dispone di dati quantitativi (metriche come densità dei difetti, copertura) e dati qualitativi (risultati delle retrospettive). Quale approccio integra al meglio queste due fonti di informazione per guidare decisioni di miglioramento efficaci?",
+    "question_image": "",
+    "question_option": {
+      "a": "Basare le decisioni solo sulle metriche quantitative, perché i numeri sono oggettivi mentre le opinioni delle retrospettive sono soggettive e inaffidabili.",
+      "b": "Basare le decisioni solo sui risultati delle retrospettive, perché il feedback diretto del team è più importante dei dati storici che potrebbero non essere più pertinenti.",
+      "c": "Utilizzare le anomalie nelle metriche (es. un picco nella densità dei difetti in un modulo) come punto di partenza per le discussioni nelle retrospettive, al fine di investigare la 'root cause' qualitativa (es. un problema di comunicazione nel team) e proporre un miglioramento mirato. Questo approccio usa i dati per porre le domande giuste e il feedback del team per trovare le risposte.",
+      "d": "Implementare tutte le azioni suggerite da entrambe le fonti contemporaneamente, perché questo massimizza la quantità di cambiamenti e quindi la probabilità di miglioramento del processo."
+    },
+    "answer_pdf": "syllabus_istqb.txt",
+    "answer_page": [0],
+    "answer_option": "c",
+    "answer_option_text": {
+      "c": "Utilizzare le anomalie nelle metriche (es. un picco nella densità dei difetti in un modulo) come punto di partenza per le discussioni nelle retrospettive, al fine di investigare la 'root cause' qualitativa (es. un problema di comunicazione nel team) e proporre un miglioramento mirato. Questo approccio usa i dati per porre le domande giuste e il feedback del team per trovare le risposte."
+    },
+    "no_answer_option_text": {
+      "a": "Basare le decisioni solo sulle metriche quantitative, perché i numeri sono oggettivi mentre le opinioni delle retrospettive sono soggettive e inaffidabili.",
+      "b": "Basare le decisioni solo sui risultati delle retrospettive, perché il feedback diretto del team è più importante dei dati storici che potrebbero non essere più pertinenti.",
+      "d": "Implementare tutte le azioni suggerite da entrambe le fonti contemporaneamente, perché questo massimizza la quantità di cambiamenti e quindi la probabilità di miglioramento del processo."
+    },
+    "ambiguous": false,
+    "learning_objective": "Sintetizzare due meccanismi di miglioramento del processo (metriche e retrospettive) per creare un ciclo di feedback virtuoso in cui i dati quantitativi informano l'analisi qualitativa, portando a decisioni di miglioramento più efficaci e basate sull'evidenza.",
+    "k_level": "Synthesis",
+    "points": 5
+  }
+]
