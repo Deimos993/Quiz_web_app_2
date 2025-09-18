@@ -1,0 +1,562 @@
+[
+  {
+    "question_pdf": "ITASTQB-QTEST-FL-2023-A.pdf",
+    "question_page": [8, 12],
+    "question_number": "Q1",
+    "question_text": "Un team di testing esegue da diverse iterazioni una suite di regression test che non viene aggiornata. La domanda 14 (pag. 12) mostra uno scenario di esecuzione di test. Il manager osserva che, come nell'Esecuzione 3 di quello scenario, tutti i test passano e conclude che la qualità del software è eccellente e stabile. Basandosi sui principi del testing descritti nel documento, quale delle seguenti affermazioni rappresenta l'analisi più critica e accurata della situazione?",
+    "question_image": "",
+    "question_option": {
+      "a": "Il manager ha ragione, poiché il superamento di tutti i test, in particolare i regression test (come TC1 nell'Esecuzione 2, che diventa regression test in Esecuzione 3), conferma l'assenza di nuovi difetti.",
+      "b": "L'analisi del manager è incompleta; sebbene il successo dei test sia positivo, la vera preoccupazione è il principio 'L'assenza di difetti è un'idea sbagliata' (pag. 8), che suggerisce che il software potrebbe non soddisfare le esigenze degli utenti.",
+      "c": "L'analisi del manager è potenzialmente errata. La situazione descritta nella domanda 3 (pag. 8) suggerisce che la suite di test potrebbe aver perso efficacia (pesticide paradox), non trovando più nuovi difetti nonostante possano esistere.",
+      "d": "La conclusione del manager è prematura. Il principio 'Il testing esaustivo è impossibile' (pag. 8) implica che la suite di regression, per quanto ampia, non può coprire tutte le combinazioni possibili, quindi la sua efficacia è intrinsecamente limitata."
+    },
+    "answer_pdf": "ITASTQB-QTEST-FL-2023-A-SOL.pdf",
+    "answer_page": [7],
+    "answer_option": "c",
+    "answer_option_text": {
+      "c": "L'analisi del manager è potenzialmente errata. La situazione descritta nella domanda 3 (pag. 8) suggerisce che la suite di test potrebbe aver perso efficacia (pesticide paradox), non trovando più nuovi difetti nonostante possano esistere."
+    },
+    "no_answer_option_text": {
+      "a": "Questo distrattore rappresenta un'interpretazione superficiale dei risultati. Ignora il principio fondamentale che l'efficacia dei test diminuisce nel tempo se non vengono aggiornati.",
+      "b": "Questo è un 'Conceptual Near-miss'. Sebbene il principio citato ('L'assenza di difetti è un'idea sbagliata') sia valido, non è il più pertinente per spiegare perché una suite di test *immutata* smette di trovare difetti. Il problema principale qui è la degenerazione della suite di test stessa.",
+      "d": "Questo è un 'Partial Truth Trap'. Il principio 'Il testing esaustivo è impossibile' è vero, ma la ragione più specifica e diretta dello scetticismo in questo scenario è il 'pesticide paradox', non l'impossibilità del testing esaustivo in generale."
+    },
+    "ambiguous": false,
+    "learning_objective": "Analizzare uno scenario di regression testing alla luce dei principi fondamentali del testing, in particolare il 'pesticide paradox'.",
+    "k_level": "Analysis",
+    "points": 4
+  },
+  {
+    "question_pdf": "ITASTQB-QTEST-FL-2023-A.pdf",
+    "question_page": [13, 22],
+    "question_number": "Q2",
+    "question_text": "Considerando il processo di review descritto nella domanda 17 (pag. 13), che identifica un 'Walkthrough', e la gestione del rischio descritta nella domanda 35 (pag. 22), dove si pianifica una 'mitigazione del rischio'. Qual è il modo più efficace in cui un walkthrough, condotto sui requisiti di business, contribuisce direttamente alla mitigazione di un rischio di prodotto come 'Failure in regole di business non correttamente implementate' (identificato nella domanda 13, pag. 12)?",
+    "question_image": "",
+    "question_option": {
+      "a": "Il walkthrough trasferisce la responsabilità della qualità dei requisiti dall'autore ai partecipanti della review, agendo come forma di trasferimento del rischio.",
+      "b": "Il walkthrough, essendo condotto dall'autore, permette di ottenere un consenso rapido, accettando il rischio residuo che alcune ambiguità non vengano risolte.",
+      "c": "Il walkthrough serve come contingency plan, documentando i difetti nei requisiti che verranno poi gestiti durante il testing di sistema.",
+      "d": "Il walkthrough è un'attività di testing statico che rileva lacune e inconsistenza nei requisiti (domanda 15, pag. 13) prima della codifica, mitigando il rischio che le regole di business errate vengano implementate e scoperte solo durante il testing di sistema."
+    },
+    "answer_pdf": "ITASTQB-QTEST-FL-2023-A-SOL.pdf",
+    "answer_page": [12, 14, 25],
+    "answer_option": "d",
+    "answer_option_text": {
+      "d": "Il walkthrough è un'attività di testing statico che rileva lacune e inconsistenza nei requisiti (domanda 15, pag. 13) prima della codifica, mitigando il rischio che le regole di business errate vengano implementate e scoperte solo durante il testing di sistema."
+    },
+    "no_answer_option_text": {
+      "a": "Questo distrattore confonde la mitigazione con il trasferimento del rischio e interpreta erroneamente lo scopo di una review collaborativa, che è migliorare la qualità, non riassegnare la colpa.",
+      "b": "Questo distrattore attribuisce un obiettivo errato al walkthrough (consenso rapido a scapito della qualità) e lo collega a una strategia di gestione del rischio errata ('accettazione del rischio' invece di mitigazione).",
+      "c": "Questo distrattore classifica erroneamente la review come un 'contingency plan'. Un piano di contingenza è una reazione a un rischio che si manifesta, mentre la review è un'azione proattiva per prevenire che il rischio si manifesti."
+    },
+    "ambiguous": false,
+    "learning_objective": "Sintetizzare il ruolo di un tipo di review specifico (Walkthrough) come strumento di mitigazione del rischio, collegandolo alla prevenzione di specifici tipi di failure a un determinato livello di test.",
+    "k_level": "Synthesis",
+    "points": 5
+  },
+  {
+    "question_pdf": "ITASTQB-QTEST-FL-2023-A.pdf",
+    "question_page": [11, 20],
+    "question_number": "Q3",
+    "question_text": "Un team Agile deve stimare l'effort per una user story critica. La domanda 32 (pag. 20) presenta una stima three-point di (2, 11, 14) ore, risultante in 10 ore-persona. Il team sta anche adottando un approccio 'shift-left', come discusso nella domanda 11 (pag. 11). In che modo l'applicazione coerente dei principi 'shift-left' (es. review anticipate dei requisiti, TDD) dovrebbe influenzare le future stime three-point per user story simili?",
+    "question_image": "",
+    "question_option": {
+      "a": "Tutte e tre le stime (ottimistica, probabile, pessimistica) dovrebbero aumentare, poiché lo 'shift-left' introduce più attività di testing all'inizio del ciclo di vita.",
+      "b": "La stima pessimistica dovrebbe diminuire significativamente, mentre quella ottimistica e probabile potrebbero rimanere simili, riducendo l'incertezza e il valore finale della stima.",
+      "c": "Solo la stima probabile dovrebbe diminuire, poiché lo 'shift-left' non ha impatto sugli scenari migliori o peggiori, ma solo sul caso medio.",
+      "d": "L'approccio 'shift-left' rende la stima three-point obsoleta, poiché la qualità viene integrata continuamente e non richiede una fase di stima formale."
+    },
+    "answer_pdf": "ITASTQB-QTEST-FL-2023-A-SOL.pdf",
+    "answer_page": [10, 24],
+    "answer_option": "b",
+    "answer_option_text": {
+      "b": "La stima pessimistica dovrebbe diminuire significativamente, mentre quella ottimistica e probabile potrebbero rimanere simili, riducendo l'incertezza e il valore finale della stima."
+    },
+    "no_answer_option_text": {
+      "a": "Questo è un 'Cause-effect Confusion'. Lo 'shift-left' sposta l'effort, ma il suo obiettivo è ridurre l'effort *totale* prevenendo difetti costosi, non aumentarlo.",
+      "c": "Questo distrattore ignora l'impatto principale dello 'shift-left', che è la riduzione dei rischi e delle incertezze, fattori che influenzano maggiormente la stima pessimistica (worst-case scenario).",
+      "d": "Questo è uno 'Scope Misalignment'. Lo 'shift-left' non elimina la necessità di pianificazione e stima, ma mira a renderla più accurata e prevedibile."
+    },
+    "ambiguous": false,
+    "learning_objective": "Valutare l'impatto di un approccio strategico ('shift-left') su un'attività di pianificazione quantitativa (stima three-point), dimostrando la comprensione delle relazioni causa-effetto tra processi di sviluppo e effort di testing.",
+    "k_level": "Evaluation",
+    "points": 5
+  },
+  {
+    "question_pdf": "ITASTQB-QTEST-FL-2023-A.pdf",
+    "question_page": [17, 19],
+    "question_number": "Q4",
+    "question_text": "Analizzando la domanda 23 (pag. 17) con il suo state transition diagram e la domanda 29 (pag. 19) con la sua user story e criteri di accettazione. Come potrebbe un test case derivato dall'approccio ATDD per il criterio 'L'editore può salvare le modifiche' (Q29) essere mappato in termini di copertura sullo state transition diagram (Q23), assumendo che 'INIT' sia lo stato iniziale, 'editing' sia uno stato intermedio e 'saved' sia uno stato raggiungibile da 'editing'?",
+    "question_image": "",
+    "question_option": {
+      "a": "Coprirebbe solo la transizione da uno stato 'editing' a 'saved', rappresentando una copertura di transizione minima ma direttamente legata al criterio di accettazione.",
+      "b": "Raggiungerebbe la copertura di tutti gli stati ('all-states coverage') perché per salvare, un editore deve necessariamente passare per gli stati di login, apertura e modifica.",
+      "c": "Verificherebbe solo lo stato finale 'OFF', poiché il salvataggio è l'ultima azione prima di chiudere la sessione di lavoro, come implicitamente richiesto dal diagramma.",
+      "d": "Non può essere mappato, poiché l'ATDD (Q29) è una tecnica black-box basata sui requisiti, mentre il state transition testing (Q23) è una tecnica white-box che richiede la conoscenza degli stati interni del codice."
+    },
+    "answer_pdf": "ITASTQB-QTEST-FL-2023-A-SOL.pdf",
+    "answer_page": [18, 23],
+    "answer_option": "a",
+    "answer_option_text": {
+      "a": "Coprirebbe solo la transizione da uno stato 'editing' a 'saved', rappresentando una copertura di transizione minima ma direttamente legata al criterio di accettazione."
+    },
+    "no_answer_option_text": {
+      "d": "Questo è un 'Conceptual Near-miss'. Lo state transition testing è una tecnica black-box, non white-box, poiché modella il comportamento osservabile del sistema in base ai suoi input, senza necessità di vedere il codice. Pertanto, le due tecniche possono essere mappate.",
+      "b": "Questo è uno 'Scope Misalignment'. Un singolo test case per un criterio di accettazione specifico tipicamente copre un percorso (una sequenza di transizioni), non necessariamente tutti gli stati possibili del sistema.",
+      "c": "Questa è una supposizione non supportata dal testo. Il salvataggio di un documento non implica necessariamente la fine della sessione ('OFF')."
+    },
+    "ambiguous": false,
+    "learning_objective": "Analizzare come un artefatto di test (test ATDD) derivato da criteri di accettazione si correla a un modello di comportamento del sistema (state transition diagram), dimostrando comprensione della relazione tra diverse tecniche di test black-box.",
+    "k_level": "Analysis",
+    "points": 4
+  },
+  {
+    "question_pdf": "ITASTQB-QTEST-FL-2023-A.pdf",
+    "question_page": [14, 18],
+    "question_number": "Q5",
+    "question_text": "La domanda 26 (pag. 18) definisce l'error guessing come una tecnica basata sull'esperienza. La domanda 18 (pag. 14) elenca i fattori di successo per le review, tra cui 'i failure rilevati dovrebbero essere riconosciuti, apprezzati e gestiti in modo oggettivo'. In quale scenario l'output di una review può potenziare più efficacemente la tecnica di error guessing?",
+    "question_image": "",
+    "question_option": {
+      "a": "Quando una review produce un elenco di failure, il tester può usare questi dati per prevedere i failure futuri.",
+      "b": "Quando una review formale identifica aree del codice o dei requisiti particolarmente complesse o ambigue, il tester può focalizzare l'error guessing su quelle aree, anticipando gli errori tipici degli sviluppatori in tali contesti.",
+      "c": "Quando durante una review i partecipanti evitano comportamenti ostili (come da Q18), l'ambiente positivo che ne risulta migliora la capacità del tester di 'indovinare' gli errori.",
+      "d": "Quando i prodotti di lavoro sono suddivisi in piccole parti per la review (come da Q18), il tester può applicare l'error guessing a ogni singola parte, ottenendo una copertura migliore."
+    },
+    "answer_pdf": "ITASTQB-QTEST-FL-2023-A-SOL.pdf",
+    "answer_page": [15, 21],
+    "answer_option": "b",
+    "answer_option_text": {
+      "b": "Quando una review formale identifica aree del codice o dei requisiti particolarmente complesse o ambigue, il tester può focalizzare l'error guessing su quelle aree, anticipando gli errori tipici degli sviluppatori in tali contesti."
+    },
+    "no_answer_option_text": {
+      "a": "Questo è un 'Precision Trap'. La giustificazione della Q18 (pag. 15 del SOL) chiarisce che durante le review si rilevano 'difetti', non 'failure'. I failure si manifestano durante l'esecuzione. Questa imprecisione terminologica rende l'opzione incorretta.",
+      "c": "Questo distrattore confonde un fattore di successo del *processo* di review con un input tecnico per la *tecnica* di error guessing. Un ambiente positivo è utile, ma non fornisce dati concreti su cui basare l'error guessing.",
+      "d": "Questo è plausibile ma meno efficace. La suddivisione aiuta il processo di review, ma l'informazione più preziosa per l'error guessing non è la granularità del lavoro, ma l'identificazione delle aree a più alto rischio di errore."
+    },
+    "ambiguous": false,
+    "learning_objective": "Sintetizzare la relazione sinergica tra il testing statico (review) e le tecniche di testing dinamico basate sull'esperienza (error guessing), dimostrando come i risultati di uno possano informare e potenziare l'altro.",
+    "k_level": "Synthesis",
+    "points": 5
+  },
+  {
+    "question_pdf": "ITASTQB-QTEST-FL-2023-A.pdf",
+    "question_page": [9, 10],
+    "question_number": "Q6",
+    "question_text": "La domanda 5 (pag. 9) elenca i fattori che influenzano l'approccio del test, includendo 'I rischi di prodotto identificati' e 'Nuovi requisiti normativi'. La domanda 9 (pag. 10) stabilisce che in tutti i modelli SDLC 'esiste una corrispondente attività di test' per ogni attività di sviluppo. Quale delle seguenti opzioni rappresenta la migliore sintesi di come questi concetti si combinano nella pratica?",
+    "question_image": "",
+    "question_option": {
+      "a": "In un modello SDLC sequenziale, i rischi di prodotto e i requisiti normativi vengono analizzati solo durante la fase di testing di sistema.",
+      "b": "L'approccio del test, influenzato dai rischi e dalle normative, determina quali attività di test corrispondono a ciascuna fase di sviluppo, indipendentemente dal modello SDLC.",
+      "c": "Nei modelli SDLC iterativi, ogni iterazione deve avere un'attività di test che rivaluta tutti i rischi di prodotto e i requisiti normativi da zero.",
+      "d": "La corrispondenza tra attività di sviluppo e di test è puramente teorica e raramente influenzata da fattori pratici come rischi o normative."
+    },
+    "answer_pdf": "ITASTQB-QTEST-FL-2023-A-SOL.pdf",
+    "answer_page": [8, 10],
+    "answer_option": "b",
+    "answer_option_text": {
+      "b": "L'approccio del test, influenzato dai rischi e dalle normative, determina quali attività di test corrispondono a ciascuna fase di sviluppo, indipendentemente dal modello SDLC."
+    },
+    "no_answer_option_text": {
+      "a": "Questo è errato e contraddice il principio 'shift-left'. I rischi e le normative dovrebbero essere considerati il prima possibile, ad esempio durante la review dei requisiti, non solo nel testing di sistema.",
+      "c": "Questo è un 'Scope Misalignment' (over-generalization). Sebbene i rischi vengano rivalutati, non vengono necessariamente rivalutati 'da zero' in ogni iterazione; si tratta di un processo continuo di refinement.",
+      "d": "Questa opzione nega la premessa della domanda 5, che afferma esplicitamente che questi fattori hanno un'influenza significativa sull'approccio del test."
+    },
+    "ambiguous": false,
+    "learning_objective": "Sintetizzare come i fattori strategici (rischi, normative) definiscono la natura delle attività di test all'interno di diversi modelli di ciclo di vita dello sviluppo software (SDLC).",
+    "k_level": "Synthesis",
+    "points": 4
+  },
+  {
+    "question_pdf": "ITASTQB-QTEST-FL-2023-A.pdf",
+    "question_page": [16, 17],
+    "question_number": "Q7",
+    "question_text": "La domanda 22 (pag. 16) presenta una tabella delle decisioni per un sistema di noleggio. La regola R8 (Socio=F, Termine non rispettato=T, 15° noleggio=T) viene identificata come impossibile. La domanda 24 (pag. 17) discute la copertura delle istruzioni. Se uno sviluppatore scrivesse codice che implementa esplicitamente una gestione per la condizione R8, quale sarebbe la conseguenza più accurata dal punto di vista del testing white-box?",
+    "question_image": "",
+    "question_option": {
+      "a": "Il codice per R8 sarebbe un 'dead code' (codice morto) che non potrebbe mai essere eseguito, rendendo impossibile raggiungere il 100% di copertura delle istruzioni con test basati su scenari di business validi.",
+      "b": "Qualsiasi test che raggiungesse il 100% di copertura delle istruzioni per quel modulo verificherebbe implicitamente che la logica di business è stata implementata correttamente, inclusa R8.",
+      "c": "La copertura delle istruzioni non è rilevante, poiché la tabella delle decisioni è una tecnica black-box che non ha relazione con la struttura interna del codice.",
+      "d": "Il testing white-box identificherebbe la regola R8 come una lacuna nell'implementazione dei requisiti, come descritto nella domanda 25 (pag. 17)."
+    },
+    "answer_pdf": "ITASTQB-QTEST-FL-2023-A-SOL.pdf",
+    "answer_page": [18, 19, 20],
+    "answer_option": "a",
+    "answer_option_text": {
+      "a": "Il codice per R8 sarebbe un 'dead code' (codice morto) che non potrebbe mai essere eseguito, rendendo impossibile raggiungere il 100% di copertura delle istruzioni con test basati su scenari di business validi."
+    },
+    "no_answer_option_text": {
+      "b": "Questo è errato. Raggiungere il 100% di copertura non garantisce la correttezza della logica; dimostra solo che tutto il codice è stato eseguito.",
+      "c": "Questo è parzialmente vero ma fuorviante. Sebbene la tecnica sia black-box, il codice che la implementa è soggetto a testing white-box e alle sue metriche di copertura.",
+      "d": "Questo è un 'Precision Trap'. La giustificazione della domanda 25 (pag. 20 del SOL) afferma che il punto debole del testing white-box è proprio che *non* è in grado di identificare l'implementazione mancante o, in questo caso, l'implementazione di una logica di business impossibile."
+    },
+    "ambiguous": false,
+    "learning_objective": "Analizzare le implicazioni della progettazione di test black-box (decision table) sulla misurabilità e gli obiettivi del testing white-box (statement coverage), identificando il concetto di 'dead code'.",
+    "k_level": "Analysis",
+    "points": 5
+  },
+  {
+    "question_pdf": "ITASTQB-QTEST-FL-2023-A.pdf",
+    "question_page": [15, 21],
+    "question_number": "Q8",
+    "question_text": "La domanda 21 (pag. 15) calcola la copertura dell'analisi ai valori limite a 2 valori. La domanda 33 (pag. 21) mostra una lista di test case con priorità e dipendenze. Si supponga di dover aggiungere nuovi test case per raggiungere il 100% di copertura dei valori limite in Q21 (testando i valori 0, 51, 61, 71, 90, 100). Data la logica di prioritizzazione di Q33 (valore più piccolo = priorità più alta), come si dovrebbe valutare e prioritizzare l'esecuzione di questi nuovi test case?",
+    "question_image": "",
+    "question_option": {
+      "a": "Dovrebbero essere eseguiti tutti con la priorità più alta (1), poiché coprire i limiti è più critico che testare le funzionalità come 'Chiamare il ristorante'.",
+      "b": "La loro esecuzione dovrebbe essere schedulata dopo tutti i test esistenti, in quanto rappresentano test di dettaglio a bassa priorità.",
+      "c": "La priorità dovrebbe essere valutata in base al rischio di business associato a ciascun limite. Ad esempio, il limite tra 'bocciato' e 'discreto' (50-51) potrebbe avere una priorità più alta rispetto a quello tra 'ottimo' e 'eccellente' (90-91).",
+      "d": "La prioritizzazione è irrilevante; l'ordine di esecuzione dei test derivati da una tecnica specifica come l'analisi dei valori limite deve seguire l'ordine numerico dei valori stessi (0, 51, 61...)."
+    },
+    "answer_pdf": "ITASTQB-QTEST-FL-2023-A-SOL.pdf",
+    "answer_page": [17, 25],
+    "answer_option": "c",
+    "answer_option_text": {
+      "c": "La priorità dovrebbe essere valutata in base al rischio di business associato a ciascun limite. Ad esempio, il limite tra 'bocciato' e 'discreto' (50-51) potrebbe avere una priorità più alta rispetto a quello tra 'ottimo' e 'eccellente' (90-91)."
+    },
+    "no_answer_option_text": {
+      "a": "Questa è un'assunzione non giustificata. La criticità di un test tecnico (copertura dei limiti) deve essere bilanciata con la criticità di una funzionalità di business.",
+      "b": "Questo è un 'Scope Misalignment'. I valori limite sono spesso punti in cui si verificano difetti critici, quindi non sono intrinsecamente a bassa priorità.",
+      "d": "Questo confonde l'ordine di derivazione dei test con l'ordine di esecuzione. L'esecuzione dei test dovrebbe essere guidata dal rischio e dalla priorità, non da un ordinamento numerico arbitrario."
+    },
+    "ambiguous": false,
+    "learning_objective": "Valutare come applicare principi di prioritizzazione basati sul rischio a un insieme di test case generati da una specifica tecnica di test black-box (analisi dei valori limite).",
+    "k_level": "Evaluation",
+    "points": 4
+  },
+  {
+    "question_pdf": "ITASTQB-QTEST-FL-2023-A.pdf",
+    "question_page": [23, 31],
+    "question_number": "Q9",
+    "question_text": "La domanda 38 (pag. 23) mostra un defect report rifiutato perché 'non riproducibile', mancante di informazioni sull'ambiente di test. La domanda A23 (pag. 31) distingue tra rischi di progetto (es. spostamento di tester) e rischi di prodotto (es. non conformità del sistema). La mancanza cronica di informazioni sull'ambiente nei defect report a quale categoria di rischio appartiene primariamente e quale è la sua implicazione più grave?",
+    "question_image": "",
+    "question_option": {
+      "a": "È un rischio di prodotto, perché porta direttamente a difetti non corretti nel prodotto finale.",
+      "b": "È un rischio di progetto legato a processi di defect management inadeguati. L'implicazione più grave è un aumento dei tempi e dei costi di debugging e re-testing.",
+      "c": "È un rischio di prodotto, poiché un ambiente di test non documentato potrebbe non rispecchiare l'ambiente di produzione, causando failure post-rilascio.",
+      "d": "È un rischio di progetto legato a una scarsa competenza dei tester. L'implicazione è che l'effort di testing viene sprecato in attività non produttive."
+    },
+    "answer_pdf": "ITASTQB-QTEST-FL-2023-A-SOL.pdf",
+    "answer_page": [27, 42],
+    "answer_option": "b",
+    "answer_option_text": {
+      "b": "È un rischio di progetto legato a processi di defect management inadeguati. L'implicazione più grave è un aumento dei tempi e dei costi di debugging e re-testing."
+    },
+    "no_answer_option_text": {
+      "a": "Questo confonde la causa con l'effetto. Il difetto nel prodotto è un rischio di prodotto, ma il *processo* di reporting inefficiente che ne impedisce la correzione è un rischio per il *progetto* (il suo budget, la sua timeline).",
+      "c": "Questo è un 'Conceptual Near-miss'. La discrepanza tra ambienti è un rischio di prodotto, ma la domanda si concentra sul *reporting* di tale ambiente, che è un'attività di processo del progetto.",
+      "d": "Questo è plausibile ma meno preciso. Sebbene possa dipendere dalla competenza, è più probabile che sia una debolezza del *processo* definito (o non definito). L'implicazione descritta in 'b' (costi e tempi) è una conseguenza più diretta e misurabile."
+    },
+    "ambiguous": false,
+    "learning_objective": "Classificare un problema operativo (reporting incompleto) all'interno di un framework di rischio (progetto vs prodotto) e valutarne le conseguenze primarie sul ciclo di vita dello sviluppo.",
+    "k_level": "Evaluation",
+    "points": 4
+  },
+  {
+    "question_pdf": "ITASTQB-QTEST-FL-2023-A.pdf",
+    "question_page": [22, 32],
+    "question_number": "Q10",
+    "question_text": "Un manager deve decidere come presentare lo stato del progetto agli stakeholder di business. Ha a disposizione una 'burndown chart' (Q36, pag. 22) e un report sulla 'copertura dei rami' (Q.A26, pag. 32). Considerando che la domanda A26 afferma che la copertura dei rami è l'informazione MENO utile per i rappresentanti di business, quale combinazione di metriche fornirebbe la visione più completa e comprensibile, bilanciando avanzamento e qualità?",
+    "question_image": "",
+    "question_option": {
+      "a": "La burndown chart per l'avanzamento e la copertura dei rami per la qualità, poiché una metrica tecnica è necessaria per dimostrare la completezza.",
+      "b": "Solo la burndown chart, poiché l'avanzamento rispetto al tempo è l'unica metrica che interessa al business.",
+      "c": "La burndown chart per l'avanzamento, combinata con una metrica di qualità orientata al business come la 'densità dei difetti' per feature critiche (menzionata in Q31 e Q.A25).",
+      "d": "La copertura dei rami e il numero di test case eseguiti (Q.A25), per fornire una visione oggettiva e quantitativa dello sforzo di testing."
+    },
+    "answer_pdf": "ITASTQB-QTEST-FL-2023-A-SOL.pdf",
+    "answer_page": [24, 26, 43],
+    "answer_option": "c",
+    "answer_option_text": {
+      "c": "La burndown chart per l'avanzamento, combinata con una metrica di qualità orientata al business come la 'densità dei difetti' per feature critiche (menzionata in Q31 e Q.A25)."
+    },
+    "no_answer_option_text": {
+      "a": "Questo ignora esplicitamente la conclusione della domanda A26, secondo cui la copertura dei rami non è utile per il business. Presentarla creerebbe confusione.",
+      "b": "Questo è incompleto. Il business è interessato anche alla qualità e al rischio, non solo a rispettare le scadenze. Un avanzamento rapido con una qualità scadente non è un successo.",
+      "d": "Questo è un set di metriche puramente tecniche e orientate all'output ('effort'), non all'outcome ('qualità'). Come indicato in Q.A26, non sarebbero significative per un pubblico di business."
+    },
+    "ambiguous": false,
+    "learning_objective": "Valutare e selezionare le metriche di progetto e di qualità più appropriate per un pubblico specifico (stakeholder di business), sintetizzando informazioni da più domande relative al reporting e alle metriche.",
+    "k_level": "Evaluation",
+    "points": 5
+  },
+  {
+    "question_pdf": "ITASTQB-QTEST-FL-2023-A.pdf",
+    "question_page": [8, 13],
+    "question_number": "Q11",
+    "question_text": "Un team sta pianificando le attività di testing per un nuovo sistema. La domanda 15 (pag. 13) elenca i vantaggi del testing statico, tra cui il rilevamento di difetti di codifica non individuabili dal testing dinamico. La domanda 1 (pag. 8) definisce un obiettivo di test valido come 'Ridurre il livello di rischio'. In che modo l'esecuzione di analisi statiche del codice può essere considerata una strategia proattiva per raggiungere questo obiettivo, specialmente in relazione a difetti che il testing dinamico potrebbe non rilevare?",
+    "question_image": "",
+    "question_option": {
+      "a": "L'analisi statica dimostra l'assenza di difetti, raggiungendo l'obiettivo primario del testing e riducendo il rischio a zero.",
+      "b": "L'analisi statica riduce il rischio identificando deviazioni dagli standard di codifica e costrutti potenzialmente insicuri (es. 'dead code') prima dell'esecuzione, coprendo rischi che il testing funzionale dinamico potrebbe mancare.",
+      "c": "L'analisi statica riduce il livello di rischio principalmente perché è meno costosa del testing dinamico, permettendo di allocare più budget ad altre attività di mitigazione.",
+      "d": "L'analisi statica è un'attività di Quality Assurance, non di testing, e quindi contribuisce a ridurre il rischio di processo ma non il rischio di prodotto."
+    },
+    "answer_pdf": "ITASTQB-QTEST-FL-2023-A-SOL.pdf",
+    "answer_page": [6, 12, 31],
+    "answer_option": "b",
+    "answer_option_text": {
+      "b": "L'analisi statica riduce il rischio identificando deviazioni dagli standard di codifica e costrutti potenzialmente insicuri (es. 'dead code') prima dell'esecuzione, coprendo rischi che il testing funzionale dinamico potrebbe mancare."
+    },
+    "no_answer_option_text": {
+      "a": "Questo distrattore fa un'affermazione impossibile ('dimostra l'assenza di difetti'), che contraddice i principi fondamentali del testing (Principio 1, pag. 8).",
+      "c": "Questa è una 'Partial Truth Trap'. Sebbene la correzione dei difetti trovati staticamente sia meno costosa (Q15), la riduzione del rischio deriva dal rilevamento dei difetti stessi, non dal risparmio economico.",
+      "d": "Questo crea una falsa dicotomia. La giustificazione per la domanda A2 (pag. 31 del SOL) chiarisce che il testing è distinto dalla QA, ma il testing statico è inequivocabilmente una forma di testing che affronta i rischi del prodotto."
+    },
+    "ambiguous": false,
+    "learning_objective": "Sintetizzare il ruolo del testing statico come strumento di mitigazione del rischio, collegando i suoi vantaggi specifici all'obiettivo generale del testing.",
+    "k_level": "Synthesis",
+    "points": 4
+  },
+  {
+    "question_pdf": "ITASTQB-QTEST-FL-2023-A.pdf",
+    "question_page": [12, 26],
+    "question_number": "Q12",
+    "question_text": "La domanda 13 (pag. 12) associa i tipi di failure ai livelli di test (es. Failure di comunicazione tra componenti al Testing di Integrazione). La domanda A9 (pag. 26) descrive un test non-funzionale di performance ('ordine elaborato in meno di 10 secondi'). Valutare come un failure di performance, pur essendo non-funzionale, potrebbe essere inizialmente causato da un difetto a un livello di test più basso.",
+    "question_image": "",
+    "question_option": {
+      "a": "Un failure di performance può manifestarsi solo durante il testing di sistema o di accettazione, poiché è una caratteristica dell'intero sistema e non può essere causato da un singolo componente.",
+      "b": "Un failure di performance è per definizione un problema di business (Q.A9), quindi la sua root cause deve risiedere nei requisiti di business testati a livello di Accettazione.",
+      "c": "Un'inefficiente comunicazione tra due componenti (un difetto tipico del testing di integrazione) potrebbe causare ritardi che, accumulandosi, portano a un failure di performance a livello di sistema.",
+      "d": "La performance è un attributo white-box, quindi la sua analisi è possibile solo a livello di componente, dove si può misurare il tempo di esecuzione del codice."
+    },
+    "answer_pdf": "ITASTQB-QTEST-FL-2023-A-SOL.pdf",
+    "answer_page": [11, 36],
+    "answer_option": "c",
+    "answer_option_text": {
+      "c": "Un'inefficiente comunicazione tra due componenti (un difetto tipico del testing di integrazione) potrebbe causare ritardi che, accumulandosi, portano a un failure di performance a livello di sistema."
+    },
+    "no_answer_option_text": {
+      "a": "Questo è un 'Over-generalization'. Sebbene la performance sia spesso misurata a livello di sistema, i difetti sottostanti possono risiedere a livelli inferiori (componente o integrazione).",
+      "b": "Questo confonde il livello in cui il *sintomo* è rilevante per il business (Accettazione) con il livello in cui la *causa* (difetto) può essere introdotta e trovata.",
+      "d": "Questo è un 'Precision Trap'. La giustificazione della domanda A9 (pag. 36 del SOL) afferma esplicitamente che 'Non è necessario conoscere la struttura interna del codice per eseguire il performance testing', contraddicendo l'idea che sia un attributo puramente white-box."
+    },
+    "ambiguous": false,
+    "learning_objective": "Valutare come un problema non-funzionale (performance) osservato a un alto livello di test possa avere la sua root cause in difetti individuabili a livelli di test inferiori e più tecnici.",
+    "k_level": "Evaluation",
+    "points": 5
+  },
+  {
+    "question_pdf": "ITASTQB-QTEST-FL-2023-A.pdf",
+    "question_page": [14, 25],
+    "question_number": "Q13",
+    "text": "La domanda 19 (pag. 14) distingue le tecniche basate sull'esperienza da quelle black-box e white-box. La domanda A6 (pag. 25) discute i benefici dell'indipendenza del testing, evidenziando come un tester indipendente possa 'mettere in discussione le assunzioni e le interpretazioni fatte dallo sviluppatore'. Quale tecnica di test è massimizzata dal beneficio dell'indipendenza e perché?",
+    "question_image": "",
+    "question_option": {
+      "a": "Le tecniche white-box, perché un tester indipendente ha una visione più oggettiva della struttura del codice creata dallo sviluppatore.",
+      "b": "Le tecniche black-box basate sui requisiti, come l'analisi dei valori limite, poiché l'indipendenza garantisce che i test case non vengano influenzati dalla conoscenza di come il codice è stato implementato.",
+      "c": "Le tecniche basate sull'esperienza, come il testing esplorativo, perché un tester indipendente, non essendo vincolato dalle assunzioni del team di sviluppo, è più libero di esplorare il sistema da prospettive inaspettate e di simulare comportamenti utente non convenzionali.",
+      "d": "Nessuna tecnica beneficia dell'indipendenza, poiché l'approccio 'whole-team' (Q8, pag. 10) suggerisce che la collaborazione stretta è sempre preferibile all'indipendenza."
+    },
+    "answer_pdf": "ITASTQB-QTEST-FL-2023-A-SOL.pdf",
+    "answer_page": [15, 33],
+    "answer_option": "c",
+    "answer_option_text": {
+      "c": "Le tecniche basate sull'esperienza, come il testing esplorativo, perché un tester indipendente, non essendo vincolato dalle assunzioni del team di sviluppo, è più libero di esplorare il sistema da prospettive inaspettate e di simulare comportamenti utente non convenzionali."
+    },
+    "no_answer_option_text": {
+      "a": "Questo è meno probabile. Sebbene l'oggettività sia utile, il testing white-box richiede una profonda comprensione tecnica che spesso beneficia di una stretta collaborazione con lo sviluppatore.",
+      "b": "Questo è un beneficio valido, ma l'impatto dell'indipendenza è ancora più pronunciato nelle tecniche meno strutturate. Le tecniche formali black-box sono guidate dai requisiti, che sono (in teoria) condivisi, limitando l'impatto delle assunzioni individuali.",
+      "d": "Questo crea una falsa dicotomia. L'indipendenza e la collaborazione non si escludono a vicenda. Un tester può essere indipendente nel suo pensiero critico pur collaborando strettamente con il team."
+    },
+    "ambiguous": false,
+    "learning_objective": "Analizzare la relazione tra il concetto organizzativo di 'indipendenza del testing' e l'efficacia delle diverse categorie di tecniche di test.",
+    "k_level": "Analysis",
+    "points": 4
+  },
+  {
+    "question_pdf": "ITASTQB-QTEST-FL-2023-A.pdf",
+    "question_page": [21, 29],
+    "question_number": "Q14",
+    "text": "La domanda 34 (pag. 21) assegna il 'Testing di usabilità' al quadrante Q3 (orientato al business che critica il prodotto). La domanda A17 (pag. 29) descrive un'applicazione del 'testing checklist-based' per valutare una user interface rispetto a best practice di usabilità. Sintetizzare queste informazioni per definire il modo più appropriato in cui un team dovrebbe utilizzare questi due concetti.",
+    "question_image": "",
+    "question_option": {
+      "a": "Il testing checklist-based è l'unico modo per eseguire il testing di usabilità, poiché fornisce una misura oggettiva e quantitativa per il quadrante Q3.",
+      "b": "Il testing di usabilità (Q3) definisce l'obiettivo strategico, mentre il testing checklist-based (A17) può essere uno degli strumenti tattici per strutturare l'attività, assicurando che le euristiche di base dell'usabilità siano coperte in modo sistematico.",
+      "c": "Il testing checklist-based, essendo una tecnica strutturata, appartiene al quadrante Q1 (orientato alla tecnologia), e quindi non è adatto per il testing di usabilità che appartiene a Q3.",
+      "d": "Il testing di usabilità è un'attività puramente esplorativa e non può essere combinato con approcci strutturati come le checklist, poiché ne limiterebbero la natura critica e orientata al business."
+    },
+    "answer_pdf": "ITASTQB-QTEST-FL-2023-A-SOL.pdf",
+    "answer_page": [25, 39],
+    "answer_option": "b",
+    "answer_option_text": {
+      "b": "Il testing di usabilità (Q3) definisce l'obiettivo strategico, mentre il testing checklist-based (A17) può essere uno degli strumenti tattici per strutturare l'attività, assicurando che le euristiche di base dell'usabilità siano coperte in modo sistematico."
+    },
+    "no_answer_option_text": {
+      "a": "Questo è un 'Over-generalization'. Il testing checklist-based è *un modo*, ma non l'unico. Il testing di usabilità può includere anche sessioni con utenti, testing esplorativo e altri metodi.",
+      "c": "Questo classifica erroneamente la tecnica. Una checklist può essere basata su requisiti tecnici (Q1) o di business/usabilità (Q3). La tecnica è agnostica rispetto al quadrante; il suo contenuto ne determina la classificazione.",
+      "d": "Questo crea una falsa dicotomia. Il testing esplorativo può essere complementare a quello basato su checklist. Una sessione esplorativa può essere guidata da una 'test charter' che a sua volta può essere informata da una checklist di aree da investigare."
+    },
+    "ambiguous": false,
+    "learning_objective": "Sintetizzare come una tecnica di test specifica (checklist-based) possa essere applicata tatticamente per raggiungere gli obiettivi di un tipo di test strategico (usabilità) all'interno del modello dei quadranti di testing.",
+    "k_level": "Synthesis",
+    "points": 5
+  },
+  {
+    "question_pdf": "ITASTQB-QTEST-FL-2023-A.pdf",
+    "question_page": [20, 32],
+    "question_number": "Q15",
+    "text": "La domanda 30 (pag. 20) afferma che i tester aggiungono valore alla pianificazione partecipando all'identificazione e valutazione dei rischi delle user story. La domanda A24 (pag. 32) mostra come la valutazione del rischio (es. 'livello molto alto di rischio di efficienza delle prestazioni') influenzi l'ambito del testing. Valutare lo scenario in cui un tester, durante la pianificazione dell'iterazione, identifica un rischio di usabilità elevato per una user story. Qual è l'azione più coerente con i principi del documento?",
+    "question_image": "",
+    "question_option": {
+      "a": "Aumentare la stima dell'effort di testing per quella user story nel planning poker, senza specificare ulteriori azioni.",
+      "b": "Proporre di eseguire un performance testing dettagliato, poiché tutti i rischi ad alto impatto richiedono test orientati alla tecnologia (Quadrante Q4).",
+      "c": "Raccomandare di posticipare la user story a una release successiva, poiché i rischi di usabilità non possono essere mitigati in una singola iterazione.",
+      "d": "Proporre l'inclusione di attività di testing di usabilità specifiche (es. test con prototipi, review da parte di esperti di UX) come parte dei criteri di accettazione o delle attività di testing per quella user story, influenzando così l'ambito del test."
+    },
+    "answer_pdf": "ITASTQB-QTEST-FL-2023-A-SOL.pdf",
+    "answer_page": [23, 42],
+    "answer_option": "d",
+    "answer_option_text": {
+      "d": "Proporre l'inclusione di attività di testing di usabilità specifiche (es. test con prototipi, review da parte di esperti di UX) come parte dei criteri di accettazione o delle attività di testing per quella user story, influenzando così l'ambito del test."
+    },
+    "no_answer_option_text": {
+      "a": "Questa azione è insufficiente. Identificare un rischio richiede di definirne la mitigazione (influenzare l'ambito), non solo di quantificarne l'impatto sull'effort.",
+      "b": "Questo applica la soluzione sbagliata al problema. Un rischio di *usabilità* (Quadrante Q3) richiede test di *usabilità*, non di *performance* (Quadrante Q4).",
+      "c": "Questa è una misura estrema e non sempre necessaria. Molti rischi di usabilità possono essere mitigati precocemente attraverso attività di 'shift-left'."
+    },
+    "ambiguous": false,
+    "learning_objective": "Valutare la linea d'azione più appropriata per un tester che identifica un rischio specifico durante la pianificazione, dimostrando la capacità di tradurre l'analisi del rischio in un ambito di testing concreto.",
+    "k_level": "Evaluation",
+    "points": 5
+  },
+  {
+    "question_pdf": "ITASTQB-QTEST-FL-2023-A.pdf",
+    "question_page": [11, 30],
+    "question_number": "Q16",
+    "text": "La domanda 12 (pag. 11) sostiene l'uso delle retrospettive per identificare 'debolezze del processo'. La domanda A18 (pag. 30) descrive l'approccio collaborativo alla scrittura delle user story. In una retrospettiva, un team scopre che molti difetti sono dovuti a criteri di accettazione ambigui. Quale delle seguenti azioni rappresenta la migliore applicazione dei concetti del documento per risolvere questa debolezza di processo?",
+    "question_image": "",
+    "question_option": {
+      "a": "Introdurre ispezioni formali (domanda 17, pag. 13) sui criteri di accettazione dopo che sono stati scritti dai rappresentanti di business.",
+      "b": "Adottare un approccio più collaborativo alla scrittura delle user story e dei loro criteri di accettazione, coinvolgendo attivamente tester e sviluppatori fin dall'inizio, come suggerito in Q.A18.",
+      "c": "Aumentare il tempo dedicato al testing di sistema per trovare i difetti causati da ambiguità, accettando il processo di scrittura dei requisiti come immutabile.",
+      "d": "Fare in modo che i tester scrivano tutti i criteri di accettazione, poiché hanno la responsabilità finale di verificare il software."
+    },
+    "answer_pdf": "ITASTQB-QTEST-FL-2023-A-SOL.pdf",
+    "answer_page": [11, 40],
+    "answer_option": "b",
+    "answer_option_text": {
+      "b": "Adottare un approccio più collaborativo alla scrittura delle user story e dei loro criteri di accettazione, coinvolgendo attivamente tester e sviluppatori fin dall'inizio, come suggerito in Q.A18."
+    },
+    "no_answer_option_text": {
+      "a": "Questa è una soluzione plausibile ma subottimale. Un'ispezione è un'attività di 'rilevamento' tardiva rispetto alla scrittura. L'approccio collaborativo è una misura di 'prevenzione', che è più efficace e allineata con i principi 'shift-left'.",
+      "c": "Questa è una reazione passiva e inefficiente. Ignora la lezione della retrospettiva, che è quella di migliorare il processo, non di compensare le sue debolezze a valle.",
+      "d": "Questo va contro il principio di collaborazione. La creazione di user story e criteri di accettazione è una responsabilità condivisa per garantire una comprensione comune (come indicato nella giustificazione di Q.A18)."
+    },
+    "ambiguous": false,
+    "learning_objective": "Sintetizzare come le conclusioni di un'attività di miglioramento del processo (retrospettiva) possano portare all'adozione di una pratica collaborativa specifica (scrittura di user story) per affrontare una root cause identificata.",
+    "k_level": "Synthesis",
+    "points": 4
+  },
+  {
+    "question_pdf": "ITASTQB-QTEST-FL-2023-A.pdf",
+    "question_page": [17, 31],
+    "question_number": "Q17",
+    "text": "La domanda 25 (pag. 17) afferma che il testing white-box può aiutare a 'identificare le lacune nell'implementazione dei requisiti'. La domanda A21 (pag. 31) descrive la piramide di test, che enfatizza 'più test ai livelli di test più bassi' (es. unit test). Analizzare come questi due concetti si supportano a vicenda nella pratica.",
+    "question_image": "",
+    "question_option": {
+      "a": "La piramide di test non ha relazione con il testing white-box, poiché si concentra sulla quantità di test, non sulla tecnica utilizzata.",
+      "b": "Avere una solida base di unit test (livello basso della piramide), che sono intrinsecamente white-box, permette di verificare sistematicamente che ogni parte del codice corrisponda a un requisito, identificando così le lacune a livello granulare.",
+      "c": "Le lacune nei requisiti vengono identificate principalmente dai test di accettazione (cima della piramide), mentre gli unit test verificano solo la logica interna del codice, non la sua completezza rispetto ai requisiti.",
+      "d": "Il testing white-box è utile solo per raggiungere la copertura del codice, mentre l'identificazione di lacune nei requisiti è un obiettivo esclusivo del testing black-box."
+    },
+    "answer_pdf": "ITASTQB-QTEST-FL-2023-A-SOL.pdf",
+    "answer_page": [20, 41],
+    "answer_option": "b",
+    "answer_option_text": {
+      "b": "Avere una solida base di unit test (livello basso della piramide), che sono intrinsecamente white-box, permette di verificare sistematicamente che ogni parte del codice corrisponda a un requisito, identificando così le lacune a livello granulare."
+    },
+    "no_answer_option_text": {
+      "a": "Questo è errato. Il livello più basso della piramide, gli unit test, sono la forma più comune di testing white-box, creando un legame diretto tra i due concetti.",
+      "c": "Questo è un 'Partial Truth Trap'. Mentre i test di accettazione sono cruciali per la validazione end-to-end, un buon set di unit test può rivelare che una specifica parte di un requisito non è stata affatto implementata nel codice, identificando una lacuna molto prima.",
+      "d": "Questo contraddice direttamente l'affermazione nella domanda 25. Sebbene il testing black-box sia fondamentale per trovare lacune, il testing white-box può confermare che il codice scritto copre effettivamente tutta la base di test (es. le specifiche tecniche derivate dai requisiti)."
+    },
+    "ambiguous": false,
+    "learning_objective": "Analizzare la relazione sinergica tra un modello strategico (la piramide di test) e una categoria di tecniche di test (white-box), spiegando come l'applicazione di uno supporti gli obiettivi dell'altro.",
+    "k_level": "Analysis",
+    "points": 4
+  },
+  {
+    "question_pdf": "ITASTQB-QTEST-FL-2023-A.pdf",
+    "question_page": [22, 23],
+    "question_number": "Q18",
+    "text": "La domanda 37 (pag. 22) definisce il 'Configuration Management' come il processo che gestisce le versioni dei test script. La domanda 38 (pag. 23) presenta un defect report dove l'anomalia non è riproducibile. Valutare come una debolezza nel Configuration Management possa essere la root cause più probabile del problema descritto nella domanda 38.",
+    "question_image": "",
+    "question_option": {
+      "a": "Il Configuration Management non è rilevante, poiché il problema è chiaramente legato a un ambiente di test errato, come suggerito dalla soluzione.",
+      "b": "Una cattiva gestione delle configurazioni potrebbe aver portato lo sviluppatore a tentare di riprodurre il difetto su una versione del software (oggetto di test) diversa da quella su cui il tester ha trovato il difetto.",
+      "c": "Una debolezza nel Configuration Management significa che il test script (es. TC-1305) potrebbe essere stato modificato senza tracciamento, ma questo non spiegherebbe perché il difetto non è riproducibile.",
+      "d": "Il problema della non riproducibilità è legato alla priorità e severità del difetto (Q38), che sono parametri di gestione dei difetti, non di configurazione."
+    },
+    "answer_pdf": "ITASTQB-QTEST-FL-2023-A-SOL.pdf",
+    "answer_page": [26, 27],
+    "answer_option": "b",
+    "answer_option_text": {
+      "b": "Una cattiva gestione delle configurazioni potrebbe aver portato lo sviluppatore a tentare di riprodurre il difetto su una versione del software (oggetto di test) diversa da quella su cui il tester ha trovato il difetto."
+    },
+    "no_answer_option_text": {
+      "a": "Questo è un 'Conceptual Near-miss'. La soluzione per Q38 indica che mancano informazioni su ambiente e oggetto di test. Una debolezza nel Configuration Management è una *causa sistemica* per cui l'informazione sulla versione dell'oggetto di test (una componente chiave della configurazione) potrebbe essere mancante o errata.",
+      "c": "Questa è una possibilità, ma meno probabile. È più comune che ci sia una discrepanza nella versione del software sotto test piuttosto che nello script di test, specialmente per un test manuale come quello descritto.",
+      "d": "Questo confonde gli attributi di un defect report con le possibili cause tecniche del problema. Priorità e severità non hanno alcun impatto sulla riproducibilità tecnica."
+    },
+    "ambiguous": false,
+    "learning_objective": "Valutare come una debolezza in un processo di supporto (Configuration Management) possa essere la root cause di un problema pratico di testing (difetto non riproducibile).",
+    "k_level": "Evaluation",
+    "points": 5
+  },
+  {
+    "question_pdf": "ITASTQB-QTEST-FL-2023-A.pdf",
+    "question_page": [18, 28],
+    "question_number": "Q19",
+    "text": "La domanda A13 (pag. 28) afferma che 'Il processo di review prevede diverse attività'. La domanda 27 (pag. 18) presenta uno scenario in cui è necessario iniziare il testing con requisiti incompleti e scadenze strette, suggerendo il 'Testing esplorativo' come tecnica adatta. In che modo una 'review informale' (descritta in Q17, pag. 13) potrebbe essere integrata in un processo di testing esplorativo in questo scenario?",
+    "question_image": "",
+    "question_option": {
+      "a": "Non possono essere integrate. Il testing esplorativo è un'attività dinamica, mentre le review sono attività statiche.",
+      "b": "Una review informale e collaborativa ('pair testing') del sistema, eseguita da due tester durante una sessione di testing esplorativo, combina il testing statico (discussione, review 'al volo' del comportamento osservato) con quello dinamico (esecuzione).",
+      "c": "Si dovrebbe eseguire una review informale completa di tutti i requisiti esistenti prima di iniziare il testing esplorativo, anche se ciò ritarderebbe l'inizio delle attività.",
+      "d": "Il risultato del testing esplorativo dovrebbe essere sottoposto a una review informale da parte degli sviluppatori per validare i difetti trovati."
+    },
+    "answer_pdf": "ITASTQB-QTEST-FL-2023-A-SOL.pdf",
+    "answer_page": [14, 22, 38],
+    "answer_option": "b",
+    "answer_option_text": {
+      "b": "Una review informale e collaborativa ('pair testing') del sistema, eseguita da due tester durante una sessione di testing esplorativo, combina il testing statico (discussione, review 'al volo' del comportamento osservato) con quello dinamico (esecuzione)."
+    },
+    "no_answer_option_text": {
+      "a": "Questo crea una falsa dicotomia. Le attività statiche e dinamiche possono essere integrate in modo sinergico, specialmente in approcci agili e flessibili.",
+      "c": "Questo approccio sequenziale non è adatto allo scenario descritto, che richiede flessibilità e risultati rapidi a fronte di documentazione incompleta.",
+      "d": "Questo è un passo valido nel processo, ma non rappresenta un'integrazione *durante* il testing esplorativo stesso. Descrive un'attività di follow-up."
+    },
+    "ambiguous": false,
+    "learning_objective": "Sintetizzare come due diverse tecniche di test (review informale e testing esplorativo) possano essere combinate in un approccio ibrido per affrontare le sfide di un contesto con requisiti incerti e vincoli di tempo.",
+    "k_level": "Synthesis",
+    "points": 5
+  },
+  {
+    "question_pdf": "ITASTQB-QTEST-FL-2023-A.pdf",
+    "question_page": [23, 31],
+    "question_number": "Q20",
+    "text": "La domanda 40 (pag. 23) identifica come rischio della test automation che 'Gli effort necessari a manutenere il testware possono non essere allocati in modo appropriato'. La domanda A22 (pag. 31) afferma che impatto e probabilità del rischio sono indipendenti. Valutare come un'alta volatilità dei requisiti di business influenzi i fattori di questo rischio specifico.",
+    "question_image": "",
+    "question_option": {
+      "a": "Aumenta sia la probabilità che l'impatto del rischio: la probabilità aumenta perché i test dovranno essere aggiornati spesso; l'impatto aumenta perché una maggiore quantità di testware dovrà essere manutenuta.",
+      "b": "Aumenta la probabilità del rischio, ma non ha effetto sull'impatto, poiché l'effort per manutenere un singolo test rimane costante.",
+      "c": "Aumenta l'impatto del rischio, ma non la sua probabilità, poiché l'allocazione inappropriata dell'effort è una decisione di management, non una conseguenza della volatilità.",
+      "d": "Non ha alcun effetto, poiché i rischi della test automation sono puramente tecnici e non sono influenzati da fattori di business come la volatilità dei requisiti."
+    },
+    "answer_pdf": "ITASTQB-QTEST-FL-2023-A-SOL.pdf",
+    "answer_page": [28, 41],
+    "answer_option": "a",
+    "answer_option_text": {
+      "a": "Aumenta sia la probabilità che l'impatto del rischio: la probabilità aumenta perché i test dovranno essere aggiornati spesso; l'impatto aumenta perché una maggiore quantità di testware dovrà essere manutenuta."
+    },
+    "no_answer_option_text": {
+      "b": "Questo sottovaluta l'impatto. Se un cambiamento fondamentale nei requisiti richiede di riscrivere il 50% della suite di test automatizzati, l'impatto è significativamente maggiore rispetto a un piccolo cambiamento che ne impatta solo l'1%.",
+      "c": "Questo ignora la realtà pratica. Un'alta volatilità rende molto più probabile che il management sottostimi l'effort di manutenzione necessario, aumentando così la probabilità che il rischio si verifichi.",
+      "d": "Questo è palesemente falso. La test automation è strettamente legata ai requisiti che verifica; cambiamenti nei requisiti impattano direttamente il testware."
+    },
+    "ambiguous": false,
+    "learning_objective": "Valutare come un fattore di contesto di business (volatilità dei requisiti) influenzi le componenti di un rischio tecnico specifico (manutenzione della test automation), dimostrando la comprensione delle dinamiche di probabilità e impatto.",
+    "k_level": "Evaluation",
+    "points": 5
+  }
+]
